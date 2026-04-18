@@ -1,0 +1,97 @@
+[
+    {
+        "group": "",
+        "raw_data": [
+            {
+                "date": "Saturday, Apr 18 2026",
+                "time": "14:30",
+                "home": "Bayer Leverkusen",
+                "away": "Augsburg"
+            },
+            {
+                "date": "Saturday, Apr 18 2026",
+                "time": "14:30",
+                "home": "Hoffenheim",
+                "away": "Borussia Dortmund"
+            },
+            {
+                "date": "Saturday, Apr 18 2026",
+                "time": "14:30",
+                "home": "Union Berlin",
+                "away": "Wolfsburg"
+            },
+            {
+                "date": "Saturday, Apr 18 2026",
+                "time": "14:30",
+                "home": "Werder Bremen",
+                "away": "Hamburger SV"
+            },
+            {
+                "date": "Saturday, Apr 18 2026",
+                "time": "17:30",
+                "home": "Eintracht Frankfurt",
+                "away": "RB Leipzig"
+            },
+            {
+                "date": "Sunday, Apr 19 2026",
+                "time": "14:30",
+                "home": "Freiburg",
+                "away": "FC Heidenheim"
+            },
+            {
+                "date": "Sunday, Apr 19 2026",
+                "time": "16:30",
+                "home": "Bayern Munich",
+                "away": "VfB Stuttgart"
+            },
+            {
+                "date": "Sunday, Apr 19 2026",
+                "time": "18:30",
+                "home": "Borussia M.Gladbach",
+                "away": "Mainz 05"
+            },
+            {
+                "date": "Friday, Apr 24 2026",
+                "time": "19:30",
+                "home": "RB Leipzig",
+                "away": "Union Berlin"
+            },
+            {
+                "date": "Saturday, Apr 25 2026",
+                "time": "14:30",
+                "home": "FC Koln",
+                "away": "Bayer Leverkusen"
+            },
+            {
+                "date": "Saturday, Apr 25 2026",
+                "time": "14:30",
+                "home": "FC Heidenheim",
+                "away": "St. Pauli"
+            },
+            {
+                "date": "Saturday, Apr 25 2026",
+                "time": "14:30",
+                "home": "Mainz 05",
+                "away": "Bayern Munich"
+            },
+            {
+                "date": "Saturday, Apr 25 2026",
+                "time": "14:30",
+                "home": "Augsburg",
+                "away": "Eintracht Frankfurt"
+            },
+            {
+                "date": "Saturday, Apr 25 2026",
+                "time": "14:30",
+                "home": "Wolfsburg",
+                "away": "Borussia M.Gladbach"
+            },
+            {
+                "date": "Saturday, Apr 25 2026",
+                "time": "17:30",
+                "home": "Hamburger SV",
+                "away": "Hoffenheim"
+            }
+        ]
+    }
+]

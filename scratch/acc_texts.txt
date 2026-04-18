@@ -1,0 +1,446 @@
+Saturday, Apr 04 2026
+Saturday, Apr 04 2026
+Saturday, Apr 04 2026
+FT
+6
+3
+Bayer Leverkusen
+Bayer Leverkusen
+Wolfsburg
+Wolfsburg
+1
+FT
+2
+2
+Borussia M.Gladbach
+Borussia M.Gladbach
+FC Heidenheim
+FC Heidenheim
+1
+FT
+2
+3
+Freiburg
+Freiburg
+Bayern Munich
+Bayern Munich
+9
+FT
+1
+1
+Hamburger SV
+1
+Augsburg
+Augsburg
+1
+FT
+1
+2
+Hoffenheim
+Hoffenheim
+Mainz 05
+Mainz 05
+3
+FT
+1
+2
+Werder Bremen
+Werder Bremen
+RB Leipzig
+RB Leipzig
+1
+FT
+0
+2
+VfB Stuttgart
+VfB Stuttgart
+Borussia Dortmund
+Borussia Dortmund
+3
+Sunday, Apr 05 2026
+Sunday, Apr 05 2026
+Sunday, Apr 05 2026
+FT
+1
+1
+Union Berlin
+Union Berlin
+St. Pauli
+1
+1
+FT
+2
+2
+Eintracht Frankfurt
+Eintracht Frankfurt
+FC Koln
+FC Koln
+2
+Friday, Apr 10 2026
+Friday, Apr 10 2026
+Friday, Apr 10 2026
+FT
+2
+2
+Augsburg
+Augsburg
+Hoffenheim
+Hoffenheim
+3
+Saturday, Apr 11 2026
+Saturday, Apr 11 2026
+Saturday, Apr 11 2026
+FT
+0
+1
+Borussia Dortmund
+Borussia Dortmund
+Bayer Leverkusen
+Bayer Leverkusen
+2
+FT
+3
+1
+FC Heidenheim
+FC Heidenheim
+Union Berlin
+Union Berlin
+1
+FT
+1
+0
+RB Leipzig
+RB Leipzig
+Borussia M.Gladbach
+Borussia M.Gladbach
+1
+FT
+1
+2
+Wolfsburg
+Wolfsburg
+Eintracht Frankfurt
+Eintracht Frankfurt
+3
+FT
+0
+5
+St. Pauli
+St. Pauli
+Bayern Munich
+Bayern Munich
+3
+Sunday, Apr 12 2026
+Sunday, Apr 12 2026
+Sunday, Apr 12 2026
+FT
+3
+1
+FC Koln
+FC Koln
+Werder Bremen
+1
+1
+FT
+4
+0
+VfB Stuttgart
+VfB Stuttgart
+Hamburger SV
+Hamburger SV
+1
+FT
+0
+1
+Mainz 05
+Mainz 05
+Freiburg
+Freiburg
+1
+Friday, Apr 17 2026
+Friday, Apr 17 2026
+Friday, Apr 17 2026
+FT
+1
+1
+St. Pauli
+St. Pauli
+FC Koln
+FC Koln
+2
+Saturday, Apr 18 2026
+Saturday, Apr 18 2026
+Saturday, Apr 18 2026
+1
+X
+2
+14:30
+14:30
+-
+-
+Bayer Leverkusen
+Bayer Leverkusen
+Augsburg
+Augsburg
+1.40
+1.40
+5.25
+5.25
+6.50
+6.50
+1
+14:30
+14:30
+-
+-
+Hoffenheim
+Hoffenheim
+Borussia Dortmund
+Borussia Dortmund
+2.40
+2.40
+3.90
+3.90
+2.60
+2.60
+4
+14:30
+14:30
+-
+-
+Union Berlin
+Union Berlin
+Wolfsburg
+Wolfsburg
+2.20
+2.20
+3.60
+3.60
+3.20
+3.20
+1
+14:30
+14:30
+-
+-
+Werder Bremen
+Werder Bremen
+Hamburger SV
+Hamburger SV
+1.95
+1.95
+3.60
+3.60
+3.75
+3.75
+1
+17:30
+17:30
+-
+-
+Eintracht Frankfurt
+Eintracht Frankfurt
+RB Leipzig
+RB Leipzig
+3.40
+3.40
+4.10
+4.10
+1.95
+1.95
+2
+Sunday, Apr 19 2026
+Sunday, Apr 19 2026
+Sunday, Apr 19 2026
+1
+X
+2
+14:30
+14:30
+-
+-
+Freiburg
+Freiburg
+FC Heidenheim
+FC Heidenheim
+1.67
+1.67
+4.10
+4.10
+4.75
+4.75
+1
+16:30
+16:30
+-
+-
+Bayern Munich
+Bayern Munich
+VfB Stuttgart
+VfB Stuttgart
+1.40
+1.40
+5.50
+5.50
+6.50
+6.50
+2
+18:30
+18:30
+-
+-
+Borussia M.Gladbach
+Borussia M.Gladbach
+Mainz 05
+Mainz 05
+2.35
+2.35
+3.50
+3.50
+2.90
+2.90
+1
+Friday, Apr 24 2026
+Friday, Apr 24 2026
+Friday, Apr 24 2026
+1
+X
+2
+19:30
+19:30
+-
+-
+RB Leipzig
+RB Leipzig
+Union Berlin
+Union Berlin
+1.36
+1.36
+4.75
+4.75
+8.00
+8.00
+Saturday, Apr 25 2026
+Saturday, Apr 25 2026
+Saturday, Apr 25 2026
+1
+X
+2
+14:30
+14:30
+-
+-
+FC Koln
+FC Koln
+Bayer Leverkusen
+Bayer Leverkusen
+4.00
+4.00
+3.90
+3.90
+1.75
+1.75
+14:30
+14:30
+-
+-
+FC Heidenheim
+FC Heidenheim
+St. Pauli
+St. Pauli
+2.45
+2.45
+3.30
+3.30
+2.70
+2.70
+14:30
+14:30
+-
+-
+Mainz 05
+Mainz 05
+Bayern Munich
+Bayern Munich
+5.50
+5.50
+4.20
+4.20
+1.53
+1.53
+14:30
+14:30
+-
+-
+Augsburg
+Augsburg
+Eintracht Frankfurt
+Eintracht Frankfurt
+2.35
+2.35
+3.70
+3.70
+2.63
+2.63
+14:30
+14:30
+-
+-
+Wolfsburg
+Wolfsburg
+Borussia M.Gladbach
+Borussia M.Gladbach
+2.30
+2.30
+3.70
+3.70
+2.75
+2.75
+17:30
+17:30
+-
+-
+Hamburger SV
+Hamburger SV
+Hoffenheim
+Hoffenheim
+3.60
+3.60
+3.90
+3.90
+1.85
+1.85
+Sunday, Apr 26 2026
+Sunday, Apr 26 2026
+Sunday, Apr 26 2026
+1
+X
+2
+14:30
+14:30
+-
+-
+VfB Stuttgart
+VfB Stuttgart
+Werder Bremen
+Werder Bremen
+1.57
+1.57
+4.10
+4.10
+5.00
+5.00
+16:30
+16:30
+-
+-
+Borussia Dortmund
+Borussia Dortmund
+Freiburg
+Freiburg
+1.42
+1.42
+4.50
+4.50
+7.00
+7.00
