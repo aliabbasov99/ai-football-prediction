@@ -5,12 +5,13 @@ from typing import List
 
 from models import TeamXGStats, League, Match
 from services import data_service
-from scripts.scrapSeasonGames import run_all_scrapers
+from scripts.scrapSeasonGames import run_all_scrapers, run_all_combined
 from scripts.getFixtureGames import run_all_fixture_scrapers
 
 # Global flag for scraper status
 is_scraping = False
 is_scraping_fixtures = False
+
 
 def run_scrapers_task():
     global is_scraping
@@ -22,6 +23,7 @@ def run_scrapers_task():
     finally:
         is_scraping = False
 
+
 def run_fixture_scrapers_task():
     global is_scraping_fixtures
     is_scraping_fixtures = True
@@ -30,6 +32,20 @@ def run_fixture_scrapers_task():
     except Exception as e:
         print(f"Fixture scraper task failed: {e}")
     finally:
+        is_scraping_fixtures = False
+
+
+def run_all_task():
+    """Run combined scraper: standings + fixtures per league in one Chrome session."""
+    global is_scraping, is_scraping_fixtures
+    is_scraping = True
+    is_scraping_fixtures = True
+    try:
+        run_all_combined()
+    except Exception as e:
+        print(f"[scrape-all] Task failed: {e}")
+    finally:
+        is_scraping = False
         is_scraping_fixtures = False
 
 
@@ -102,7 +118,7 @@ async def trigger_scrape(background_tasks: BackgroundTasks):
     global is_scraping
     if is_scraping:
         return {"status": "warning", "message": "Scraping already in progress."}
-    
+
     background_tasks.add_task(run_scrapers_task)
     return {"status": "success", "message": "Scraping process started in background."}
 
@@ -116,10 +132,16 @@ async def get_scrape_status():
 async def trigger_scrape_fixtures(background_tasks: BackgroundTasks):
     global is_scraping_fixtures
     if is_scraping_fixtures:
-        return {"status": "warning", "message": "Fixtures scraping already in progress."}
-    
+        return {
+            "status": "warning",
+            "message": "Fixtures scraping already in progress.",
+        }
+
     background_tasks.add_task(run_fixture_scrapers_task)
-    return {"status": "success", "message": "Fixtures scraping process started in background."}
+    return {
+        "status": "success",
+        "message": "Fixtures scraping process started in background.",
+    }
 
 
 @app.get("/api/admin/status-fixtures")
@@ -128,7 +150,32 @@ async def get_scrape_fixtures_status():
     return {"is_scraping": is_scraping_fixtures}
 
 
+@app.post("/api/admin/scrape-all")
+async def trigger_scrape_all(background_tasks: BackgroundTasks):
+    global is_scraping, is_scraping_fixtures
+    if is_scraping or is_scraping_fixtures:
+        return {
+            "status": "warning",
+            "message": "Scraping already in progress.",
+        }
+    background_tasks.add_task(run_all_task)
+    return {
+        "status": "success",
+        "message": "Full data refresh (standings + fixtures) started in background.",
+    }
+
+
+@app.get("/api/admin/status-all")
+async def get_scrape_all_status():
+    global is_scraping, is_scraping_fixtures
+    return {
+        "is_scraping": is_scraping or is_scraping_fixtures,
+        "is_scraping_standings": is_scraping,
+        "is_scraping_fixtures": is_scraping_fixtures,
+    }
+
+
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=7999)

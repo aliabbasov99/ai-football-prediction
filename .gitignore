@@ -1,0 +1,30 @@
+# Node
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+npm-debug.log
+yarn-error.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+
+# Next.js
+.next/
+out/
+build/
+.vercel/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -6,3 +6,5 @@ selenium
 webdriver-manager
 pydantic
 beautifulsoup4
+python-dotenv
+pymongo

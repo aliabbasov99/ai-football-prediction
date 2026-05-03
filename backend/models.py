@@ -33,10 +33,24 @@ class League(BaseModel):
     logo: str
 
 
+class Last5Game(BaseModel):
+    opponent: str
+    opponent_logo: str = ""
+    home_away: str
+    score: Optional[str] = None
+    xg_for: float = 0.0
+    xg_against: float = 0.0
+    date: str = ""
+
+
 class Match(BaseModel):
     id: str
     home_team: str
+    home_team_id: str = ""
+    home_team_position: int = 0
     away_team: str
+    away_team_id: str = ""
+    away_team_position: int = 0
     home_logo: str
     away_logo: str
     home_xg: float
@@ -44,6 +58,9 @@ class Match(BaseModel):
     score: Optional[str] = None
     date: str
     league: str
+    league_name: str = ""
+    home_last5: list[Last5Game] = []
+    away_last5: list[Last5Game] = []
 
 
 class Prediction(BaseModel):

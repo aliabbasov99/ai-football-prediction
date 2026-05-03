@@ -1,0 +1,64 @@
+{
+  "league": "Eredivisie",
+  "fixtures": [
+    {
+      "group": "2.25",
+      "games": [
+        {
+          "date": "Wednesday, Apr 22 2026",
+          "time": "19:00",
+          "home": "Telstar",
+          "away": "Sparta Rotterdam"
+        },
+        {
+          "date": "Thursday, Apr 23 2026",
+          "time": "17:45",
+          "home": "Go Ahead Eagles",
+          "away": "AZ Alkmaar"
+        },
+        {
+          "date": "Thursday, Apr 23 2026",
+          "time": "20:00",
+          "home": "PSV Eindhoven",
+          "away": "PEC Zwolle"
+        },
+        {
+          "date": "Saturday, Apr 25 2026",
+          "time": "15:30",
+          "home": "Feyenoord",
+          "away": "FC Groningen"
+        },
+        {
+          "date": "Saturday, Apr 25 2026",
+          "time": "17:45",
+          "home": "SC Heerenveen",
+          "away": "Fortuna Sittard"
+        },
+        {
+          "date": "Saturday, Apr 25 2026",
+          "time": "19:00",
+          "home": "NAC Breda",
+          "away": "Ajax"
+        },
+        {
+          "date": "Saturday, Apr 25 2026",
+          "time": "20:00",
+          "home": "Twente",
+          "away": "NEC Nijmegen"
+        },
+        {
+          "date": "Sunday, Apr 26 2026",
+          "time": "11:15",
+          "home": "Excelsior",
+          "away": "FC Utrecht"
+        },
+        {
+          "date": "Sunday, Apr 26 2026",
+          "time": "13:30",
+          "home": "Heracles",
+          "away": "FC Volendam"
+        }
+      ]
+    }
+  ]
+}

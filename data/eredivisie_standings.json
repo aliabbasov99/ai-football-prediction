@@ -1,0 +1,365 @@
+{
+  "league": "Eredivisie",
+  "standings": [
+    {
+      "rank": "1",
+      "team": "PSV Eindhoven",
+      "played": 30,
+      "won": 24,
+      "drawn": 2,
+      "lost": 4,
+      "goals_for": 84,
+      "goals_against": 40,
+      "goal_difference": "+44",
+      "points": 74,
+      "last_games": [
+        "w",
+        "w",
+        "l",
+        "l",
+        "w",
+        "w"
+      ]
+    },
+    {
+      "rank": "2",
+      "team": "Feyenoord",
+      "played": 30,
+      "won": 16,
+      "drawn": 7,
+      "lost": 7,
+      "goals_for": 62,
+      "goals_against": 41,
+      "goal_difference": "+21",
+      "points": 55,
+      "last_games": [
+        "l",
+        "d",
+        "w",
+        "d",
+        "d",
+        "d"
+      ]
+    },
+    {
+      "rank": "3",
+      "team": "NEC Nijmegen",
+      "played": 30,
+      "won": 15,
+      "drawn": 9,
+      "lost": 6,
+      "goals_for": 72,
+      "goals_against": 48,
+      "goal_difference": "+24",
+      "points": 54,
+      "last_games": [
+        "l",
+        "w",
+        "w",
+        "d",
+        "w",
+        "d"
+      ]
+    },
+    {
+      "rank": "4",
+      "team": "Twente",
+      "played": 30,
+      "won": 14,
+      "drawn": 11,
+      "lost": 5,
+      "goals_for": 51,
+      "goals_against": 32,
+      "goal_difference": "+19",
+      "points": 53,
+      "last_games": [
+        "w",
+        "w",
+        "l",
+        "w",
+        "w",
+        "w"
+      ]
+    },
+    {
+      "rank": "5",
+      "team": "Ajax",
+      "played": 30,
+      "won": 13,
+      "drawn": 12,
+      "lost": 5,
+      "goals_for": 57,
+      "goals_against": 37,
+      "goal_difference": "+20",
+      "points": 51,
+      "last_games": [
+        "d",
+        "l",
+        "w",
+        "d",
+        "l",
+        "w"
+      ]
+    },
+    {
+      "rank": "6",
+      "team": "AZ Alkmaar",
+      "played": 30,
+      "won": 14,
+      "drawn": 6,
+      "lost": 10,
+      "goals_for": 52,
+      "goals_against": 45,
+      "goal_difference": "+7",
+      "points": 48,
+      "last_games": [
+        "l",
+        "l",
+        "w",
+        "l",
+        "w",
+        "w"
+      ]
+    },
+    {
+      "rank": "7",
+      "team": "FC Utrecht",
+      "played": 30,
+      "won": 12,
+      "drawn": 8,
+      "lost": 10,
+      "goals_for": 49,
+      "goals_against": 36,
+      "goal_difference": "+13",
+      "points": 44,
+      "last_games": [
+        "w",
+        "d",
+        "w",
+        "w",
+        "l",
+        "w"
+      ]
+    },
+    {
+      "rank": "8",
+      "team": "SC Heerenveen",
+      "played": 30,
+      "won": 12,
+      "drawn": 8,
+      "lost": 10,
+      "goals_for": 53,
+      "goals_against": 50,
+      "goal_difference": "+3",
+      "points": 44,
+      "last_games": [
+        "w",
+        "w",
+        "w",
+        "d",
+        "w",
+        "l"
+      ]
+    },
+    {
+      "rank": "9",
+      "team": "FC Groningen",
+      "played": 30,
+      "won": 12,
+      "drawn": 6,
+      "lost": 12,
+      "goals_for": 42,
+      "goals_against": 37,
+      "goal_difference": "+5",
+      "points": 42,
+      "last_games": [
+        "l",
+        "w",
+        "d",
+        "w",
+        "w",
+        "d"
+      ]
+    },
+    {
+      "rank": "10",
+      "team": "Sparta Rotterdam",
+      "played": 30,
+      "won": 12,
+      "drawn": 6,
+      "lost": 12,
+      "goals_for": 35,
+      "goals_against": 49,
+      "goal_difference": "-14",
+      "points": 42,
+      "last_games": [
+        "l",
+        "d",
+        "l",
+        "w",
+        "d",
+        "l"
+      ]
+    },
+    {
+      "rank": "11",
+      "team": "Go Ahead Eagles",
+      "played": 30,
+      "won": 8,
+      "drawn": 12,
+      "lost": 10,
+      "goals_for": 50,
+      "goals_against": 45,
+      "goal_difference": "+5",
+      "points": 36,
+      "last_games": [
+        "w",
+        "l",
+        "w",
+        "l",
+        "w",
+        "d"
+      ]
+    },
+    {
+      "rank": "12",
+      "team": "Fortuna Sittard",
+      "played": 30,
+      "won": 10,
+      "drawn": 6,
+      "lost": 14,
+      "goals_for": 44,
+      "goals_against": 55,
+      "goal_difference": "-11",
+      "points": 36,
+      "last_games": [
+        "w",
+        "l",
+        "w",
+        "l",
+        "l",
+        "d"
+      ]
+    },
+    {
+      "rank": "13",
+      "team": "PEC Zwolle",
+      "played": 30,
+      "won": 8,
+      "drawn": 10,
+      "lost": 12,
+      "goals_for": 40,
+      "goals_against": 60,
+      "goal_difference": "-20",
+      "points": 34,
+      "last_games": [
+        "d",
+        "d",
+        "d",
+        "w",
+        "l",
+        "d"
+      ]
+    },
+    {
+      "rank": "14",
+      "team": "FC Volendam",
+      "played": 30,
+      "won": 7,
+      "drawn": 7,
+      "lost": 16,
+      "goals_for": 31,
+      "goals_against": 50,
+      "goal_difference": "-19",
+      "points": 28,
+      "last_games": [
+        "w",
+        "l",
+        "l",
+        "l",
+        "d",
+        "l"
+      ]
+    },
+    {
+      "rank": "15",
+      "team": "Excelsior",
+      "played": 30,
+      "won": 7,
+      "drawn": 7,
+      "lost": 16,
+      "goals_for": 31,
+      "goals_against": 51,
+      "goal_difference": "-20",
+      "points": 28,
+      "last_games": [
+        "l",
+        "l",
+        "l",
+        "d",
+        "l",
+        "d"
+      ]
+    },
+    {
+      "rank": "16",
+      "team": "Telstar",
+      "played": 30,
+      "won": 6,
+      "drawn": 9,
+      "lost": 15,
+      "goals_for": 39,
+      "goals_against": 52,
+      "goal_difference": "-13",
+      "points": 27,
+      "last_games": [
+        "w",
+        "w",
+        "l",
+        "w",
+        "l",
+        "l"
+      ]
+    },
+    {
+      "rank": "17",
+      "team": "NAC Breda",
+      "played": 30,
+      "won": 5,
+      "drawn": 10,
+      "lost": 15,
+      "goals_for": 30,
+      "goals_against": 51,
+      "goal_difference": "-21",
+      "points": 25,
+      "last_games": [
+        "l",
+        "d",
+        "l",
+        "l",
+        "d",
+        "d"
+      ]
+    },
+    {
+      "rank": "18",
+      "team": "Heracles",
+      "played": 30,
+      "won": 5,
+      "drawn": 4,
+      "lost": 21,
+      "goals_for": 34,
+      "goals_against": 77,
+      "goal_difference": "-43",
+      "points": 19,
+      "last_games": [
+        "l",
+        "d",
+        "l",
+        "d",
+        "l",
+        "l"
+      ]
+    }
+  ]
+}

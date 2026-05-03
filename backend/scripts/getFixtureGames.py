@@ -60,8 +60,8 @@ def fetch_and_parse_fixtures(url, league_name):
 
     try:
         driver.get(url)
-        print("Sehife yuklenir, gozleyin (15 saniye)...")
-        time.sleep(15) 
+        print("Sehife yuklenir, gozleyin (7 saniye)...")
+        time.sleep(7) 
         
         soup = BeautifulSoup(driver.page_source, "html.parser")
         
@@ -163,8 +163,64 @@ def run_all_fixture_scrapers():
             "url": "https://www.whoscored.com/Regions/74/Tournaments/22/Seasons/10669/Stages/24871/Fixtures/France-Ligue-1-2025-2026"
         },
         {
+            "name": "Brasileirao",
+            "url": "https://www.whoscored.com/Regions/31/Tournaments/95/Seasons/11756/Stages/27234/Fixtures/Brazil-Serie-A-2025"
+        },
+        {
+            "name": "Primeira Liga",
+            "url": "https://www.whoscored.com/Regions/177/Tournaments/21/Seasons/10674/Stages/24877/Fixtures/Portugal-Primera-Liga-2025-2026"
+        },
+        {
             "name": "Eredivisie",
             "url": "https://www.whoscored.com/Regions/155/Tournaments/13/Seasons/10670/Stages/24872/Fixtures/Netherlands-Eredivisie-2025-2026"
+        },
+        {
+            "name": "Primera Division",
+            "url": "https://www.whoscored.com/Regions/11/Tournaments/68/Seasons/10893/Stages/25274/Fixtures/Argentina-Primera-Division-2025"
+        },
+        {
+            "name": "Pro League",
+            "url": "https://www.whoscored.com/Regions/4/Tournaments/36/Seasons/10686/Stages/24893/Fixtures/Belgium-First-Division-A-2025-2026"
+        },
+        {
+            "name": "Super Lig",
+            "url": "https://www.whoscored.com/Regions/215/Tournaments/17/Seasons/10888/Stages/25269/Fixtures/Turkey-Super-Lig-2025-2026"
+        },
+        {
+            "name": "EFL Championship",
+            "url": "https://www.whoscored.com/Regions/252/Tournaments/7/Seasons/10666/Stages/24868/Fixtures/England-Championship-2025-2026"
+        },
+        {
+            "name": "Saudi Pro League",
+            "url": "https://www.whoscored.com/Regions/195/Tournaments/349/Seasons/11390/Stages/26371/Fixtures/Saudi-Arabia-Pro-League-2025-2026"
+        },
+        {
+            "name": "MLS",
+            "url": "https://www.whoscored.com/Regions/233/Tournaments/85/Seasons/11768/Stages/27248/Fixtures/USA-Major-League-Soccer-2025"
+        },
+        {
+            "name": "Czech First League",
+            "url": "https://www.whoscored.com/Regions/44/Tournaments/37/Seasons/10691/Stages/24899/Fixtures/Czech-Republic-1-Liga-2025-2026"
+        },
+        {
+            "name": "Super League Greece",
+            "url": "https://www.whoscored.com/Regions/85/Tournaments/53/Seasons/10785/Stages/24999/Fixtures/Greece-Super-League-2025-2026"
+        },
+        {
+            "name": "Liga Pro Ecuador",
+            "url": "https://www.whoscored.com/Regions/60/Tournaments/447/Seasons/11800/Stages/27302/Fixtures/Ecuador-Liga-Pro-2025"
+        },
+        {
+            "name": "Danish Superliga",
+            "url": "https://www.whoscored.com/Regions/47/Tournaments/50/Seasons/10754/Stages/24963/Fixtures/Denmark-Superliga-2025-2026"
+        },
+        {
+            "name": "Ekstraklasa",
+            "url": "https://www.whoscored.com/Regions/173/Tournaments/84/Seasons/10783/Stages/24997/Fixtures/Poland-Ekstraklasa-2025-2026"
+        },
+        {
+            "name": "J1 League",
+            "url": "https://www.whoscored.com/Regions/107/Tournaments/96/Seasons/11753/Stages/27231/Fixtures/Japan-J1-League-2025"
         }
     ]
 
