@@ -33,32 +33,6 @@ AI Football Prediction is a full-stack application that **scrapes odds, predicti
 
 ---
 
-## 🖼️ Screenshots
-
-> *(Add screenshots here to showcase the dashboard — replace these placeholders)*
-
-<div align="center">
-  <table>
-    <tr>
-      <td><img src="https://via.placeholder.com/400x250/1a1a2e/e94560?text=Predictions+Dashboard" alt="Predictions Dashboard" width="400"/></td>
-      <td><img src="https://via.placeholder.com/400x250/1a1a2e/0f3460?text=Betting+Coupon" alt="Betting Coupon" width="400"/></td>
-    </tr>
-    <tr>
-      <td align="center"><strong>Predictions Dashboard</strong></td>
-      <td align="center"><strong>Betting Coupon</strong></td>
-    </tr>
-    <tr>
-      <td><img src="https://via.placeholder.com/400x250/1a1a2e/533483?text=Stats+Page" alt="Stats Page" width="400"/></td>
-      <td><img src="https://via.placeholder.com/400x250/1a1a2e/e94560?text=Admin+Panel" alt="Admin Panel" width="400"/></td>
-    </tr>
-    <tr>
-      <td align="center"><strong>Statistical Analysis</strong></td>
-      <td align="center"><strong>Admin Control Panel</strong></td>
-    </tr>
-  </table>
-</div>
-
----
 
 ## 🏗️ Architecture
 
