@@ -1,0 +1,57 @@
+{
+  "league_id": "6a0cd21df79eee93e875df80",
+  "name": "Meistriliiga",
+  "url": "https://footystats.org/estonia/meistriliiga",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Tallinna FC Levadia",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-tallinna-fc-levadia_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Nõmme Kalju FC",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-nomme-kalju-fc_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Tallinna FC Flora",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-tallinna-fc-flora_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Paide Linnameeskond",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-paide-linnameeskond_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "JK Tammeka Tartu",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-jk-tammeka-tartu_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Pärnu JK Vaprus",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-parnu-jk-vaprus_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Harju Jalgpallikool",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-harju-jalgpallikool_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "FC Nõmme United",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-fc-nomme-united_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "FC Kuressaare",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-fc-kuressaare_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "JK Narva Trans",
+      "logo": "https://cdn.footystats.org/img/teams/estonia-jk-narva-trans_thumb.png"
+    }
+  ]
+}

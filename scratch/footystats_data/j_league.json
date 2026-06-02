@@ -1,0 +1,57 @@
+{
+  "league_id": "6a0f761a180aed8292eff092",
+  "name": "J League",
+  "url": "https://footystats.org/japan/kanto-soccer-league",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Toho Titanium SC",
+      "logo": "https://cdn.footystats.org/img/teams/japan-toho-titanium-sc_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Nankatsu SC",
+      "logo": "https://cdn.footystats.org/img/teams/japan-nankatsu-sc_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Toin Yokohama UFC",
+      "logo": "https://cdn.footystats.org/img/teams/japan-toin-yokohama-university-fc-toin-university-of-yokohama-ii_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Tokyo United FC",
+      "logo": "https://cdn.footystats.org/img/teams/japan-tokyo-united-fc_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Shibuya City",
+      "logo": "https://cdn.footystats.org/img/teams/japan-shibuya-city_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Tokyo 23 FC",
+      "logo": "https://cdn.footystats.org/img/teams/japan-tokyo-23-fc_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Edo All United",
+      "logo": "https://cdn.footystats.org/img/teams/japan-edo-all-united_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Aries Toshima",
+      "logo": "https://cdn.footystats.org/img/teams/japan-aries-toshima_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Nihon University FC",
+      "logo": "https://cdn.footystats.org/img/teams/japan-nihon-university-fc_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Ryutsu Keizai Dragons",
+      "logo": "https://cdn.footystats.org/img/teams/japan-ryutsu-keizai-dragons-ryugasaki_thumb.png"
+    }
+  ]
+}

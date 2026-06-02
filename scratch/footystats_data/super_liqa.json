@@ -1,0 +1,97 @@
+{
+  "league_id": "6a077aed18804871b1355608",
+  "name": "Super Liqa",
+  "url": "https://footystats.org/turkey/super-lig",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Galatasaray",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-galatasaray_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Fenerbahçe",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-fenerbahce_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Trabzonspor",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-trabzonspor_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Beşiktaş",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-besiktas_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "İstanbul Başakşehir FK",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-istanbul-basaksehir-fk_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Göztepe",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-goztepe_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Samsunspor",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-samsunspor_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Çaykur Rizespor",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-caykur-rizespor_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Konyaspor",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-konyaspor_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Alanyaspor",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-alanyaspor_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Kocaelispor Kulübü",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-kocaelispor-kulubu_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Gaziantep FK",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-gaziantep-fk_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Kasimpasa",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-kasimpasa_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "Gençlerbirliği",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-genclerbirligi_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Eyüp Spor Kulübü",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-eyup-spor-kulubu_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "Antalyaspor",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-antalyaspor_thumb.png"
+    },
+    {
+      "position": 17,
+      "name": "Fatih Karagümrük",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-fatih-karagumruk-spor-kulubu_thumb.png"
+    },
+    {
+      "position": 18,
+      "name": "Kayserispor",
+      "logo": "https://cdn.footystats.org/img/teams/turkey-kayserispor_thumb.png"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "league_id": "6a0f5cad180aed8292eff08c",
+  "name": "Veikkausliga",
+  "url": "https://footystats.org/finland/veikkausliiga",
+  "teams": [
+    {
+      "position": 1,
+      "name": "FC Inter Turku",
+      "logo": "https://cdn.footystats.org/img/teams/finland-fc-inter-turku_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Kuopion Palloseura",
+      "logo": "https://cdn.footystats.org/img/teams/finland-kuopion-palloseura_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "AC Oulu",
+      "logo": "https://cdn.footystats.org/img/teams/finland-ac-oulu_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Helsingin Jalkapalloklubi",
+      "logo": "https://cdn.footystats.org/img/teams/finland-helsingin-jalkapalloklubi_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Turun Palloseura",
+      "logo": "https://cdn.footystats.org/img/teams/finland-turun-palloseura_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Vaasan Palloseura",
+      "logo": "https://cdn.footystats.org/img/teams/finland-vaasan-palloseura_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "IF Gnistan",
+      "logo": "https://cdn.footystats.org/img/teams/finland-if-gnistan_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "FC Lahti",
+      "logo": "https://cdn.footystats.org/img/teams/finland-fc-lahti_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Seinäjoen Jalkapallokerho",
+      "logo": "https://cdn.footystats.org/img/teams/finland-seinajoen-jalkapallokerho_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Tampereen Ilves",
+      "logo": "https://cdn.footystats.org/img/teams/finland-tampereen-ilves_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "IFK Mariehamn",
+      "logo": "https://cdn.footystats.org/img/teams/finland-ifk-mariehamn_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "FF Jaro",
+      "logo": "https://cdn.footystats.org/img/teams/finland-ff-jaro_thumb.png"
+    }
+  ]
+}

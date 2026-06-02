@@ -1,0 +1,67 @@
+{
+  "league_id": "6a0f4e4d180aed8292eff086",
+  "name": "Úrvalsdeild",
+  "url": "https://footystats.org/iceland/urvalsdeild",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Víkingur Reykjavík",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-vikingur-reykjavik_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "KR Reykjavík",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-kr-reykjavik_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Fram Reykjavík",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-fram-reykjavik_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Breidablik UBK",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-breidablik-ubk_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Valur Reykjavík",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-valur-reykjavik_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "KA Akureyri",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-ka-akureyri_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "ÍA Akranes",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-ia-akranes_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Keflavík ÍF",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-keflavik-if_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "UMF Stjarnan",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-umf-stjarnan_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Thór Akureyri",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-thor-akureyri_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "FH Hafnarfjördur",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-fh-hafnarfjordur_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "ÍB Vestmannaeyja",
+      "logo": "https://cdn.footystats.org/img/teams/iceland-ib-vestmannaeyja_thumb.png"
+    }
+  ]
+}

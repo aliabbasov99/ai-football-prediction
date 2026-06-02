@@ -1,0 +1,67 @@
+{
+  "league_id": "6a0f72d0180aed8292eff091",
+  "name": "Ykkönen",
+  "url": "https://footystats.org/finland/ykkonen",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Oulun Luistinseura",
+      "logo": "https://cdn.footystats.org/img/teams/finland-oulun-luistinseura_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Rovaniemen Palloseura",
+      "logo": "https://cdn.footystats.org/img/teams/finland-rovaniemen-palloseura_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "JJK Jyväskylä",
+      "logo": "https://cdn.footystats.org/img/teams/finland-jjk-jyvaskyla_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Tampere United",
+      "logo": "https://cdn.footystats.org/img/teams/finland-tampere-united_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "FC Jazz",
+      "logo": "https://cdn.footystats.org/img/teams/finland-fc-jazz_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Salon Palloilijat",
+      "logo": "https://cdn.footystats.org/img/teams/finland-salon-palloilijat_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Pallokerho Keski-Uusimaa",
+      "logo": "https://cdn.footystats.org/img/teams/finland-pallokerho-keski-uusimaa_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Vantaan Jalkapalloseura",
+      "logo": "https://cdn.footystats.org/img/teams/finland-vantaan-jalkapalloseura_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "FC Inter Turku II",
+      "logo": "https://cdn.footystats.org/img/teams/finland-fc-inter-turku-ii_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Tampereen Pallo-Veikot",
+      "logo": "https://cdn.footystats.org/img/teams/finland-tampereen-pallo-veikot_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "KuPS Akatemia",
+      "logo": "https://cdn.footystats.org/img/teams/finland-kups-akatemia_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Kokkolan Pallo-Veikot",
+      "logo": "https://cdn.footystats.org/img/teams/finland-kokkolan-pallo-veikot_thumb.png"
+    }
+  ]
+}

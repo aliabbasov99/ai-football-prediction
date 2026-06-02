@@ -1,0 +1,107 @@
+{
+  "league_id": "6a0644199a0a41ff09112bb7",
+  "name": "Premier League",
+  "url": "https://footystats.org/england/premier-league",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Arsenal FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-arsenal-fc_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Manchester City FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-manchester-city-fc_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Manchester United FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-manchester-united-fc_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Aston Villa FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-aston-villa-fc_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Liverpool FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-liverpool-fc_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "AFC Bournemouth",
+      "logo": "https://cdn.footystats.org/img/teams/england-afc-bournemouth_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Brighton & Hove Albion FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-brighton-hove-albion-fc_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Chelsea FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-chelsea-fc_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Brentford FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-brentford-fc_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Sunderland AFC",
+      "logo": "https://cdn.footystats.org/img/teams/england-sunderland-afc_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Newcastle United FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-newcastle-united-fc_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Everton FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-everton-fc_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Fulham FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-fulham-fc_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "Leeds United FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-leeds-united-fc_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Crystal Palace FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-crystal-palace-fc_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "Nottingham Forest FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-nottingham-forest-fc_thumb.png"
+    },
+    {
+      "position": 17,
+      "name": "Tottenham Hotspur FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-tottenham-hotspur-fc_thumb.png"
+    },
+    {
+      "position": 18,
+      "name": "West Ham United FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-west-ham-united-fc_thumb.png"
+    },
+    {
+      "position": 19,
+      "name": "Burnley FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-burnley-fc_thumb.png"
+    },
+    {
+      "position": 20,
+      "name": "Wolverhampton Wanderers FC",
+      "logo": "https://cdn.footystats.org/img/teams/england-wolverhampton-wanderers-fc_thumb.png"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "league_id": "6a0f6ece180aed8292eff08f",
+  "name": "USL Championship",
+  "url": "https://footystats.org/usa/usl-championship",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Tampa Bay Rowdies",
+      "logo": "https://cdn.footystats.org/img/teams/usa-tampa-bay-rowdies_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "San Antonio FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-san-antonio-fc_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Detroit City FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-detroit-city-fc_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Oakland Roots SC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-oakland-roots-sc_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Orange County SC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-orange-county-sc_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Louisville City FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-louisville-city-fc_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "El Paso Locomotive FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-el-paso-locomotive-fc_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Sacramento Republic FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-sacramento-republic-fc_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Phoenix Rising FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-phoenix-rising-fc_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Hartford Athletic",
+      "logo": "https://cdn.footystats.org/img/teams/usa-hartford-athletic_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Charleston Battery",
+      "logo": "https://cdn.footystats.org/img/teams/usa-charleston-battery_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Pittsburgh Riverhounds FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-pittsburgh-riverhounds-fc_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Miami FC II",
+      "logo": "https://cdn.footystats.org/img/teams/usa-miami-fc-ii_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "Tulsa Roughnecks FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-tulsa-roughnecks-fc_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Indy Eleven",
+      "logo": "https://cdn.footystats.org/img/teams/usa-indy-eleven_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "Colorado Springs",
+      "logo": "https://cdn.footystats.org/img/teams/usa-colorado-springs-switchbacks-fc_thumb.png"
+    },
+    {
+      "position": 17,
+      "name": "Birmingham Legion FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-birmingham-legion-fc_thumb.png"
+    },
+    {
+      "position": 18,
+      "name": "New Mexico United",
+      "logo": "https://cdn.footystats.org/img/teams/usa-new-mexico-united_thumb.png"
+    },
+    {
+      "position": 19,
+      "name": "Rhode Island FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-rhode-island-fc_thumb.png"
+    },
+    {
+      "position": 20,
+      "name": "Lexington SC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-lexington-sc_thumb.png"
+    },
+    {
+      "position": 21,
+      "name": "Loudoun United FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-loudoun-united-fc_thumb.png"
+    },
+    {
+      "position": 22,
+      "name": "Las Vegas Lights FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-las-vegas-lights-fc_thumb.png"
+    },
+    {
+      "position": 23,
+      "name": "Brooklyn FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-brooklyn-fc_thumb.png"
+    },
+    {
+      "position": 24,
+      "name": "Monterey Bay FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-monterey-bay-fc_thumb.png"
+    },
+    {
+      "position": 25,
+      "name": "Sporting Club Jacksonville",
+      "logo": "https://cdn.footystats.org/img/teams/usa-sporting-club-jacksonville_thumb.png"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "league_id": "6a0f53c1180aed8292eff08a",
+  "name": "Primera Division",
+  "url": "https://footystats.org/argentina/primera-division",
+  "teams": [
+    {
+      "position": 1,
+      "name": "CA River Plate",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-river-plate_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Argentinos Juniors",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-argentinos-juniors_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "CS Independiente Rivadavia",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-cs-independiente-rivadavia_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "CA Rosario Central",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-rosario-central_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "CA Belgrano de Córdoba",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-belgrano-de-cordoba_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Estudiantes de La Plata",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-estudiantes-de-la-plata_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "CA Boca Juniors",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-boca-juniors_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Gimnasia y Esgrima La Plata",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-gimnasia-y-esgrima-la-plata_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Vélez Sarsfield",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-club-atletico-velez-sarsfield_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "CA Talleres de Córdoba",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-talleres-de-cordoba_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "CA Huracán",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-huracan_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "CA Unión de Santa Fe",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-union-de-santa-fe_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Racing Club de Avellaneda",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-racing-club-de-avellaneda_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "CA Independiente",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-independiente_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "CA Lanús",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-lanus_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "CA San Lorenzo de Almagro",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-san-lorenzo-de-almagro_thumb.png"
+    },
+    {
+      "position": 17,
+      "name": "CA Barracas Central",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-barracas-central_thumb.png"
+    },
+    {
+      "position": 18,
+      "name": "Instituto AC Córdoba",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-instituto-ac-cordoba_thumb.png"
+    },
+    {
+      "position": 19,
+      "name": "CA Tigre",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-tigre_thumb.png"
+    },
+    {
+      "position": 20,
+      "name": "CSD Defensa y Justicia",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-csd-defensa-y-justicia_thumb.png"
+    },
+    {
+      "position": 21,
+      "name": "CA Sarmiento",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-sarmiento_thumb.png"
+    },
+    {
+      "position": 22,
+      "name": "Gimnasia Mendoza",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-atletico-gimnasia-y-esgrima-de-mendoza_thumb.png"
+    },
+    {
+      "position": 23,
+      "name": "CA Banfield",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-banfield_thumb.png"
+    },
+    {
+      "position": 24,
+      "name": "CA Platense",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-platense_thumb.png"
+    },
+    {
+      "position": 25,
+      "name": "Central Córdoba SdE",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-central-cordoba-de-santiago-del-estero_thumb.png"
+    },
+    {
+      "position": 26,
+      "name": "Newell's Old Boys",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-newells-old-boys_thumb.png"
+    },
+    {
+      "position": 27,
+      "name": "CA Tucuman",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-tucuman_thumb.png"
+    },
+    {
+      "position": 28,
+      "name": "CD Riestra",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-cd-riestra_thumb.png"
+    },
+    {
+      "position": 29,
+      "name": "CA Aldosivi",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-ca-aldosivi_thumb.png"
+    },
+    {
+      "position": 30,
+      "name": "AA Estudiantes de Río Cuarto",
+      "logo": "https://cdn.footystats.org/img/teams/argentina-aa-estudiantes-de-rio-cuarto_thumb.png"
+    }
+  ]
+}

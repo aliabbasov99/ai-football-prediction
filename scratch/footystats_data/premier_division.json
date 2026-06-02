@@ -1,0 +1,57 @@
+{
+  "league_id": "6a0f4f1e180aed8292eff087",
+  "name": "Premier Division",
+  "url": "https://footystats.org/republic-of-ireland/premier-division",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Shamrock Rovers FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-shamrock-rovers-fc_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "St Patrick's Athletic FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-st-patricks-athletic-fc_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Bohemian FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-bohemian-fc_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Dundalk FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-dundalk-fc_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Shelbourne FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-shelbourne-fc_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Derry City FC",
+      "logo": "https://cdn.footystats.org/img/teams/northern-ireland-derry-city-fc_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Galway United FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-galway-united-fc_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Drogheda United FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-drogheda-united-fc_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Sligo Rovers FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-sligo-rovers-fc_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Waterford FC",
+      "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-waterford-fc_thumb.png"
+    }
+  ]
+}

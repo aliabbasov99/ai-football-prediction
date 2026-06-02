@@ -1,0 +1,57 @@
+{
+  "league_id": "6a0f5fc8180aed8292eff08d",
+  "name": "A Lyga",
+  "url": "https://footystats.org/lithuania/a-lyga",
+  "teams": [
+    {
+      "position": 1,
+      "name": "FK Kauno Žalgiris",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-kauno-zalgiris_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "FK TransINVEST Vilnius",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-transinvest-vilnius_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "FK Džiugas Telšiai",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-dziugas-telsiai_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "FK Banga Gargždai",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-banga-gargzdai_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "FK Sūduva Marijampolė",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-suduva-marijampole_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "VMFD Žalgiris Vilnius",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-vmfd-zalgiris-vilnius_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "FK Panevėžys",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-panevezys_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "FC Hegelmann Litauen Kaunas",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fc-hegelmann-litauen-kaunas_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "FA Šiauliai",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fa-siauliai_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "FK Trakai",
+      "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-trakai_thumb.png"
+    }
+  ]
+}

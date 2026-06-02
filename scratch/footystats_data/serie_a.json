@@ -1,0 +1,107 @@
+{
+  "league_id": "6a0f512c180aed8292eff088",
+  "name": "Serie A",
+  "url": "https://footystats.org/brazil/serie-a",
+  "teams": [
+    {
+      "position": 1,
+      "name": "SE Palmeiras",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-se-palmeiras_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "CR Flamengo",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-cr-flamengo_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Fluminense FC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-fluminense-fc_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "CA Paranaense",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-ca-paranaense_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "São Paulo FC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-sao-paulo-fc_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "EC Bahia",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-ec-bahia_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Coritiba FBC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-coritiba-fbc_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Clube Atlético Bragantino",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-clube-atletico-bragantino_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "SC Internacional",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-sc-internacional_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Botafogo FR",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-botafogo-fr_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "CA Mineiro",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-ca-mineiro_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "CR Vasco da Gama",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-cr-vasco-da-gama_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Cruzeiro EC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-cruzeiro-ec_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "EC Vitória",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-ec-vitoria_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Grêmio FB Porto Alegrense",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-gremio-fb-porto-alegrense_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "SC Corinthians Paulista",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-sc-corinthians-paulista_thumb.png"
+    },
+    {
+      "position": 17,
+      "name": "Santos FC Sao Paulo",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-santos-fc-sao-paulo_thumb.png"
+    },
+    {
+      "position": 18,
+      "name": "Clube do Remo",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-clube-do-remo_thumb.png"
+    },
+    {
+      "position": 19,
+      "name": "Mirassol Futebol Clube",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-mirassol-futebol-clube_thumb.png"
+    },
+    {
+      "position": 20,
+      "name": "Chapecoense AF",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-chapecoense-af_thumb.png"
+    }
+  ]
+}

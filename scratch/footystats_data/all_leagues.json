@@ -1,0 +1,1817 @@
+{
+  "Premier League": {
+    "league_id": "6a0644199a0a41ff09112bb7",
+    "name": "Premier League",
+    "url": "https://footystats.org/england/premier-league",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Arsenal FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-arsenal-fc_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Manchester City FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-manchester-city-fc_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Manchester United FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-manchester-united-fc_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Aston Villa FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-aston-villa-fc_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Liverpool FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-liverpool-fc_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "AFC Bournemouth",
+        "logo": "https://cdn.footystats.org/img/teams/england-afc-bournemouth_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Brighton & Hove Albion FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-brighton-hove-albion-fc_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Chelsea FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-chelsea-fc_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Brentford FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-brentford-fc_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Sunderland AFC",
+        "logo": "https://cdn.footystats.org/img/teams/england-sunderland-afc_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Newcastle United FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-newcastle-united-fc_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Everton FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-everton-fc_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Fulham FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-fulham-fc_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "Leeds United FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-leeds-united-fc_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Crystal Palace FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-crystal-palace-fc_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "Nottingham Forest FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-nottingham-forest-fc_thumb.png"
+      },
+      {
+        "position": 17,
+        "name": "Tottenham Hotspur FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-tottenham-hotspur-fc_thumb.png"
+      },
+      {
+        "position": 18,
+        "name": "West Ham United FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-west-ham-united-fc_thumb.png"
+      },
+      {
+        "position": 19,
+        "name": "Burnley FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-burnley-fc_thumb.png"
+      },
+      {
+        "position": 20,
+        "name": "Wolverhampton Wanderers FC",
+        "logo": "https://cdn.footystats.org/img/teams/england-wolverhampton-wanderers-fc_thumb.png"
+      }
+    ]
+  },
+  "Super Liqa": {
+    "league_id": "6a077aed18804871b1355608",
+    "name": "Super Liqa",
+    "url": "https://footystats.org/turkey/super-lig",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Galatasaray",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-galatasaray_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Fenerbahçe",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-fenerbahce_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Trabzonspor",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-trabzonspor_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Beşiktaş",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-besiktas_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "İstanbul Başakşehir FK",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-istanbul-basaksehir-fk_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Göztepe",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-goztepe_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Samsunspor",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-samsunspor_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Çaykur Rizespor",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-caykur-rizespor_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Konyaspor",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-konyaspor_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Alanyaspor",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-alanyaspor_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Kocaelispor Kulübü",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-kocaelispor-kulubu_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Gaziantep FK",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-gaziantep-fk_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Kasimpasa",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-kasimpasa_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "Gençlerbirliği",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-genclerbirligi_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Eyüp Spor Kulübü",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-eyup-spor-kulubu_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "Antalyaspor",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-antalyaspor_thumb.png"
+      },
+      {
+        "position": 17,
+        "name": "Fatih Karagümrük",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-fatih-karagumruk-spor-kulubu_thumb.png"
+      },
+      {
+        "position": 18,
+        "name": "Kayserispor",
+        "logo": "https://cdn.footystats.org/img/teams/turkey-kayserispor_thumb.png"
+      }
+    ]
+  },
+  "Chinese Super League": {
+    "league_id": "6a0c5ded04d3399a61752730",
+    "name": "Chinese Super League",
+    "url": "https://footystats.org/china/chinese-super-league",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Chengdu Better City FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-chengdu-better-city-fc_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Chongqing Tongliang Long FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-chongqing-tongliang-long-fc_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Yunnan Yukun FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-yunnan-yukun-fc_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Dalian Zhixing FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-dalian-zhixing-fc_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Shandong Luneng Taishan FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-shandong-luneng-taishan-fc_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Zhejiang Professional FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-zhejiang-professional-fc_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Qingdao Youth Island FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-qingdao-youth-island-fc_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Shanghai Shenhua FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-shanghai-shenhua-fc_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Beijing Guoan FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-beijing-guoan-fc_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Henan Jianye FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-henan-jianye-fc_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Shanghai SIPG FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-shanghai-sipg-fc_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Sichuan Jiuniu FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-sichuan-jiuniu-fc_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Shenyang Urban FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-shenyang-urban-fc_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "Qingdao Jonoon FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-qingdao-jonoon-fc_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Wuhan Three Towns FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-wuhan-three-towns-fc_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "Tianjin Teda FC",
+        "logo": "https://cdn.footystats.org/img/teams/china-tianjin-teda-fc_thumb.png"
+      }
+    ]
+  },
+  "Eliteserien": {
+    "league_id": "6a0c9371d19fdf7899120578",
+    "name": "Eliteserien",
+    "url": "https://footystats.org/norway/eliteserien",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Viking FK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-viking-fk_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Tromsø IL",
+        "logo": "https://cdn.footystats.org/img/teams/norway-tromso-il_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "FK Bodo - Glimt",
+        "logo": "https://cdn.footystats.org/img/teams/norway-fk-bodo-glimt_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Lillestrøm SK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-lillestrom-sk_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Molde FK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-molde-fk_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "SK Brann",
+        "logo": "https://cdn.footystats.org/img/teams/norway-sk-brann_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Hamarkameratene Fotball",
+        "logo": "https://cdn.footystats.org/img/teams/norway-hamarkameratene-fotball_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Sandefjord Fotball",
+        "logo": "https://cdn.footystats.org/img/teams/norway-sandefjord-fotball_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Kristiansund BK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-kristiansund-bk_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Vålerenga Fotball",
+        "logo": "https://cdn.footystats.org/img/teams/norway-valerenga-fotball_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Fredrikstad FK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-fredrikstad-fk_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Aalesunds FK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-aalesunds-fk_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Sarpsborg 08 FF",
+        "logo": "https://cdn.footystats.org/img/teams/norway-sarpsborg-08-ff_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "Rosenborg BK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-rosenborg-bk_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "KFUM Fotball",
+        "logo": "https://cdn.footystats.org/img/teams/norway-kfum-fotball_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "IK Start",
+        "logo": "https://cdn.footystats.org/img/teams/norway-ik-start_thumb.png"
+      }
+    ]
+  },
+  "Meistriliiga": {
+    "league_id": "6a0cd21df79eee93e875df80",
+    "name": "Meistriliiga",
+    "url": "https://footystats.org/estonia/meistriliiga",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Tallinna FC Levadia",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-tallinna-fc-levadia_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Nõmme Kalju FC",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-nomme-kalju-fc_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Tallinna FC Flora",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-tallinna-fc-flora_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Paide Linnameeskond",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-paide-linnameeskond_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "JK Tammeka Tartu",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-jk-tammeka-tartu_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Pärnu JK Vaprus",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-parnu-jk-vaprus_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Harju Jalgpallikool",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-harju-jalgpallikool_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "FC Nõmme United",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-fc-nomme-united_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "FC Kuressaare",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-fc-kuressaare_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "JK Narva Trans",
+        "logo": "https://cdn.footystats.org/img/teams/estonia-jk-narva-trans_thumb.png"
+      }
+    ]
+  },
+  "1. Division": {
+    "league_id": "6a0d8c2e27a2897b932cb426",
+    "name": "1. Division",
+    "url": "https://footystats.org/norway/first-division",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Kongsvinger IL",
+        "logo": "https://cdn.footystats.org/img/teams/norway-kongsvinger-il_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Strømsgodset IF",
+        "logo": "https://cdn.footystats.org/img/teams/norway-stromsgodset-if_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "FK Haugesund",
+        "logo": "https://cdn.footystats.org/img/teams/norway-fk-haugesund_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Odds BK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-odds-bk_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Stabæk Fotball",
+        "logo": "https://cdn.footystats.org/img/teams/norway-stabaek-fotball_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Ranheim Fotball",
+        "logo": "https://cdn.footystats.org/img/teams/norway-ranheim-fotball_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Egersunds IK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-egersunds-ik_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Moss FK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-moss-fk_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "IL Hødd",
+        "logo": "https://cdn.footystats.org/img/teams/norway-il-hodd_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Sogndal Fotball",
+        "logo": "https://cdn.footystats.org/img/teams/norway-sogndal-fotball_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Sandnes Ulf",
+        "logo": "https://cdn.footystats.org/img/teams/norway-sandnes-ulf_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Raufoss IL",
+        "logo": "https://cdn.footystats.org/img/teams/norway-raufoss-il_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Bryne FK",
+        "logo": "https://cdn.footystats.org/img/teams/norway-bryne-fk_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "FC Lyn Oslo",
+        "logo": "https://cdn.footystats.org/img/teams/norway-fc-lyn-oslo_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Åsane Fotball",
+        "logo": "https://cdn.footystats.org/img/teams/norway-asane-fotball_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "Strømmen IF",
+        "logo": "https://cdn.footystats.org/img/teams/norway-strommen-if_thumb.png"
+      }
+    ]
+  },
+  "Vysheyshaya Liga": {
+    "league_id": "6a0e2b706df9b46b2181eb27",
+    "name": "Vysheyshaya Liga",
+    "url": "https://footystats.org/belarus/vysheyshaya-liga",
+    "teams": [
+      {
+        "position": 1,
+        "name": "MKK-Dnepr Rohachev",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-mkk-dnepr-rohachev_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "FC Dinamo Minsk",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-dinamo-minsk_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "FC Minsk",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-minsk_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "FK Gomel",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fk-gomel_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "FC Neman Grodno",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-neman-grodno_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "FK Isloch Minsk",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fk-isloch-minsk_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "FC Dinamo Brest",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-dinamo-brest_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "FK Arsenal Dzyarzhynsk",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fk-arsenal-dzyarzhynsk_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "FC Torpedo-BelAZ Zhodino",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-torpedo-belaz-zhodino_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "FC Vitebsk",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-vitebsk_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "FK Slavia-Mozyr",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fk-slavia-mozyr_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "FC Dnepr Mogilev",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-dnepr-mogilev_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "FC BATE Borisov",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-bate-borisov_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "FC Belshina Bobruisk",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-belshina-bobruisk_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "FK Baranovichi",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fk-baranovichi_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "FC Naftan Novopolotsk",
+        "logo": "https://cdn.footystats.org/img/teams/belarus-fc-naftan-novopolotsk_thumb.png"
+      }
+    ]
+  },
+  "Úrvalsdeild": {
+    "league_id": "6a0f4e4d180aed8292eff086",
+    "name": "Úrvalsdeild",
+    "url": "https://footystats.org/iceland/urvalsdeild",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Víkingur Reykjavík",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-vikingur-reykjavik_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "KR Reykjavík",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-kr-reykjavik_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Fram Reykjavík",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-fram-reykjavik_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Breidablik UBK",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-breidablik-ubk_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Valur Reykjavík",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-valur-reykjavik_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "KA Akureyri",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-ka-akureyri_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "ÍA Akranes",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-ia-akranes_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Keflavík ÍF",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-keflavik-if_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "UMF Stjarnan",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-umf-stjarnan_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Thór Akureyri",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-thor-akureyri_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "FH Hafnarfjördur",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-fh-hafnarfjordur_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "ÍB Vestmannaeyja",
+        "logo": "https://cdn.footystats.org/img/teams/iceland-ib-vestmannaeyja_thumb.png"
+      }
+    ]
+  },
+  "Premier Division": {
+    "league_id": "6a0f4f1e180aed8292eff087",
+    "name": "Premier Division",
+    "url": "https://footystats.org/republic-of-ireland/premier-division",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Shamrock Rovers FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-shamrock-rovers-fc_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "St Patrick's Athletic FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-st-patricks-athletic-fc_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Bohemian FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-bohemian-fc_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Dundalk FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-dundalk-fc_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Shelbourne FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-shelbourne-fc_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Derry City FC",
+        "logo": "https://cdn.footystats.org/img/teams/northern-ireland-derry-city-fc_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Galway United FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-galway-united-fc_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Drogheda United FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-drogheda-united-fc_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Sligo Rovers FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-sligo-rovers-fc_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Waterford FC",
+        "logo": "https://cdn.footystats.org/img/teams/republic-of-ireland-waterford-fc_thumb.png"
+      }
+    ]
+  },
+  "Serie A": {
+    "league_id": "6a0f512c180aed8292eff088",
+    "name": "Serie A",
+    "url": "https://footystats.org/brazil/serie-a",
+    "teams": [
+      {
+        "position": 1,
+        "name": "SE Palmeiras",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-se-palmeiras_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "CR Flamengo",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-cr-flamengo_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Fluminense FC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-fluminense-fc_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "CA Paranaense",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-ca-paranaense_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "São Paulo FC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-sao-paulo-fc_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "EC Bahia",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-ec-bahia_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Coritiba FBC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-coritiba-fbc_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Clube Atlético Bragantino",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-clube-atletico-bragantino_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "SC Internacional",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-sc-internacional_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Botafogo FR",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-botafogo-fr_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "CA Mineiro",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-ca-mineiro_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "CR Vasco da Gama",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-cr-vasco-da-gama_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Cruzeiro EC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-cruzeiro-ec_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "EC Vitória",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-ec-vitoria_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Grêmio FB Porto Alegrense",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-gremio-fb-porto-alegrense_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "SC Corinthians Paulista",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-sc-corinthians-paulista_thumb.png"
+      },
+      {
+        "position": 17,
+        "name": "Santos FC Sao Paulo",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-santos-fc-sao-paulo_thumb.png"
+      },
+      {
+        "position": 18,
+        "name": "Clube do Remo",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-clube-do-remo_thumb.png"
+      },
+      {
+        "position": 19,
+        "name": "Mirassol Futebol Clube",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-mirassol-futebol-clube_thumb.png"
+      },
+      {
+        "position": 20,
+        "name": "Chapecoense AF",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-chapecoense-af_thumb.png"
+      }
+    ]
+  },
+  "Serie B": {
+    "league_id": "6a0f51a8180aed8292eff089",
+    "name": "Serie B",
+    "url": "https://footystats.org/brazil/serie-b",
+    "teams": [
+      {
+        "position": 1,
+        "name": "São Bernardo FC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-sao-bernardo-fc_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Clube Náutico Capibaribe",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-clube-nautico-capibaribe_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "SC do Recife",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-sc-do-recife_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Vila Nova FC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-vila-nova-fc_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Fortaleza EC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-fortaleza-ec_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Criciuma EC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-criciuma-ec_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Grêmio Novorizontino",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-gremio-novorizontino_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "EC Juventude",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-ec-juventude_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Ceará SC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-ceara-sc_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Goiás EC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-goias-ec_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "AC Goianiense",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-ac-goianiense_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Operário Ferroviário EC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-operario-ferroviario-ec_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Athletic Club (Minas Gerais)",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-athletic-club-minas-gerais_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "Clube de Regatas Brasil",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-clube-de-regatas-brasil_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Cuiabá EC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-cuiaba-ec_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "Avai FC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-avai-fc_thumb.png"
+      },
+      {
+        "position": 17,
+        "name": "Botafogo FC Ribeirão Preto",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-botafogo-fc-ribeirao-preto_thumb.png"
+      },
+      {
+        "position": 18,
+        "name": "Londrina EC",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-londrina-ec_thumb.png"
+      },
+      {
+        "position": 19,
+        "name": "Ponte Preta",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-associacao-atletica-ponte-preta_thumb.png"
+      },
+      {
+        "position": 20,
+        "name": "América FC - Minas Gerais",
+        "logo": "https://cdn.footystats.org/img/teams/brazil-america-fc-minas-gerais_thumb.png"
+      }
+    ]
+  },
+  "Primera Division": {
+    "league_id": "6a0f53c1180aed8292eff08a",
+    "name": "Primera Division",
+    "url": "https://footystats.org/argentina/primera-division",
+    "teams": [
+      {
+        "position": 1,
+        "name": "CA River Plate",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-river-plate_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Argentinos Juniors",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-argentinos-juniors_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "CS Independiente Rivadavia",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-cs-independiente-rivadavia_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "CA Rosario Central",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-rosario-central_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "CA Belgrano de Córdoba",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-belgrano-de-cordoba_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Estudiantes de La Plata",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-estudiantes-de-la-plata_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "CA Boca Juniors",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-boca-juniors_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Gimnasia y Esgrima La Plata",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-gimnasia-y-esgrima-la-plata_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Vélez Sarsfield",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-club-atletico-velez-sarsfield_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "CA Talleres de Córdoba",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-talleres-de-cordoba_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "CA Huracán",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-huracan_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "CA Unión de Santa Fe",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-union-de-santa-fe_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Racing Club de Avellaneda",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-racing-club-de-avellaneda_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "CA Independiente",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-independiente_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "CA Lanús",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-lanus_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "CA San Lorenzo de Almagro",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-san-lorenzo-de-almagro_thumb.png"
+      },
+      {
+        "position": 17,
+        "name": "CA Barracas Central",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-barracas-central_thumb.png"
+      },
+      {
+        "position": 18,
+        "name": "Instituto AC Córdoba",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-instituto-ac-cordoba_thumb.png"
+      },
+      {
+        "position": 19,
+        "name": "CA Tigre",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-tigre_thumb.png"
+      },
+      {
+        "position": 20,
+        "name": "CSD Defensa y Justicia",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-csd-defensa-y-justicia_thumb.png"
+      },
+      {
+        "position": 21,
+        "name": "CA Sarmiento",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-sarmiento_thumb.png"
+      },
+      {
+        "position": 22,
+        "name": "Gimnasia Mendoza",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-atletico-gimnasia-y-esgrima-de-mendoza_thumb.png"
+      },
+      {
+        "position": 23,
+        "name": "CA Banfield",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-banfield_thumb.png"
+      },
+      {
+        "position": 24,
+        "name": "CA Platense",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-platense_thumb.png"
+      },
+      {
+        "position": 25,
+        "name": "Central Córdoba SdE",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-central-cordoba-de-santiago-del-estero_thumb.png"
+      },
+      {
+        "position": 26,
+        "name": "Newell's Old Boys",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-newells-old-boys_thumb.png"
+      },
+      {
+        "position": 27,
+        "name": "CA Tucuman",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-tucuman_thumb.png"
+      },
+      {
+        "position": 28,
+        "name": "CD Riestra",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-cd-riestra_thumb.png"
+      },
+      {
+        "position": 29,
+        "name": "CA Aldosivi",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-ca-aldosivi_thumb.png"
+      },
+      {
+        "position": 30,
+        "name": "AA Estudiantes de Río Cuarto",
+        "logo": "https://cdn.footystats.org/img/teams/argentina-aa-estudiantes-de-rio-cuarto_thumb.png"
+      }
+    ]
+  },
+  "Major League Soccer": {
+    "league_id": "6a0f54a9180aed8292eff08b",
+    "name": "Major League Soccer",
+    "url": "https://footystats.org/usa/mls",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Nashville SC MLS",
+        "logo": "https://cdn.footystats.org/img/teams/usa-nashville-sc-mls_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Vancouver Whitecaps FC",
+        "logo": "https://cdn.footystats.org/img/teams/canada-vancouver-whitecaps-fc_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "San Jose Earthquakes",
+        "logo": "https://cdn.footystats.org/img/teams/usa-san-jose-earthquakes_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Inter Miami",
+        "logo": "https://cdn.footystats.org/img/teams/usa-club-internacional-de-futbol-miami_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Real Salt Lake",
+        "logo": "https://cdn.footystats.org/img/teams/usa-real-salt-lake_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "New England Revolution",
+        "logo": "https://cdn.footystats.org/img/teams/usa-new-england-revolution_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Seattle Sounders FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-seattle-sounders-fc_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Chicago Fire",
+        "logo": "https://cdn.footystats.org/img/teams/usa-chicago-fire_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "FC Dallas",
+        "logo": "https://cdn.footystats.org/img/teams/usa-fc-dallas_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Los Angeles FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-los-angeles-fc_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Minnesota United FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-minnesota-united-fc_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Houston Dynamo",
+        "logo": "https://cdn.footystats.org/img/teams/usa-houston-dynamo_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "New York City FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-new-york-city-fc_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "LA Galaxy",
+        "logo": "https://cdn.footystats.org/img/teams/usa-la-galaxy_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "New York Red Bulls",
+        "logo": "https://cdn.footystats.org/img/teams/usa-new-york-red-bulls_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "Charlotte FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-charlotte-fc_thumb.png"
+      },
+      {
+        "position": 17,
+        "name": "San Diego FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-san-diego-fc_thumb.png"
+      },
+      {
+        "position": 18,
+        "name": "DC United",
+        "logo": "https://cdn.footystats.org/img/teams/usa-dc-united_thumb.png"
+      },
+      {
+        "position": 19,
+        "name": "FC Cincinnati",
+        "logo": "https://cdn.footystats.org/img/teams/usa-fc-cincinnati_thumb.png"
+      },
+      {
+        "position": 20,
+        "name": "Colorado Rapids",
+        "logo": "https://cdn.footystats.org/img/teams/usa-colorado-rapids_thumb.png"
+      },
+      {
+        "position": 21,
+        "name": "Portland Timbers",
+        "logo": "https://cdn.footystats.org/img/teams/usa-portland-timbers_thumb.png"
+      },
+      {
+        "position": 22,
+        "name": "Toronto FC",
+        "logo": "https://cdn.footystats.org/img/teams/canada-toronto-fc_thumb.png"
+      },
+      {
+        "position": 23,
+        "name": "Austin FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-austin-fc_thumb.png"
+      },
+      {
+        "position": 24,
+        "name": "Orlando City SC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-orlando-city-sc_thumb.png"
+      },
+      {
+        "position": 25,
+        "name": "Columbus Crew",
+        "logo": "https://cdn.footystats.org/img/teams/usa-columbus-crew_thumb.png"
+      },
+      {
+        "position": 26,
+        "name": "St. Louis City SC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-st-louis-city-sc_thumb.png"
+      },
+      {
+        "position": 27,
+        "name": "Montreal Impact",
+        "logo": "https://cdn.footystats.org/img/teams/canada-montreal-impact_thumb.png"
+      },
+      {
+        "position": 28,
+        "name": "Atlanta United FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-atlanta-united-fc_thumb.png"
+      },
+      {
+        "position": 29,
+        "name": "Sporting Kansas City",
+        "logo": "https://cdn.footystats.org/img/teams/usa-sporting-kansas-city_thumb.png"
+      },
+      {
+        "position": 30,
+        "name": "Philadelphia Union",
+        "logo": "https://cdn.footystats.org/img/teams/usa-philadelphia-union_thumb.png"
+      }
+    ]
+  },
+  "Veikkausliga": {
+    "league_id": "6a0f5cad180aed8292eff08c",
+    "name": "Veikkausliga",
+    "url": "https://footystats.org/finland/veikkausliiga",
+    "teams": [
+      {
+        "position": 1,
+        "name": "FC Inter Turku",
+        "logo": "https://cdn.footystats.org/img/teams/finland-fc-inter-turku_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Kuopion Palloseura",
+        "logo": "https://cdn.footystats.org/img/teams/finland-kuopion-palloseura_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "AC Oulu",
+        "logo": "https://cdn.footystats.org/img/teams/finland-ac-oulu_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Helsingin Jalkapalloklubi",
+        "logo": "https://cdn.footystats.org/img/teams/finland-helsingin-jalkapalloklubi_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Turun Palloseura",
+        "logo": "https://cdn.footystats.org/img/teams/finland-turun-palloseura_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Vaasan Palloseura",
+        "logo": "https://cdn.footystats.org/img/teams/finland-vaasan-palloseura_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "IF Gnistan",
+        "logo": "https://cdn.footystats.org/img/teams/finland-if-gnistan_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "FC Lahti",
+        "logo": "https://cdn.footystats.org/img/teams/finland-fc-lahti_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Seinäjoen Jalkapallokerho",
+        "logo": "https://cdn.footystats.org/img/teams/finland-seinajoen-jalkapallokerho_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Tampereen Ilves",
+        "logo": "https://cdn.footystats.org/img/teams/finland-tampereen-ilves_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "IFK Mariehamn",
+        "logo": "https://cdn.footystats.org/img/teams/finland-ifk-mariehamn_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "FF Jaro",
+        "logo": "https://cdn.footystats.org/img/teams/finland-ff-jaro_thumb.png"
+      }
+    ]
+  },
+  "A Lyga": {
+    "league_id": "6a0f5fc8180aed8292eff08d",
+    "name": "A Lyga",
+    "url": "https://footystats.org/lithuania/a-lyga",
+    "teams": [
+      {
+        "position": 1,
+        "name": "FK Kauno Žalgiris",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-kauno-zalgiris_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "FK TransINVEST Vilnius",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-transinvest-vilnius_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "FK Džiugas Telšiai",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-dziugas-telsiai_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "FK Banga Gargždai",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-banga-gargzdai_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "FK Sūduva Marijampolė",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-suduva-marijampole_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "VMFD Žalgiris Vilnius",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-vmfd-zalgiris-vilnius_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "FK Panevėžys",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-panevezys_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "FC Hegelmann Litauen Kaunas",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fc-hegelmann-litauen-kaunas_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "FA Šiauliai",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fa-siauliai_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "FK Trakai",
+        "logo": "https://cdn.footystats.org/img/teams/lithuania-fk-trakai_thumb.png"
+      }
+    ]
+  },
+  "Allsvenskan": {
+    "league_id": "6a0f6c92180aed8292eff08e",
+    "name": "Allsvenskan",
+    "url": "https://footystats.org/sweden/allsvenskan",
+    "teams": [
+      {
+        "position": 1,
+        "name": "IK Sirius Fotboll",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-ik-sirius-fotboll_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Hammarby IF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-hammarby-if_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "IF Elfsborg",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-if-elfsborg_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "BK Häcken",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-bk-hacken_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Mjällby AIF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-mjallby-aif_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Djurgårdens IF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-djurgardens-if_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "GAIS",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-gais_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "IF Brommapojkarna",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-if-brommapojkarna_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Malmö FF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-malmo-ff_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "AIK Fotboll",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-aik-fotboll_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Degerfors IF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-degerfors-if_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Västerås SK Fotboll",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-vasteras-sk-fotboll_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Kalmar FF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-kalmar-ff_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "Örgryte IS",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-orgryte-is_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Halmstads BK",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-halmstads-bk_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "IFK Göteborg",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-ifk-goteborg_thumb.png"
+      }
+    ]
+  },
+  "USL Championship": {
+    "league_id": "6a0f6ece180aed8292eff08f",
+    "name": "USL Championship",
+    "url": "https://footystats.org/usa/usl-championship",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Tampa Bay Rowdies",
+        "logo": "https://cdn.footystats.org/img/teams/usa-tampa-bay-rowdies_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "San Antonio FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-san-antonio-fc_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Detroit City FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-detroit-city-fc_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Oakland Roots SC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-oakland-roots-sc_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Orange County SC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-orange-county-sc_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Louisville City FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-louisville-city-fc_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "El Paso Locomotive FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-el-paso-locomotive-fc_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Sacramento Republic FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-sacramento-republic-fc_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Phoenix Rising FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-phoenix-rising-fc_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Hartford Athletic",
+        "logo": "https://cdn.footystats.org/img/teams/usa-hartford-athletic_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Charleston Battery",
+        "logo": "https://cdn.footystats.org/img/teams/usa-charleston-battery_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Pittsburgh Riverhounds FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-pittsburgh-riverhounds-fc_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Miami FC II",
+        "logo": "https://cdn.footystats.org/img/teams/usa-miami-fc-ii_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "Tulsa Roughnecks FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-tulsa-roughnecks-fc_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Indy Eleven",
+        "logo": "https://cdn.footystats.org/img/teams/usa-indy-eleven_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "Colorado Springs",
+        "logo": "https://cdn.footystats.org/img/teams/usa-colorado-springs-switchbacks-fc_thumb.png"
+      },
+      {
+        "position": 17,
+        "name": "Birmingham Legion FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-birmingham-legion-fc_thumb.png"
+      },
+      {
+        "position": 18,
+        "name": "New Mexico United",
+        "logo": "https://cdn.footystats.org/img/teams/usa-new-mexico-united_thumb.png"
+      },
+      {
+        "position": 19,
+        "name": "Rhode Island FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-rhode-island-fc_thumb.png"
+      },
+      {
+        "position": 20,
+        "name": "Lexington SC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-lexington-sc_thumb.png"
+      },
+      {
+        "position": 21,
+        "name": "Loudoun United FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-loudoun-united-fc_thumb.png"
+      },
+      {
+        "position": 22,
+        "name": "Las Vegas Lights FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-las-vegas-lights-fc_thumb.png"
+      },
+      {
+        "position": 23,
+        "name": "Brooklyn FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-brooklyn-fc_thumb.png"
+      },
+      {
+        "position": 24,
+        "name": "Monterey Bay FC",
+        "logo": "https://cdn.footystats.org/img/teams/usa-monterey-bay-fc_thumb.png"
+      },
+      {
+        "position": 25,
+        "name": "Sporting Club Jacksonville",
+        "logo": "https://cdn.footystats.org/img/teams/usa-sporting-club-jacksonville_thumb.png"
+      }
+    ]
+  },
+  "Superettan": {
+    "league_id": "6a0f7226180aed8292eff090",
+    "name": "Superettan",
+    "url": "https://footystats.org/sweden/superettan",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Varbergs BoIS FC",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-varbergs-bois-fc_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Falkenbergs FF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-falkenbergs-ff_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Östersunds FK",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-ostersunds-fk_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "United IK Nordic",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-united-ik-nordic_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "IK Oddevold",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-ik-oddevold_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Örebro SK",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-orebro-sk_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "IFK Norrköping",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-ifk-norrkoping_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "IK Brage",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-ik-brage_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Helsingborgs IF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-helsingborgs-if_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Östers IF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-osters-if_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "Ljungskile SK",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-ljungskile-sk_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "IFK Värnamo",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-ifk-varnamo_thumb.png"
+      },
+      {
+        "position": 13,
+        "name": "Landskrona BoIS",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-landskrona-bois_thumb.png"
+      },
+      {
+        "position": 14,
+        "name": "Norrby IF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-norrby-if_thumb.png"
+      },
+      {
+        "position": 15,
+        "name": "Sandvikens IF",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-sandvikens-if_thumb.png"
+      },
+      {
+        "position": 16,
+        "name": "GIF Sundsvall",
+        "logo": "https://cdn.footystats.org/img/teams/sweden-gif-sundsvall_thumb.png"
+      }
+    ]
+  },
+  "Ykkönen": {
+    "league_id": "6a0f72d0180aed8292eff091",
+    "name": "Ykkönen",
+    "url": "https://footystats.org/finland/ykkonen",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Oulun Luistinseura",
+        "logo": "https://cdn.footystats.org/img/teams/finland-oulun-luistinseura_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Rovaniemen Palloseura",
+        "logo": "https://cdn.footystats.org/img/teams/finland-rovaniemen-palloseura_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "JJK Jyväskylä",
+        "logo": "https://cdn.footystats.org/img/teams/finland-jjk-jyvaskyla_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Tampere United",
+        "logo": "https://cdn.footystats.org/img/teams/finland-tampere-united_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "FC Jazz",
+        "logo": "https://cdn.footystats.org/img/teams/finland-fc-jazz_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Salon Palloilijat",
+        "logo": "https://cdn.footystats.org/img/teams/finland-salon-palloilijat_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Pallokerho Keski-Uusimaa",
+        "logo": "https://cdn.footystats.org/img/teams/finland-pallokerho-keski-uusimaa_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Vantaan Jalkapalloseura",
+        "logo": "https://cdn.footystats.org/img/teams/finland-vantaan-jalkapalloseura_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "FC Inter Turku II",
+        "logo": "https://cdn.footystats.org/img/teams/finland-fc-inter-turku-ii_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Tampereen Pallo-Veikot",
+        "logo": "https://cdn.footystats.org/img/teams/finland-tampereen-pallo-veikot_thumb.png"
+      },
+      {
+        "position": 11,
+        "name": "KuPS Akatemia",
+        "logo": "https://cdn.footystats.org/img/teams/finland-kups-akatemia_thumb.png"
+      },
+      {
+        "position": 12,
+        "name": "Kokkolan Pallo-Veikot",
+        "logo": "https://cdn.footystats.org/img/teams/finland-kokkolan-pallo-veikot_thumb.png"
+      }
+    ]
+  },
+  "J League": {
+    "league_id": "6a0f761a180aed8292eff092",
+    "name": "J League",
+    "url": "https://footystats.org/japan/kanto-soccer-league",
+    "teams": [
+      {
+        "position": 1,
+        "name": "Toho Titanium SC",
+        "logo": "https://cdn.footystats.org/img/teams/japan-toho-titanium-sc_thumb.png"
+      },
+      {
+        "position": 2,
+        "name": "Nankatsu SC",
+        "logo": "https://cdn.footystats.org/img/teams/japan-nankatsu-sc_thumb.png"
+      },
+      {
+        "position": 3,
+        "name": "Toin Yokohama UFC",
+        "logo": "https://cdn.footystats.org/img/teams/japan-toin-yokohama-university-fc-toin-university-of-yokohama-ii_thumb.png"
+      },
+      {
+        "position": 4,
+        "name": "Tokyo United FC",
+        "logo": "https://cdn.footystats.org/img/teams/japan-tokyo-united-fc_thumb.png"
+      },
+      {
+        "position": 5,
+        "name": "Shibuya City",
+        "logo": "https://cdn.footystats.org/img/teams/japan-shibuya-city_thumb.png"
+      },
+      {
+        "position": 6,
+        "name": "Tokyo 23 FC",
+        "logo": "https://cdn.footystats.org/img/teams/japan-tokyo-23-fc_thumb.png"
+      },
+      {
+        "position": 7,
+        "name": "Edo All United",
+        "logo": "https://cdn.footystats.org/img/teams/japan-edo-all-united_thumb.png"
+      },
+      {
+        "position": 8,
+        "name": "Aries Toshima",
+        "logo": "https://cdn.footystats.org/img/teams/japan-aries-toshima_thumb.png"
+      },
+      {
+        "position": 9,
+        "name": "Nihon University FC",
+        "logo": "https://cdn.footystats.org/img/teams/japan-nihon-university-fc_thumb.png"
+      },
+      {
+        "position": 10,
+        "name": "Ryutsu Keizai Dragons",
+        "logo": "https://cdn.footystats.org/img/teams/japan-ryutsu-keizai-dragons-ryugasaki_thumb.png"
+      }
+    ]
+  }
+}

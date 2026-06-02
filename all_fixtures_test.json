@@ -1,0 +1,394 @@
+{
+    "Premier League": [],
+    "Super Liqa": [],
+    "Chinese Super League": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "12:00",
+                    "home": "Shanghai Port",
+                    "away": "Tianjin Jinmen Tiger"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "12:35",
+                    "home": "Beijing Guoan",
+                    "away": "Henan FC"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "13:00",
+                    "home": "Dalian Yingbo",
+                    "away": "Chengdu Rongcheng FC"
+                }
+            ]
+        }
+    ],
+    "Eliteserien": [],
+    "Meistriliiga": [],
+    "1. Division": [],
+    "Vysheyshaya Liga": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "18:00",
+                    "home": "Maxline Vitebsk",
+                    "away": "Gomel"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "12:00",
+                    "home": "Belshina Bobruisk",
+                    "away": "Naftan Novopolotsk"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "14:00",
+                    "home": "Isloch",
+                    "away": "FK Vitebsk"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "16:00",
+                    "home": "Torpedo Zhodino",
+                    "away": "FC Minsk"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "18:00",
+                    "home": "Dynamo Brest",
+                    "away": "Arsenal Dzerzhinsk"
+                }
+            ]
+        }
+    ],
+    "Úrvalsdeild": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "19:00",
+                    "home": "KA Akureyri",
+                    "away": "Valur"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "19:00",
+                    "home": "Keflavik",
+                    "away": "Thor Akureyri"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "20:15",
+                    "home": "Breidablik",
+                    "away": "KR Reykjavik"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "20:15",
+                    "home": "Stjarnan",
+                    "away": "Fram Reykjavik"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "20:15",
+                    "home": "Vikingur Reykjavik",
+                    "away": "FH Hafnarfjordur"
+                }
+            ]
+        }
+    ],
+    "Premier Division": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "19:45",
+                    "home": "Derry City",
+                    "away": "St. Patrick's Athletic"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "19:45",
+                    "home": "Galway United FC",
+                    "away": "Bohemian FC"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "19:45",
+                    "home": "Shelbourne",
+                    "away": "Waterford FC"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "20:00",
+                    "home": "Shamrock Rovers",
+                    "away": "Sligo Rovers"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "20:00",
+                    "home": "Drogheda United",
+                    "away": "Dundalk"
+                }
+            ]
+        }
+    ],
+    "Serie A": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "21:00",
+                    "home": "Sao Paulo",
+                    "away": "Botafogo RJ"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "21:00",
+                    "home": "Vitoria",
+                    "away": "Internacional"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "23:00",
+                    "home": "Mirassol",
+                    "away": "Fluminense"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "23:00",
+                    "home": "Gremio",
+                    "away": "Santos FC"
+                }
+            ]
+        }
+    ],
+    "Serie B": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "23:00",
+                    "home": "Nautico",
+                    "away": "Cuiaba"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "20:00",
+                    "home": "Novorizontino",
+                    "away": "Ceara"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "22:30",
+                    "home": "Fortaleza",
+                    "away": "Londrina EC"
+                }
+            ]
+        }
+    ],
+    "Primera Division": [],
+    "Major League Soccer": [],
+    "Veikkausliga": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "17:00",
+                    "home": "VPS",
+                    "away": "HJK"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "12:00",
+                    "home": "FC Inter Turku",
+                    "away": "TPS"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "15:00",
+                    "home": "FF Jaro",
+                    "away": "IFK Mariehamn"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "15:00",
+                    "home": "Ilves",
+                    "away": "IF Gnistan"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "15:00",
+                    "home": "KuPS",
+                    "away": "FC Lahti"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "15:00",
+                    "home": "SJK",
+                    "away": "AC Oulu"
+                }
+            ]
+        }
+    ],
+    "A Lyga": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "12:15",
+                    "home": "Suduva",
+                    "away": "FK Kauno Zalgiris"
+                }
+            ]
+        }
+    ],
+    "Allsvenskan": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "18:00",
+                    "home": "Djurgaarden",
+                    "away": "Brommapojkarna"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "14:00",
+                    "home": "Kalmar FF",
+                    "away": "Degerfors"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "14:00",
+                    "home": "Halmstads BK",
+                    "away": "Oergryte FF"
+                }
+            ]
+        }
+    ],
+    "USL Championship": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "01:30",
+                    "home": "FC Tulsa",
+                    "away": "Hartford Athletic"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "23:00",
+                    "home": "Loudoun United FC",
+                    "away": "Detroit City FC"
+                }
+            ]
+        }
+    ],
+    "Superettan": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "12:00",
+                    "home": "Norrby",
+                    "away": "Ljungskile"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "14:00",
+                    "home": "Nordic United FC",
+                    "away": "IK Brage"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "14:00",
+                    "home": "IK Oddevold",
+                    "away": "Oestersunds FK"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "16:00",
+                    "home": "Falkenbergs FF",
+                    "away": "IFK Vaernamo"
+                }
+            ]
+        }
+    ],
+    "Ykkönen": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "16:30",
+                    "home": "JaePS",
+                    "away": "MP"
+                },
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "16:30",
+                    "home": "SJK Akatemia",
+                    "away": "Haka"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "14:00",
+                    "home": "JIPPO",
+                    "away": "PK-35"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "15:00",
+                    "home": "EIF",
+                    "away": "KaePa"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "17:00",
+                    "home": "Klubi 04",
+                    "away": "FC KTP"
+                }
+            ]
+        }
+    ],
+    "J League": [
+        {
+            "group": "",
+            "raw_data": [
+                {
+                    "date": "Friday, May 22 2026",
+                    "time": "11:30",
+                    "home": "Machida Zelvia",
+                    "away": "Urawa Red Diamonds"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "09:30",
+                    "home": "Kashima Antlers",
+                    "away": "FC Tokyo"
+                },
+                {
+                    "date": "Saturday, May 23 2026",
+                    "time": "10:00",
+                    "home": "Kashiwa Reysol",
+                    "away": "JEF United Chiba"
+                }
+            ]
+        }
+    ]
+}

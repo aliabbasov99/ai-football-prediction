@@ -1,0 +1,157 @@
+{
+  "league_id": "6a0f54a9180aed8292eff08b",
+  "name": "Major League Soccer",
+  "url": "https://footystats.org/usa/mls",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Nashville SC MLS",
+      "logo": "https://cdn.footystats.org/img/teams/usa-nashville-sc-mls_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Vancouver Whitecaps FC",
+      "logo": "https://cdn.footystats.org/img/teams/canada-vancouver-whitecaps-fc_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "San Jose Earthquakes",
+      "logo": "https://cdn.footystats.org/img/teams/usa-san-jose-earthquakes_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Inter Miami",
+      "logo": "https://cdn.footystats.org/img/teams/usa-club-internacional-de-futbol-miami_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Real Salt Lake",
+      "logo": "https://cdn.footystats.org/img/teams/usa-real-salt-lake_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "New England Revolution",
+      "logo": "https://cdn.footystats.org/img/teams/usa-new-england-revolution_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Seattle Sounders FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-seattle-sounders-fc_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Chicago Fire",
+      "logo": "https://cdn.footystats.org/img/teams/usa-chicago-fire_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "FC Dallas",
+      "logo": "https://cdn.footystats.org/img/teams/usa-fc-dallas_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Los Angeles FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-los-angeles-fc_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Minnesota United FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-minnesota-united-fc_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Houston Dynamo",
+      "logo": "https://cdn.footystats.org/img/teams/usa-houston-dynamo_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "New York City FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-new-york-city-fc_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "LA Galaxy",
+      "logo": "https://cdn.footystats.org/img/teams/usa-la-galaxy_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "New York Red Bulls",
+      "logo": "https://cdn.footystats.org/img/teams/usa-new-york-red-bulls_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "Charlotte FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-charlotte-fc_thumb.png"
+    },
+    {
+      "position": 17,
+      "name": "San Diego FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-san-diego-fc_thumb.png"
+    },
+    {
+      "position": 18,
+      "name": "DC United",
+      "logo": "https://cdn.footystats.org/img/teams/usa-dc-united_thumb.png"
+    },
+    {
+      "position": 19,
+      "name": "FC Cincinnati",
+      "logo": "https://cdn.footystats.org/img/teams/usa-fc-cincinnati_thumb.png"
+    },
+    {
+      "position": 20,
+      "name": "Colorado Rapids",
+      "logo": "https://cdn.footystats.org/img/teams/usa-colorado-rapids_thumb.png"
+    },
+    {
+      "position": 21,
+      "name": "Portland Timbers",
+      "logo": "https://cdn.footystats.org/img/teams/usa-portland-timbers_thumb.png"
+    },
+    {
+      "position": 22,
+      "name": "Toronto FC",
+      "logo": "https://cdn.footystats.org/img/teams/canada-toronto-fc_thumb.png"
+    },
+    {
+      "position": 23,
+      "name": "Austin FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-austin-fc_thumb.png"
+    },
+    {
+      "position": 24,
+      "name": "Orlando City SC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-orlando-city-sc_thumb.png"
+    },
+    {
+      "position": 25,
+      "name": "Columbus Crew",
+      "logo": "https://cdn.footystats.org/img/teams/usa-columbus-crew_thumb.png"
+    },
+    {
+      "position": 26,
+      "name": "St. Louis City SC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-st-louis-city-sc_thumb.png"
+    },
+    {
+      "position": 27,
+      "name": "Montreal Impact",
+      "logo": "https://cdn.footystats.org/img/teams/canada-montreal-impact_thumb.png"
+    },
+    {
+      "position": 28,
+      "name": "Atlanta United FC",
+      "logo": "https://cdn.footystats.org/img/teams/usa-atlanta-united-fc_thumb.png"
+    },
+    {
+      "position": 29,
+      "name": "Sporting Kansas City",
+      "logo": "https://cdn.footystats.org/img/teams/usa-sporting-kansas-city_thumb.png"
+    },
+    {
+      "position": 30,
+      "name": "Philadelphia Union",
+      "logo": "https://cdn.footystats.org/img/teams/usa-philadelphia-union_thumb.png"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "league_id": "6a0c5ded04d3399a61752730",
+  "name": "Chinese Super League",
+  "url": "https://footystats.org/china/chinese-super-league",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Chengdu Better City FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-chengdu-better-city-fc_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Chongqing Tongliang Long FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-chongqing-tongliang-long-fc_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Yunnan Yukun FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-yunnan-yukun-fc_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Dalian Zhixing FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-dalian-zhixing-fc_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Shandong Luneng Taishan FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-shandong-luneng-taishan-fc_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Zhejiang Professional FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-zhejiang-professional-fc_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Qingdao Youth Island FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-qingdao-youth-island-fc_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Shanghai Shenhua FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-shanghai-shenhua-fc_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Beijing Guoan FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-beijing-guoan-fc_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Henan Jianye FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-henan-jianye-fc_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Shanghai SIPG FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-shanghai-sipg-fc_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Sichuan Jiuniu FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-sichuan-jiuniu-fc_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Shenyang Urban FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-shenyang-urban-fc_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "Qingdao Jonoon FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-qingdao-jonoon-fc_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Wuhan Three Towns FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-wuhan-three-towns-fc_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "Tianjin Teda FC",
+      "logo": "https://cdn.footystats.org/img/teams/china-tianjin-teda-fc_thumb.png"
+    }
+  ]
+}

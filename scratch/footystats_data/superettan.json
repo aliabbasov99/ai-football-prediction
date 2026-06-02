@@ -1,0 +1,87 @@
+{
+  "league_id": "6a0f7226180aed8292eff090",
+  "name": "Superettan",
+  "url": "https://footystats.org/sweden/superettan",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Varbergs BoIS FC",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-varbergs-bois-fc_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Falkenbergs FF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-falkenbergs-ff_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "Östersunds FK",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-ostersunds-fk_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "United IK Nordic",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-united-ik-nordic_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "IK Oddevold",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-ik-oddevold_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Örebro SK",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-orebro-sk_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "IFK Norrköping",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-ifk-norrkoping_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "IK Brage",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-ik-brage_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Helsingborgs IF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-helsingborgs-if_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Östers IF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-osters-if_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Ljungskile SK",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-ljungskile-sk_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "IFK Värnamo",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-ifk-varnamo_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Landskrona BoIS",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-landskrona-bois_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "Norrby IF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-norrby-if_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Sandvikens IF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-sandvikens-if_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "GIF Sundsvall",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-gif-sundsvall_thumb.png"
+    }
+  ]
+}

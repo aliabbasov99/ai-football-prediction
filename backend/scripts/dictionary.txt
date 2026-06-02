@@ -1,0 +1,4 @@
+# AzerbaijaniName=EnglishName
+# Her setirde bir komanda adi. Asan terefi = isaresinden evvel, DB-daki adi sonra.
+# Nümunə:
+# İngilis Adi=English Name

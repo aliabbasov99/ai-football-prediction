@@ -46,7 +46,7 @@ def save_to_mongodb(data, league_name):
     except Exception as e:
         print(f"MongoDB-ye yazilarken xeta: {e}")
 
-def fetch_and_parse_fixtures(url, league_name):
+def fetch_and_parse_fixtures(url, league_name, show_url=None):
     # Set up Chrome options
     chrome_options = Options()
     # chrome_options.add_argument("--headless") # Commented out so you can see it if needed
@@ -59,9 +59,30 @@ def fetch_and_parse_fixtures(url, league_name):
     fixtures_data = []
 
     try:
+        # If url is already a /Fixtures/ page, use it directly (skip show_url)
+        if "/Fixtures/" in url or "/fixtures/" in url:
+            print(f"  Fixtures URL hazirdir: {url}")
+        elif show_url:
+            driver.get(show_url)
+            time.sleep(2)
+            soup = BeautifulSoup(driver.page_source, "html.parser")
+            fixtures_link = soup.find("a", id="link-fixtures")
+            if fixtures_link:
+                href = fixtures_link.get("href", "")
+                if href:
+                    actual_url = f"https://www.whoscored.com{href}" if href.startswith("/") else href
+                    print(f"  Fixtures link tapildi: {actual_url}")
+                    url = actual_url
+                else:
+                    print("  Fixtures link tapildi lakin href bosdur.")
+            else:
+                print("  Fixtures link tapilmadi, show url'den fixtures url'ine kecilir.")
+        else:
+            print("  Show url verilmemisdi, birbasa fixtures url'inden davam edilir.")
+
         driver.get(url)
-        print("Sehife yuklenir, gozleyin (7 saniye)...")
-        time.sleep(7) 
+        print("Sehife yuklenir...")
+        time.sleep(2) 
         
         soup = BeautifulSoup(driver.page_source, "html.parser")
         
@@ -139,98 +160,150 @@ def fetch_and_parse_fixtures(url, league_name):
 
     return fixtures_data
 
+def _load_fixture_leagues():
+    """Load fixture URLs from MongoDB leagues_config.whoscored_link. Falls back to hardcoded list."""
+    try:
+        client = MongoClient("mongodb://localhost:27017/")
+        db = client["football_prediction"]
+        configs = list(db["leagues_config"].find({"whoscored_link": {"$ne": ""}}))
+        client.close()
+        if configs:
+            result = []
+            for c in configs:
+                url = c["whoscored_link"]
+                fixtures_url = url.replace("/Show/", "/Fixtures/").replace("/show/", "/fixtures/")
+                if fixtures_url == url:
+                    fixtures_url = url.rstrip("/") + "/Fixtures"
+                # Always prefer extracting fixtures link from the actual show page,
+                # because some URLs lack season/stage path params.
+                # The fetch_and_parse_fixtures function will try the /show page first
+                # and follow #link-fixtures if found.
+                result.append({"name": c["name"], "url": url, "fixtures_url": fixtures_url})
+            return result
+    except Exception as e:
+        print(f"DB'den liqa melumatlari yuklenemedi: {e}")
+    return None
+
+
+HARDCODED_FIXTURES_LEAGUES = [
+    {
+        "name": "Premier League",
+        "url": "https://www.whoscored.com/Regions/252/Tournaments/2/Seasons/10665/Stages/24867/Fixtures/England-Premier-League-2025-2026"
+    },
+    {
+        "name": "La Liga",
+        "url": "https://www.whoscored.com/Regions/206/Tournaments/4/Seasons/11833/Stages/27339/Fixtures/Spain-La-Liga-2025-2026"
+    },
+    {
+        "name": "Bundesliga",
+        "url": "https://www.whoscored.com/regions/81/tournaments/3/seasons/10720/stages/24478/fixtures/germany-bundesliga-2025-2026"
+    },
+    {
+        "name": "Serie A",
+        "url": "https://www.whoscored.com/Regions/108/Tournaments/5/Seasons/10672/Stages/24874/Fixtures/Italy-Serie-A-2025-2026"
+    },
+    {
+        "name": "Ligue 1",
+        "url": "https://www.whoscored.com/Regions/74/Tournaments/22/Seasons/10669/Stages/24871/Fixtures/France-Ligue-1-2025-2026"
+    },
+    {
+        "name": "Brasileirao",
+        "url": "https://www.whoscored.com/Regions/31/Tournaments/95/Seasons/11756/Stages/27234/Fixtures/Brazil-Serie-A-2025"
+    },
+    {
+        "name": "Primeira Liga",
+        "url": "https://www.whoscored.com/Regions/177/Tournaments/21/Seasons/10674/Stages/24877/Fixtures/Portugal-Primera-Liga-2025-2026"
+    },
+    {
+        "name": "Eredivisie",
+        "url": "https://www.whoscored.com/Regions/155/Tournaments/13/Seasons/10670/Stages/24872/Fixtures/Netherlands-Eredivisie-2025-2026"
+    },
+    {
+        "name": "Primera Division",
+        "url": "https://www.whoscored.com/Regions/11/Tournaments/68/Seasons/10893/Stages/25274/Fixtures/Argentina-Primera-Division-2025"
+    },
+    {
+        "name": "Pro League",
+        "url": "https://www.whoscored.com/Regions/4/Tournaments/36/Seasons/10686/Stages/24893/Fixtures/Belgium-First-Division-A-2025-2026"
+    },
+    {
+        "name": "Super Lig",
+        "url": "https://www.whoscored.com/Regions/215/Tournaments/17/Seasons/10888/Stages/25269/Fixtures/Turkey-Super-Lig-2025-2026"
+    },
+    {
+        "name": "EFL Championship",
+        "url": "https://www.whoscored.com/Regions/252/Tournaments/7/Seasons/10666/Stages/24868/Fixtures/England-Championship-2025-2026"
+    },
+    {
+        "name": "Saudi Pro League",
+        "url": "https://www.whoscored.com/Regions/195/Tournaments/349/Seasons/11390/Stages/26371/Fixtures/Saudi-Arabia-Pro-League-2025-2026"
+    },
+    {
+        "name": "MLS",
+        "url": "https://www.whoscored.com/Regions/233/Tournaments/85/Seasons/11768/Stages/27248/Fixtures/USA-Major-League-Soccer-2025"
+    },
+    {
+        "name": "Czech First League",
+        "url": "https://www.whoscored.com/Regions/44/Tournaments/37/Seasons/10691/Stages/24899/Fixtures/Czech-Republic-1-Liga-2025-2026"
+    },
+    {
+        "name": "Super League Greece",
+        "url": "https://www.whoscored.com/Regions/85/Tournaments/53/Seasons/10785/Stages/24999/Fixtures/Greece-Super-League-2025-2026"
+    },
+    {
+        "name": "Liga Pro Ecuador",
+        "url": "https://www.whoscored.com/Regions/60/Tournaments/447/Seasons/11800/Stages/27302/Fixtures/Ecuador-Liga-Pro-2025"
+    },
+    {
+        "name": "Danish Superliga",
+        "url": "https://www.whoscored.com/Regions/47/Tournaments/50/Seasons/10754/Stages/24963/Fixtures/Denmark-Superliga-2025-2026"
+    },
+    {
+        "name": "Ekstraklasa",
+        "url": "https://www.whoscored.com/Regions/173/Tournaments/84/Seasons/10783/Stages/24997/Fixtures/Poland-Ekstraklasa-2025-2026"
+    },
+    {
+        "name": "J1 League",
+        "url": "https://www.whoscored.com/Regions/107/Tournaments/96/Seasons/11753/Stages/27231/Fixtures/Japan-J1-League-2025"
+    }
+]
+
+
+def _get_valid_dates():
+    result = []
+    for delta in [0, 1]:
+        d = datetime.datetime.now() + datetime.timedelta(days=delta)
+        result.append(f"{d.strftime('%A, %B')} {d.day} {d.strftime('%Y')}")
+    return result
+
 def run_all_fixture_scrapers():
     print("Oyunlarin (Fixtures) proqrami avtomatik bashladi...")
-    leagues = [
-        {
-            "name": "Premier League",
-            "url": "https://www.whoscored.com/Regions/252/Tournaments/2/Seasons/10665/Stages/24867/Fixtures/England-Premier-League-2025-2026"
-        },
-        {
-            "name": "La Liga",
-            "url": "https://www.whoscored.com/Regions/206/Tournaments/4/Seasons/11833/Stages/27339/Fixtures/Spain-La-Liga-2025-2026"
-        },
-        {
-            "name": "Bundesliga",
-            "url": "https://www.whoscored.com/regions/81/tournaments/3/seasons/10720/stages/24478/fixtures/germany-bundesliga-2025-2026"
-        },
-        {
-            "name": "Serie A",
-            "url": "https://www.whoscored.com/Regions/108/Tournaments/5/Seasons/10672/Stages/24874/Fixtures/Italy-Serie-A-2025-2026"
-        },
-        {
-            "name": "Ligue 1",
-            "url": "https://www.whoscored.com/Regions/74/Tournaments/22/Seasons/10669/Stages/24871/Fixtures/France-Ligue-1-2025-2026"
-        },
-        {
-            "name": "Brasileirao",
-            "url": "https://www.whoscored.com/Regions/31/Tournaments/95/Seasons/11756/Stages/27234/Fixtures/Brazil-Serie-A-2025"
-        },
-        {
-            "name": "Primeira Liga",
-            "url": "https://www.whoscored.com/Regions/177/Tournaments/21/Seasons/10674/Stages/24877/Fixtures/Portugal-Primera-Liga-2025-2026"
-        },
-        {
-            "name": "Eredivisie",
-            "url": "https://www.whoscored.com/Regions/155/Tournaments/13/Seasons/10670/Stages/24872/Fixtures/Netherlands-Eredivisie-2025-2026"
-        },
-        {
-            "name": "Primera Division",
-            "url": "https://www.whoscored.com/Regions/11/Tournaments/68/Seasons/10893/Stages/25274/Fixtures/Argentina-Primera-Division-2025"
-        },
-        {
-            "name": "Pro League",
-            "url": "https://www.whoscored.com/Regions/4/Tournaments/36/Seasons/10686/Stages/24893/Fixtures/Belgium-First-Division-A-2025-2026"
-        },
-        {
-            "name": "Super Lig",
-            "url": "https://www.whoscored.com/Regions/215/Tournaments/17/Seasons/10888/Stages/25269/Fixtures/Turkey-Super-Lig-2025-2026"
-        },
-        {
-            "name": "EFL Championship",
-            "url": "https://www.whoscored.com/Regions/252/Tournaments/7/Seasons/10666/Stages/24868/Fixtures/England-Championship-2025-2026"
-        },
-        {
-            "name": "Saudi Pro League",
-            "url": "https://www.whoscored.com/Regions/195/Tournaments/349/Seasons/11390/Stages/26371/Fixtures/Saudi-Arabia-Pro-League-2025-2026"
-        },
-        {
-            "name": "MLS",
-            "url": "https://www.whoscored.com/Regions/233/Tournaments/85/Seasons/11768/Stages/27248/Fixtures/USA-Major-League-Soccer-2025"
-        },
-        {
-            "name": "Czech First League",
-            "url": "https://www.whoscored.com/Regions/44/Tournaments/37/Seasons/10691/Stages/24899/Fixtures/Czech-Republic-1-Liga-2025-2026"
-        },
-        {
-            "name": "Super League Greece",
-            "url": "https://www.whoscored.com/Regions/85/Tournaments/53/Seasons/10785/Stages/24999/Fixtures/Greece-Super-League-2025-2026"
-        },
-        {
-            "name": "Liga Pro Ecuador",
-            "url": "https://www.whoscored.com/Regions/60/Tournaments/447/Seasons/11800/Stages/27302/Fixtures/Ecuador-Liga-Pro-2025"
-        },
-        {
-            "name": "Danish Superliga",
-            "url": "https://www.whoscored.com/Regions/47/Tournaments/50/Seasons/10754/Stages/24963/Fixtures/Denmark-Superliga-2025-2026"
-        },
-        {
-            "name": "Ekstraklasa",
-            "url": "https://www.whoscored.com/Regions/173/Tournaments/84/Seasons/10783/Stages/24997/Fixtures/Poland-Ekstraklasa-2025-2026"
-        },
-        {
-            "name": "J1 League",
-            "url": "https://www.whoscored.com/Regions/107/Tournaments/96/Seasons/11753/Stages/27231/Fixtures/Japan-J1-League-2025"
-        }
-    ]
+    valid_dates = _get_valid_dates()
+    print(f"Yalniz bugun ve sabah: {valid_dates}")
+    
+    leagues = _load_fixture_leagues()
+    if leagues is None:
+        leagues = HARDCODED_FIXTURES_LEAGUES
 
     all_data = {}
     
     for league in leagues:
         league_name = league["name"]
-        league_url = league["url"]
+        league_url = league.get("fixtures_url", league["url"])
+        show_url = league["url"]
         print(f"Bashlayiriq: {league_name}")
-        fetched_data = fetch_and_parse_fixtures(league_url, league_name)
+        fetched_data = fetch_and_parse_fixtures(league_url, league_name, show_url=show_url)
+        # Filter: only today and tomorrow
+        if fetched_data:
+            filtered = []
+            for group in fetched_data:
+                group_name = group.get("group", "")
+                raw = group.get("raw_data", [])
+                filtered_raw = [g for g in raw if isinstance(g, dict) and g.get("date", "") in valid_dates]
+                if filtered_raw:
+                    filtered.append({"group": group_name, "raw_data": filtered_raw})
+            fetched_data = filtered
+            print(f"  {league_name}: {sum(len(g.get('raw_data',[])) for g in fetched_data)} oyun (bugun/sabah)")
         all_data[league_name] = fetched_data
         
         # Save to MongoDB

@@ -1,0 +1,87 @@
+{
+  "league_id": "6a0c9371d19fdf7899120578",
+  "name": "Eliteserien",
+  "url": "https://footystats.org/norway/eliteserien",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Viking FK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-viking-fk_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Tromsø IL",
+      "logo": "https://cdn.footystats.org/img/teams/norway-tromso-il_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "FK Bodo - Glimt",
+      "logo": "https://cdn.footystats.org/img/teams/norway-fk-bodo-glimt_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Lillestrøm SK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-lillestrom-sk_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Molde FK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-molde-fk_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "SK Brann",
+      "logo": "https://cdn.footystats.org/img/teams/norway-sk-brann_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Hamarkameratene Fotball",
+      "logo": "https://cdn.footystats.org/img/teams/norway-hamarkameratene-fotball_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Sandefjord Fotball",
+      "logo": "https://cdn.footystats.org/img/teams/norway-sandefjord-fotball_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Kristiansund BK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-kristiansund-bk_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Vålerenga Fotball",
+      "logo": "https://cdn.footystats.org/img/teams/norway-valerenga-fotball_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Fredrikstad FK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-fredrikstad-fk_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Aalesunds FK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-aalesunds-fk_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Sarpsborg 08 FF",
+      "logo": "https://cdn.footystats.org/img/teams/norway-sarpsborg-08-ff_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "Rosenborg BK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-rosenborg-bk_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "KFUM Fotball",
+      "logo": "https://cdn.footystats.org/img/teams/norway-kfum-fotball_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "IK Start",
+      "logo": "https://cdn.footystats.org/img/teams/norway-ik-start_thumb.png"
+    }
+  ]
+}

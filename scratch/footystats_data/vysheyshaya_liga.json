@@ -1,0 +1,87 @@
+{
+  "league_id": "6a0e2b706df9b46b2181eb27",
+  "name": "Vysheyshaya Liga",
+  "url": "https://footystats.org/belarus/vysheyshaya-liga",
+  "teams": [
+    {
+      "position": 1,
+      "name": "MKK-Dnepr Rohachev",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-mkk-dnepr-rohachev_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "FC Dinamo Minsk",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-dinamo-minsk_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "FC Minsk",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-minsk_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "FK Gomel",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fk-gomel_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "FC Neman Grodno",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-neman-grodno_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "FK Isloch Minsk",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fk-isloch-minsk_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "FC Dinamo Brest",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-dinamo-brest_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "FK Arsenal Dzyarzhynsk",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fk-arsenal-dzyarzhynsk_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "FC Torpedo-BelAZ Zhodino",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-torpedo-belaz-zhodino_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "FC Vitebsk",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-vitebsk_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "FK Slavia-Mozyr",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fk-slavia-mozyr_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "FC Dnepr Mogilev",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-dnepr-mogilev_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "FC BATE Borisov",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-bate-borisov_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "FC Belshina Bobruisk",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-belshina-bobruisk_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "FK Baranovichi",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fk-baranovichi_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "FC Naftan Novopolotsk",
+      "logo": "https://cdn.footystats.org/img/teams/belarus-fc-naftan-novopolotsk_thumb.png"
+    }
+  ]
+}

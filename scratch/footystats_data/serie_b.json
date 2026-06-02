@@ -1,0 +1,107 @@
+{
+  "league_id": "6a0f51a8180aed8292eff089",
+  "name": "Serie B",
+  "url": "https://footystats.org/brazil/serie-b",
+  "teams": [
+    {
+      "position": 1,
+      "name": "São Bernardo FC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-sao-bernardo-fc_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Clube Náutico Capibaribe",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-clube-nautico-capibaribe_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "SC do Recife",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-sc-do-recife_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Vila Nova FC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-vila-nova-fc_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Fortaleza EC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-fortaleza-ec_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Criciuma EC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-criciuma-ec_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Grêmio Novorizontino",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-gremio-novorizontino_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "EC Juventude",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-ec-juventude_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Ceará SC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-ceara-sc_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Goiás EC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-goias-ec_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "AC Goianiense",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-ac-goianiense_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Operário Ferroviário EC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-operario-ferroviario-ec_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Athletic Club (Minas Gerais)",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-athletic-club-minas-gerais_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "Clube de Regatas Brasil",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-clube-de-regatas-brasil_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Cuiabá EC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-cuiaba-ec_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "Avai FC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-avai-fc_thumb.png"
+    },
+    {
+      "position": 17,
+      "name": "Botafogo FC Ribeirão Preto",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-botafogo-fc-ribeirao-preto_thumb.png"
+    },
+    {
+      "position": 18,
+      "name": "Londrina EC",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-londrina-ec_thumb.png"
+    },
+    {
+      "position": 19,
+      "name": "Ponte Preta",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-associacao-atletica-ponte-preta_thumb.png"
+    },
+    {
+      "position": 20,
+      "name": "América FC - Minas Gerais",
+      "logo": "https://cdn.footystats.org/img/teams/brazil-america-fc-minas-gerais_thumb.png"
+    }
+  ]
+}

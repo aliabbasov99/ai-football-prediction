@@ -1,0 +1,87 @@
+{
+  "league_id": "6a0f6c92180aed8292eff08e",
+  "name": "Allsvenskan",
+  "url": "https://footystats.org/sweden/allsvenskan",
+  "teams": [
+    {
+      "position": 1,
+      "name": "IK Sirius Fotboll",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-ik-sirius-fotboll_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Hammarby IF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-hammarby-if_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "IF Elfsborg",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-if-elfsborg_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "BK Häcken",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-bk-hacken_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Mjällby AIF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-mjallby-aif_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Djurgårdens IF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-djurgardens-if_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "GAIS",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-gais_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "IF Brommapojkarna",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-if-brommapojkarna_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "Malmö FF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-malmo-ff_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "AIK Fotboll",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-aik-fotboll_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Degerfors IF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-degerfors-if_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Västerås SK Fotboll",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-vasteras-sk-fotboll_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Kalmar FF",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-kalmar-ff_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "Örgryte IS",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-orgryte-is_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Halmstads BK",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-halmstads-bk_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "IFK Göteborg",
+      "logo": "https://cdn.footystats.org/img/teams/sweden-ifk-goteborg_thumb.png"
+    }
+  ]
+}

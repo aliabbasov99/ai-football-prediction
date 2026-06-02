@@ -4,7 +4,7 @@ import requests
 import re
 import json
 import os
-from typing import List, Optional, Dict, Tuple
+from typing import List, Optional, Dict, Tuple, Any
 from datetime import datetime
 from models import TeamXGStats, GameStats, League, Match, Last5Game
 from pymongo import MongoClient
@@ -67,6 +67,11 @@ LEAGUE_SLUGS = {
     "DSL": {"name": "Danish Superliga", "country": "Denmark", "logo": "/logos/leagues/default.png"},
     "EKS": {"name": "Ekstraklasa", "country": "Poland", "logo": "/logos/leagues/default.png"},
     "J1L": {"name": "J1 League", "country": "Japan", "logo": "/logos/leagues/default.png"},
+    "ELI": {"name": "Eliteserien", "country": "Norway", "logo": "/logos/leagues/default.png"},
+    "CSL": {"name": "Chinese Super League", "country": "China", "logo": "/logos/leagues/default.png"},
+    "ML": {"name": "Meistriliiga", "country": "Estonia", "logo": "/logos/leagues/default.png"},
+    "VL": {"name": "Vysheyshaya Liga", "country": "Belarus", "logo": "/logos/leagues/default.png"},
+    "SLQ": {"name": "Super Liqa", "country": "Turkey", "logo": "/logos/leagues/default.png"},
 }
 
 
@@ -99,10 +104,27 @@ class DataService:
         return None
 
     async def get_leagues(self) -> List[League]:
-        return [
-            League(id=k, name=v["name"], country=v["country"], logo=v["logo"])
-            for k, v in LEAGUE_SLUGS.items()
-        ]
+        cache_key = "leagues"
+        cached = self._get_cache(cache_key)
+        if cached:
+            return cached
+
+        # Pull leagues from leagues_config collection
+        configs = list(self.db["leagues_config"].find({}))
+
+        # Build slug → name mapping from existing LEAGUE_SLUGS for ID lookup
+        name_to_slug = {v["name"]: k for k, v in LEAGUE_SLUGS.items()}
+
+        all_leagues = []
+        for c in configs:
+            name = c.get("name", "")
+            slug = c.get("slug") or name_to_slug.get(name) or name
+            country = c.get("country", "")
+            logo = c.get("logo") or LEAGUE_SLUGS.get(slug, {}).get("logo", "")
+            all_leagues.append(League(id=slug, name=name, country=country, logo=logo))
+
+        self._set_cache(cache_key, all_leagues)
+        return all_leagues
 
     async def get_teams_stats(self, league_id: str) -> List[TeamXGStats]:
         cache_key = f"teams_{league_id}"
@@ -112,6 +134,15 @@ class DataService:
 
         print(f"Fetching data for {league_id} from MongoDB...")
         league_name = LEAGUE_SLUGS.get(league_id, {}).get("name")
+        if not league_name:
+            config = self.db["leagues_config"].find_one({"slug": league_id})
+            if config:
+                league_name = config.get("name")
+            else:
+                # Try matching by name
+                config = self.db["leagues_config"].find_one({"name": {"$regex": league_id, "$options": "i"}})
+                if config:
+                    league_name = config.get("name")
 
         standings = list(self.db["standings"].find({"league_name": league_name}))
         standings.sort(key=lambda x: int(x.get("rank") or 0))
@@ -119,9 +150,35 @@ class DataService:
         results = list(self.db["matches"].find({"league_name": league_name}).limit(300))
         xg_data = calculate_xg_from_results(results)
 
+        # Build team lookup from teams collection (name + aliases → full data)
+        team_lookup: Dict[str, dict] = {}
+        # Find the correct league_id in teams collection
+        team_league_ids = [league_id]
+        config = self.db["leagues_config"].find_one({"slug": league_id})
+        if not config:
+            config = self.db["leagues_config"].find_one({"name": {"$regex": f"^{league_id}$", "$options": "i"}})
+        if config:
+            cid = str(config.get("_id"))
+            if cid:
+                team_league_ids.append(cid)
+        for tid in team_league_ids:
+            for t in self.db["teams"].find({"league_id": tid}):
+                team_lookup[t["name"].lower()] = t
+                for alias in t.get("aliases") or []:
+                    if alias:
+                        team_lookup[alias.lower()] = t
+
+        # Also add all teams by name as fallback
+        for t in self.db["teams"].find({}):
+            if t["name"].lower() not in team_lookup:
+                team_lookup[t["name"].lower()] = t
+                for alias in t.get("aliases") or []:
+                    if alias:
+                        team_lookup[alias.lower()] = t
+
         teams = []
         for standing in standings:
-            team_name = standing.get("team", "Unknown Team")
+            team_name = standing.get("team") or standing.get("team_name") or "Unknown Team"
 
             def to_int(val, default=0):
                 if val is None:
@@ -141,6 +198,12 @@ class DataService:
             lost = to_int(standing.get("lost"))
             gd = str(standing.get("goal_difference", "0"))
             team_logo_val = standing.get("team_logo", "")
+            team_data = team_lookup.get(team_name.lower())
+            # Prefer teams collection logo (Wiki URL) over standings relative path
+            if team_data and team_data.get("logo"):
+                team_logo_val = team_data.get("logo", "")
+            elif not team_logo_val and team_data:
+                team_logo_val = team_data.get("logo", "")
 
             last_games = standing.get("last_games", [])
             form_str = (
@@ -199,8 +262,22 @@ class DataService:
         if cached:
             return cached
 
+        # Get all league IDs from LEAGUE_SLUGS + leagues_config
+        slug_ids = set(LEAGUE_SLUGS.keys())
+        for c in self.db["leagues_config"].find({}, {"slug": 1}):
+            slug = c.get("slug")
+            if slug:
+                slug_ids.add(slug)
+        name_to_slug = {v["name"]: k for k, v in LEAGUE_SLUGS.items()}
+        for c in self.db["leagues_config"].find({"slug": {"$in": [None, ""]}}, {"name": 1}):
+            name = c.get("name")
+            if name and name in name_to_slug:
+                slug_ids.add(name_to_slug[name])
+            elif name:
+                slug_ids.add(name)
+
         result = {}
-        for league_id in LEAGUE_SLUGS.keys():
+        for league_id in slug_ids:
             teams = await self.get_teams_stats(league_id)
             result[league_id] = [
                 {
@@ -235,12 +312,12 @@ class DataService:
         self, team_name: str, league_name: str
     ) -> List[Last5Game]:
         standings = self.db["standings"].find_one(
-            {"league_name": league_name, "team": team_name}
+            {"league_name": league_name, "$or": [{"team": team_name}, {"team_name": team_name}]}
         )
 
         if not standings:
             standings = self.db["standings"].find_one(
-                {"league_name": league_name, "team": {"$regex": team_name}}
+                {"league_name": league_name, "$or": [{"team": {"$regex": team_name}}, {"team_name": {"$regex": team_name}}]}
             )
 
         if not standings:
@@ -284,6 +361,10 @@ class DataService:
             league_sizes[league_id] = len(teams)
 
         name_to_id = {v["name"]: k for k, v in LEAGUE_SLUGS.items()}
+        for c in self.db["leagues_config"].find({}, {"name": 1, "slug": 1}):
+            name = c.get("name")
+            if name and name not in name_to_id:
+                name_to_id[name] = c.get("slug") or name
 
         fixtures_col = self.db["fixtures"]
         all_fixtures = list(fixtures_col.find({}))
@@ -359,15 +440,15 @@ class DataService:
             )
 
             match_date = f"{fixture.get('date', '')} {fixture.get('time', '')}".strip()
-            
-            # Köhnə oyunları süzmək
+
+            # Kecmis oyunlari gosterme (bugun ve gelecek oyunlar qalsin)
             match_date_str = fixture.get('date', '').strip()
             if match_date_str:
                 try:
-                    match_dt = parser.parse(match_date_str)
+                    match_dt = parser.parse(match_date_str).replace(hour=0, minute=0, second=0, microsecond=0)
                     today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
                     if match_dt < today:
-                        continue  # Bu oyun keçmişdədir, göstərmirik
+                        continue
                 except Exception:
                     pass
 
@@ -398,7 +479,12 @@ class DataService:
         return matches[:limit]
 
     async def get_team_stats(self, team_id: str) -> Optional[TeamXGStats]:
-        for league_id in LEAGUE_SLUGS.keys():
+        slug_ids = set(LEAGUE_SLUGS.keys())
+        for c in self.db["leagues_config"].find({}, {"slug": 1}):
+            slug = c.get("slug")
+            if slug:
+                slug_ids.add(slug)
+        for league_id in slug_ids:
             teams = await self.get_teams_stats(league_id)
             for team in teams:
                 if team.team_id == team_id:
@@ -407,6 +493,70 @@ class DataService:
 
     async def get_live_matches(self) -> List[Match]:
         return []
+
+    async def get_footystats_pages(self) -> List[Dict[str, Any]]:
+        cache_key = "footystats_pages_list"
+        cached = self._get_cache(cache_key)
+        if cached:
+            return cached
+
+        pages = list(self.db["footystats_pages"].find({}, {"_id": 0, "page": 1, "page_title": 1, "url": 1}))
+        self._set_cache(cache_key, pages)
+        return pages
+
+    async def get_footystats_page(self, slug: str) -> Optional[Dict[str, Any]]:
+        page = self.db["footystats_pages"].find_one({"page": slug}, {"_id": 0})
+        return page
+
+    async def get_predictions(self) -> List[Dict[str, Any]]:
+        cache_key = "predictions"
+        cached = self._get_cache(cache_key)
+        if cached:
+            return cached
+
+        # Build team_logo lookup from teams collection (name + aliases)
+        logo_map: Dict[str, str] = {}
+        for t in self.db["teams"].find({}, {"name": 1, "aliases": 1, "logo": 1}):
+            logo = t.get("logo", "")
+            if not logo:
+                continue
+            for name in [t.get("name")] + (t.get("aliases") or []):
+                if name:
+                    logo_map[name.lower()] = logo
+
+        fixtures = list(self.db["fixtures"].find({}))
+        result = []
+        for f in fixtures:
+            # Kecmis oyunlari gosterme (bugun ve gelecek oyunlar qalsin)
+            match_date_str = f.get("date", "").strip()
+            if match_date_str:
+                try:
+                    match_dt = parser.parse(match_date_str).replace(hour=0, minute=0, second=0, microsecond=0)
+                    today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
+                    if match_dt < today:
+                        continue
+                except Exception:
+                    pass
+            home_team = f.get("home_team", "")
+            away_team = f.get("away_team", "")
+            home_logo = f.get("home_logo") or logo_map.get(home_team.lower(), "")
+            away_logo = f.get("away_logo") or logo_map.get(away_team.lower(), "")
+            item = {
+                "league_name": f.get("league_name", ""),
+                "home_team": home_team,
+                "away_team": away_team,
+                "date": f.get("date", ""),
+                "date_az": f.get("date_az", ""),
+                "time": f.get("time", ""),
+                "time_az": f.get("time_az", ""),
+                "home_logo": home_logo,
+                "away_logo": away_logo,
+                "predictions": f.get("predictions"),
+            }
+            result.append(item)
+
+        self._set_cache(cache_key, result)
+        return result
 
 
 data_service = DataService()

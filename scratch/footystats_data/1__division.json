@@ -1,0 +1,87 @@
+{
+  "league_id": "6a0d8c2e27a2897b932cb426",
+  "name": "1. Division",
+  "url": "https://footystats.org/norway/first-division",
+  "teams": [
+    {
+      "position": 1,
+      "name": "Kongsvinger IL",
+      "logo": "https://cdn.footystats.org/img/teams/norway-kongsvinger-il_thumb.png"
+    },
+    {
+      "position": 2,
+      "name": "Strømsgodset IF",
+      "logo": "https://cdn.footystats.org/img/teams/norway-stromsgodset-if_thumb.png"
+    },
+    {
+      "position": 3,
+      "name": "FK Haugesund",
+      "logo": "https://cdn.footystats.org/img/teams/norway-fk-haugesund_thumb.png"
+    },
+    {
+      "position": 4,
+      "name": "Odds BK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-odds-bk_thumb.png"
+    },
+    {
+      "position": 5,
+      "name": "Stabæk Fotball",
+      "logo": "https://cdn.footystats.org/img/teams/norway-stabaek-fotball_thumb.png"
+    },
+    {
+      "position": 6,
+      "name": "Ranheim Fotball",
+      "logo": "https://cdn.footystats.org/img/teams/norway-ranheim-fotball_thumb.png"
+    },
+    {
+      "position": 7,
+      "name": "Egersunds IK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-egersunds-ik_thumb.png"
+    },
+    {
+      "position": 8,
+      "name": "Moss FK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-moss-fk_thumb.png"
+    },
+    {
+      "position": 9,
+      "name": "IL Hødd",
+      "logo": "https://cdn.footystats.org/img/teams/norway-il-hodd_thumb.png"
+    },
+    {
+      "position": 10,
+      "name": "Sogndal Fotball",
+      "logo": "https://cdn.footystats.org/img/teams/norway-sogndal-fotball_thumb.png"
+    },
+    {
+      "position": 11,
+      "name": "Sandnes Ulf",
+      "logo": "https://cdn.footystats.org/img/teams/norway-sandnes-ulf_thumb.png"
+    },
+    {
+      "position": 12,
+      "name": "Raufoss IL",
+      "logo": "https://cdn.footystats.org/img/teams/norway-raufoss-il_thumb.png"
+    },
+    {
+      "position": 13,
+      "name": "Bryne FK",
+      "logo": "https://cdn.footystats.org/img/teams/norway-bryne-fk_thumb.png"
+    },
+    {
+      "position": 14,
+      "name": "FC Lyn Oslo",
+      "logo": "https://cdn.footystats.org/img/teams/norway-fc-lyn-oslo_thumb.png"
+    },
+    {
+      "position": 15,
+      "name": "Åsane Fotball",
+      "logo": "https://cdn.footystats.org/img/teams/norway-asane-fotball_thumb.png"
+    },
+    {
+      "position": 16,
+      "name": "Strømmen IF",
+      "logo": "https://cdn.footystats.org/img/teams/norway-strommen-if_thumb.png"
+    }
+  ]
+}
