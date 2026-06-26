@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "C:\ali\projects\ai-football-prediction\backend\main.py", line 1, in <module>
+    from fastapi import FastAPI, HTTPException, BackgroundTasks
+ModuleNotFoundError: No module named 'fastapi'

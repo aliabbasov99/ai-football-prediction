@@ -1,5 +1,6 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from typing import Optional
+from datetime import datetime
 
 
 class GameStats(BaseModel):
@@ -71,3 +72,27 @@ class Prediction(BaseModel):
     btts_yes: dict
     btts_no: dict
     winner: dict
+
+
+class UserCreate(BaseModel):
+    nickname: str
+    password: str
+    role: str = "user"
+
+
+class UserOut(BaseModel):
+    id: str
+    nickname: str
+    role: str
+    created_at: str
+
+
+class LoginRequest(BaseModel):
+    nickname: str
+    password: str
+
+
+class TokenResponse(BaseModel):
+    access_token: str
+    token_type: str = "bearer"
+    user: UserOut

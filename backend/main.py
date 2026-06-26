@@ -1,16 +1,19 @@
-from fastapi import FastAPI, HTTPException, BackgroundTasks
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Header
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Query
+from fastapi import Depends
 from contextlib import asynccontextmanager
 from typing import List, Optional
-from datetime import datetime
+from datetime import datetime, timedelta
 from pydantic import BaseModel
+import os
 
 from models import TeamXGStats, League, Match
 from services import data_service
 from scripts.scrapeFootyStats import scrape_all_footystats as run_footystats_stats_scraper
 from scripts.scrapeFootyStatsGames import scrape_all as run_footystats_games_scraper
 from scripts.god_mode import run_god_mode
+from auth import get_current_user, require_admin, users_collection, hash_password, create_access_token, verify_password
 
 # Global flag for scraper status
 is_scraping = False
@@ -50,6 +53,16 @@ class ScrapeToggles(BaseModel):
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    # Create default admin user
+    existing = users_collection.find_one({"nickname": "admin"})
+    if not existing:
+        users_collection.insert_one({
+            "nickname": "admin",
+            "password": hash_password("gulmirze123"),
+            "role": "admin",
+            "created_at": datetime.now().isoformat(),
+        })
+        print("Default admin user created: admin / gulmirze123")
     yield
     await data_service.close()
 
@@ -73,6 +86,123 @@ app.add_middleware(
 @app.get("/api/health")
 async def health_check():
     return {"status": "ok", "message": "API isleyir"}
+
+
+# ── Auth ──
+
+@app.post("/api/auth/login")
+async def auth_login(data: dict):
+    nickname = data.get("nickname", "")
+    password = data.get("password", "")
+    user = users_collection.find_one({"nickname": nickname})
+    if not user or not verify_password(password, user["password"]):
+        raise HTTPException(status_code=401, detail="Yanlış istifadəçi adı və ya şifrə")
+    token = create_access_token({"sub": user["nickname"], "role": user["role"]})
+    return {
+        "access_token": token,
+        "token_type": "bearer",
+        "user": {
+            "id": str(user["_id"]),
+            "nickname": user["nickname"],
+            "role": user["role"],
+            "created_at": str(user.get("created_at", "")),
+        },
+    }
+
+
+@app.get("/api/auth/me")
+async def auth_me(user: dict = Depends(get_current_user)):
+    return {"user": user}
+
+
+@app.post("/api/auth/register")
+async def auth_register(data: dict, admin: dict = Depends(require_admin)):
+    nickname = data.get("nickname", "").strip()
+    password = data.get("password", "").strip()
+    role = data.get("role", "user")
+    if not nickname or not password:
+        raise HTTPException(status_code=400, detail="Nickname və şifrə tələb olunur")
+    if len(password) < 4:
+        raise HTTPException(status_code=400, detail="Şifrə ən az 4 simvol olmalıdır")
+    existing = users_collection.find_one({"nickname": nickname})
+    if existing:
+        raise HTTPException(status_code=400, detail="Bu istifadəçi artıq mövcuddur")
+    user = {
+        "nickname": nickname,
+        "password": hash_password(password),
+        "role": role,
+        "created_at": datetime.now().isoformat(),
+    }
+    users_collection.insert_one(user)
+    return {"status": "success", "message": "İstifadəçi yaradıldı"}
+
+
+@app.post("/create-user")
+async def create_user_from_bot(
+    data: dict,
+    x_bot_secret: str = Header(...),
+):
+    if x_bot_secret != os.getenv("BOT_SECRET", "qolqol-bot-secret-2024"):
+        raise HTTPException(status_code=403, detail="Qadağan olunmuş sorğu")
+    import re
+    nickname = data.get("username", "").strip()
+    password = data.get("password", "").strip()
+    if not nickname or not password:
+        raise HTTPException(status_code=400, detail="Username və password tələb olunur")
+    if len(nickname) < 3 or len(nickname) > 20:
+        raise HTTPException(status_code=400, detail="Username 3-20 simvol arası olmalıdır")
+    if not re.match(r"^[a-zA-Z0-9]+$", nickname):
+        raise HTTPException(status_code=400, detail="Username yalnız latın hərfləri və rəqəmlərdən ibarət ola bilər, boşluq olmaz")
+    if len(password) < 6:
+        raise HTTPException(status_code=400, detail="Şifrə minimum 6 simvol olmalıdır")
+    if len(password) > 40:
+        raise HTTPException(status_code=400, detail="Şifrə maksimum 40 simvol ola bilər")
+    existing = users_collection.find_one({"nickname": nickname})
+    if existing:
+        raise HTTPException(status_code=400, detail="Bu istifadəçi artıq mövcuddur")
+
+    now = datetime.now()
+    user = {
+        "nickname": nickname,
+        "password": hash_password(password),
+        "role": "user",
+        "created_at": now.isoformat(),
+    }
+    result = users_collection.insert_one(user)
+    user_id = str(result.inserted_id)
+
+    from services import data_service
+    data_service.db["subscriptions"].insert_one({
+        "user_id": user_id,
+        "nickname": nickname,
+        "created_at": now.isoformat(),
+        "expires_at": (now + timedelta(days=30)).isoformat(),
+        "expired": False,
+    })
+
+    return {"status": "success", "message": "İstifadəçi yaradıldı"}
+
+
+@app.get("/api/auth/users")
+async def auth_users(admin: dict = Depends(require_admin)):
+    users = list(users_collection.find({}, {"password": 0}))
+    for u in users:
+        u["_id"] = str(u["_id"])
+    return users
+
+
+@app.delete("/api/auth/users/{user_id}")
+async def auth_delete_user(user_id: str, admin: dict = Depends(require_admin)):
+    from bson.objectid import ObjectId
+    user = users_collection.find_one({"_id": ObjectId(user_id)})
+    if not user:
+        raise HTTPException(status_code=404, detail="İstifadəçi tapılmadı")
+    if user["role"] == "admin":
+        admin_count = users_collection.count_documents({"role": "admin"})
+        if admin_count <= 1:
+            raise HTTPException(status_code=400, detail="Son admin silinə bilməz")
+    users_collection.delete_one({"_id": ObjectId(user_id)})
+    return {"status": "success"}
 
 
 @app.get("/api/leagues", response_model=List[League])
@@ -126,12 +256,12 @@ async def get_predictions():
 
 
 @app.get("/api/admin/status-live")
-async def admin_status_live():
+async def admin_status_live(admin: dict = Depends(require_admin)):
     return pipeline
 
 
 @app.post("/api/admin/scrape-start")
-async def admin_scrape_start(toggles: ScrapeToggles, background_tasks: BackgroundTasks):
+async def admin_scrape_start(toggles: ScrapeToggles, background_tasks: BackgroundTasks, admin: dict = Depends(require_admin)):
     if pipeline["is_running"]:
         return {"status": "warning", "message": "Pipeline already running."}
 
@@ -172,7 +302,7 @@ async def admin_scrape_start(toggles: ScrapeToggles, background_tasks: Backgroun
 
 
 @app.post("/api/admin/clear-db")
-async def admin_clear_db():
+async def admin_clear_db(admin: dict = Depends(require_admin)):
     try:
         from services import data_service
         data_service.db["standings"].delete_many({})
@@ -186,7 +316,7 @@ async def admin_clear_db():
 
 
 @app.post("/api/admin/scrape-footystats-games")
-async def admin_scrape_footystats_games(background_tasks: BackgroundTasks):
+async def admin_scrape_footystats_games(background_tasks: BackgroundTasks, admin: dict = Depends(require_admin)):
     global is_scraping
     if is_scraping:
         return {"status": "warning", "message": "Scraping already in progress."}
@@ -195,7 +325,7 @@ async def admin_scrape_footystats_games(background_tasks: BackgroundTasks):
 
 
 @app.post("/api/admin/scrape-footystats-stats")
-async def admin_scrape_footystats_stats(background_tasks: BackgroundTasks):
+async def admin_scrape_footystats_stats(background_tasks: BackgroundTasks, admin: dict = Depends(require_admin)):
     if fs_stats_pipeline["is_running"]:
         return {"status": "warning", "message": "FootyStats scraping already running."}
 
@@ -216,13 +346,13 @@ async def admin_scrape_footystats_stats(background_tasks: BackgroundTasks):
 
 
 @app.get("/api/admin/scrape-footystats-stats/status")
-async def admin_footystats_stats_status():
+async def admin_footystats_stats_status(admin: dict = Depends(require_admin)):
     return fs_stats_pipeline
 
 
 # Admin leagues & teams CRUD
 @app.get("/api/admin/leagues")
-async def admin_get_leagues():
+async def admin_get_leagues(admin: dict = Depends(require_admin)):
     from services import data_service
     from services import LEAGUE_SLUGS
     name_to_slug = {v["name"]: k for k, v in LEAGUE_SLUGS.items()}
@@ -250,7 +380,7 @@ async def admin_get_leagues():
 
 
 @app.post("/api/admin/leagues")
-async def admin_create_league(data: dict):
+async def admin_create_league(data: dict, admin: dict = Depends(require_admin)):
     from services import data_service
     data.pop("_id", None)
     data_service.db["leagues_config"].insert_one(data)
@@ -258,7 +388,7 @@ async def admin_create_league(data: dict):
 
 
 @app.put("/api/admin/leagues/{league_id}")
-async def admin_update_league(league_id: str, data: dict):
+async def admin_update_league(league_id: str, data: dict, admin: dict = Depends(require_admin)):
     from services import data_service
     from bson.objectid import ObjectId
     query = {"_id": ObjectId(league_id)} if ObjectId.is_valid(league_id) else {"slug": league_id}
@@ -267,7 +397,7 @@ async def admin_update_league(league_id: str, data: dict):
 
 
 @app.delete("/api/admin/leagues/{league_id}")
-async def admin_delete_league(league_id: str):
+async def admin_delete_league(league_id: str, admin: dict = Depends(require_admin)):
     from services import data_service
     from bson.objectid import ObjectId
     query = {"_id": ObjectId(league_id)} if ObjectId.is_valid(league_id) else {"slug": league_id}
@@ -276,7 +406,7 @@ async def admin_delete_league(league_id: str):
 
 
 @app.get("/api/admin/teams")
-async def admin_get_teams(league_id: str = Query("")):
+async def admin_get_teams(league_id: str = Query(""), admin: dict = Depends(require_admin)):
     from services import data_service
     from bson.objectid import ObjectId
 
@@ -297,14 +427,14 @@ async def admin_get_teams(league_id: str = Query("")):
 
 
 @app.post("/api/admin/teams")
-async def admin_create_team(data: dict):
+async def admin_create_team(data: dict, admin: dict = Depends(require_admin)):
     from services import data_service
     data_service.db["teams"].insert_one(data)
     return {"status": "success"}
 
 
 @app.put("/api/admin/teams/{team_id}")
-async def admin_update_team(team_id: str, data: dict):
+async def admin_update_team(team_id: str, data: dict, admin: dict = Depends(require_admin)):
     from services import data_service
     from bson.objectid import ObjectId
     data_service.db["teams"].update_one({"_id": ObjectId(team_id)}, {"$set": data})
@@ -312,7 +442,7 @@ async def admin_update_team(team_id: str, data: dict):
 
 
 @app.delete("/api/admin/teams/{team_id}")
-async def admin_delete_team(team_id: str):
+async def admin_delete_team(team_id: str, admin: dict = Depends(require_admin)):
     from services import data_service
     from bson.objectid import ObjectId
     data_service.db["teams"].delete_one({"_id": ObjectId(team_id)})
@@ -320,7 +450,7 @@ async def admin_delete_team(team_id: str):
 
 
 @app.post("/api/admin/teams/sync")
-async def admin_sync_teams(data: dict):
+async def admin_sync_teams(data: dict, admin: dict = Depends(require_admin)):
     from services import data_service
     from bson.objectid import ObjectId
     league_id = data.get("league_id")
@@ -346,7 +476,7 @@ async def admin_sync_teams(data: dict):
 
 
 @app.post("/api/admin/teams/bulk-update")
-async def admin_bulk_update_teams(data: dict):
+async def admin_bulk_update_teams(data: dict, admin: dict = Depends(require_admin)):
     from services import data_service
     league_id = data.get("league_id")
     aliases = data.get("aliases", {})

@@ -5,6 +5,9 @@ import re
 import unicodedata
 import random
 import difflib
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
 from datetime import datetime, timedelta

@@ -5,6 +5,9 @@ from pymongo import MongoClient
 import os
 import random
 import re
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 from datetime import datetime, timedelta
 
 def _cleanup_stale_chromedriver():
@@ -22,7 +25,7 @@ def get_today_tomorrow_dates():
     result = []
     for delta in [0, 1]:
         d = datetime.now() + timedelta(days=delta)
-        result.append(f"{d.strftime('%A, %b')} {d.day} {d.strftime('%Y')}")
+        result.append(f"{d.strftime('%A, %B')} {d.day} {d.strftime('%Y')}")
     return result
 
 # Config

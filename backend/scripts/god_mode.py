@@ -186,17 +186,10 @@ def run_god_mode(toggles=None, progress_callback=None):
     }
     has_external = any(toggles.get(k) for k in external_map)
 
-    # Run combined link+external if any link steps or external are enabled
-    combined_link_steps = list(enabled_link_steps)
-    if has_external:
-        for k, v in external_map.items():
-            if toggles.get(k) and v not in combined_link_steps:
-                combined_link_steps.append(v)
-
-    if combined_link_steps:
+    if enabled_link_steps:
         idx += 1
         update(step_pct(idx - 1), "Proqnoz linkleri yenilenir...")
-        _run_subprocess("update_prediction_links.py", extra_args=["--step"] + combined_link_steps)
+        _run_subprocess("update_prediction_links.py", extra_args=["--step"] + enabled_link_steps)
 
     # ---- Oddslot Predictions (percentages from listing page) ----
     if toggles.get("oddslot"):

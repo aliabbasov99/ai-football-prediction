@@ -1,0 +1,244 @@
+INFO:     127.0.0.1:11989 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4694 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9654 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9656 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9657 - "GET /api/leagues HTTP/1.1" 200 OK
+Fetching data for ML from MongoDB...
+Processed 10 teams for ML
+INFO:     127.0.0.1:13552 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13553 - "GET /api/leagues HTTP/1.1" 200 OK
+Fetching data for Úrvalsdeild from MongoDB...
+Processed 12 teams for Úrvalsdeild
+INFO:     127.0.0.1:1447 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11624 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+Fetching data for A Lyga from MongoDB...
+Processed 10 teams for A Lyga
+INFO:     127.0.0.1:11625 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11626 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6177 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+Fetching data for Superettan from MongoDB...
+Processed 16 teams for Superettan
+INFO:     127.0.0.1:6178 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3366 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:2431 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:2432 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11322 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6610 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6144 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10208 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10879 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8627 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8360 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8361 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8362 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8363 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1426 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7752 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6610 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:6611 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:12115 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10498 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:5412 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1737 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1738 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1739 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1740 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1741 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2272 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2273 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2274 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2275 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2276 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2277 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3017 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:3018 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:9270 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:5514 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3996 - "GET /api/leagues HTTP/1.1" 200 OK
+Fetching data for PL from MongoDB...
+Processed 20 teams for PL
+INFO:     127.0.0.1:3997 - "GET /api/leagues/PL/teams HTTP/1.1" 200 OK
+Fetching data for SL from MongoDB...
+Processed 0 teams for SL
+Fetching data for LPE from MongoDB...
+Processed 0 teams for LPE
+Fetching data for CFL from MongoDB...
+Processed 0 teams for CFL
+Fetching data for ELI from MongoDB...
+Processed 16 teams for ELI
+Fetching data for Major League Soccer from MongoDB...
+Processed 30 teams for Major League Soccer
+Fetching data for SLG from MongoDB...
+Processed 0 teams for SLG
+Fetching data for USL Championship from MongoDB...
+Processed 25 teams for USL Championship
+Fetching data for SPL from MongoDB...
+Processed 0 teams for SPL
+Fetching data for EFL from MongoDB...
+Processed 0 teams for EFL
+Fetching data for MLS from MongoDB...
+Processed 0 teams for MLS
+Fetching data for Allsvenskan from MongoDB...
+Processed 16 teams for Allsvenskan
+Fetching data for SLQ from MongoDB...
+Processed 18 teams for SLQ
+Fetching data for Premier Division from MongoDB...
+Processed 10 teams for Premier Division
+Fetching data for LaLiga from MongoDB...
+Processed 0 teams for LaLiga
+Fetching data for Veikkausliga from MongoDB...
+Processed 12 teams for Veikkausliga
+Fetching data for L1 from MongoDB...
+Processed 0 teams for L1
+Fetching data for J1L from MongoDB...
+Processed 0 teams for J1L
+Fetching data for CSL from MongoDB...
+Processed 16 teams for CSL
+Fetching data for Brasileirao from MongoDB...
+Processed 0 teams for Brasileirao
+Fetching data for ProL from MongoDB...
+Processed 0 teams for ProL
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+Fetching data for PriD from MongoDB...
+Processed 30 teams for PriD
+Fetching data for J League from MongoDB...
+Processed 10 teams for J League
+Fetching data for BL from MongoDB...
+Processed 0 teams for BL
+Fetching data for VL from MongoDB...
+Processed 16 teams for VL
+Fetching data for PrimL from MongoDB...
+Processed 0 teams for PrimL
+Fetching data for DSL from MongoDB...
+Processed 0 teams for DSL
+Fetching data for ED from MongoDB...
+Processed 0 teams for ED
+Fetching data for 1. Division from MongoDB...
+Processed 16 teams for 1. Division
+Fetching data for EKS from MongoDB...
+Processed 0 teams for EKS
+Fetching data for SA from MongoDB...
+Processed 20 teams for SA
+Fetching data for Serie B from MongoDB...
+Processed 20 teams for Serie B
+INFO:     127.0.0.1:3636 - "GET /api/top-bottom/matches?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3637 - "GET /api/top-bottom/matches?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8896 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8897 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8898 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8899 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8900 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8901 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8779 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8780 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8781 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8782 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8783 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8784 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3844 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:3845 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:1277 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13811 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13812 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13813 - "GET /api/leagues/PL/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:14021 - "GET /api/footystats/pages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:14022 - "GET /api/footystats/pages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:14023 - "GET /api/footystats/page/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7953 - "GET /api/footystats/page/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1319 - "GET /api/top-bottom/matches?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1320 - "GET /api/top-bottom/matches?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2574 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4527 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10316 - "GET /api/leagues/PL/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10317 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10318 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8431 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7187 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:6429 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13689 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13690 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13691 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:13692 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8686 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:11598 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7091 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:7092 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:7116 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8498 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8499 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4836 - "GET /api/leagues/PL/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3641 - "GET /api/footystats/pages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:1478 - "GET /api/footystats/pages HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9156 - "GET /api/footystats/page/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:12065 - "GET /api/footystats/page/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:10456 - "GET /api/top-bottom/matches?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:2184 - "GET /api/top-bottom/matches?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4517 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:12205 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8271 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9457 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9458 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3606 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3607 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3608 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:3609 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8113 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:8114 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4274 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:4275 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:9739 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4873 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:4746 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:12646 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7213 - "GET /api/auth/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7214 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7215 - "GET /api/predictions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7216 - "GET /api/leagues HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7217 - "GET /api/leagues HTTP/1.1" 200 OK
+Fetching data for ML from MongoDB...
+Processed 10 teams for ML
+INFO:     127.0.0.1:7218 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:7877 - "GET /api/leagues/ML/teams HTTP/1.1" 200 OK
+Fetching data for Úrvalsdeild from MongoDB...
+Processed 12 teams for Úrvalsdeild
+INFO:     127.0.0.1:7878 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9772 - "GET /api/leagues/%C3%9Arvalsdeild/teams HTTP/1.1" 200 OK
+Fetching data for A Lyga from MongoDB...
+Processed 10 teams for A Lyga
+INFO:     127.0.0.1:9773 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:9774 - "GET /api/leagues/A%20Lyga/teams HTTP/1.1" 200 OK
+Fetching data for Superettan from MongoDB...
+Processed 16 teams for Superettan
+INFO:     127.0.0.1:9775 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+INFO:     127.0.0.1:5508 - "GET /api/leagues/Superettan/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:5509 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK
+Fetching data for WORLD CUP 2026 from MongoDB...
+Processed 0 teams for WORLD CUP 2026
+INFO:     127.0.0.1:5395 - "GET /api/leagues/WORLD%20CUP%202026/teams HTTP/1.1" 200 OK

@@ -509,7 +509,6 @@ def run_wincomparator_links_only():
         print("[*] Finished wincomparator links.")
 
 
-import tempfile
 import shutil
 
 
@@ -557,9 +556,7 @@ def update_footystats(db):
             continue
 
         updated = 0
-        prev_driver = None
         for mu in match_uls:
-            # Extract match timestamp from date li
             date_li = mu.find("li", class_="date")
             match_ts = None
             if date_li:
@@ -567,7 +564,6 @@ def update_footystats(db):
                 if ts_str:
                     match_ts = int(ts_str)
 
-            # Extract match info
             info_li = mu.find("li", class_="match-info")
             if not info_li:
                 continue
@@ -591,7 +587,6 @@ def update_footystats(db):
 
             for f in fixtures:
                 if fuzzy_match(f["home_team"], h_name, is_team=True) and fuzzy_match(f["away_team"], a_name, is_team=True):
-                    # Check match date if timestamp available
                     if match_ts:
                         f_date_obj = datetime.fromtimestamp(match_ts)
                         f_date_str = f"{f_date_obj.strftime('%A, %B')} {f_date_obj.day} {f_date_obj.strftime('%Y')}"
@@ -600,32 +595,11 @@ def update_footystats(db):
                     if f.get("predictions", {}).get("footystats_stats"):
                         print(f"    {h_name} vs {a_name} - artiq footystats datasi var, kecildi.")
                         continue
-                    _safe_quit_driver(prev_driver)
-                    _cleanup_stale_chromedriver()
-                    print(f"    {h_name} vs {a_name} - incognito pencere...")
-                    ud = tempfile.mkdtemp()
-                    opts = uc.ChromeOptions()
-                    opts.add_argument("--no-sandbox")
-                    opts.add_argument("--incognito")
-                    opts.add_argument(f"--user-data-dir={ud}")
-                    new_driver = None
-                    try:
-                        new_driver = uc.Chrome(options=opts, version_main=148)
-                        new_driver.get(link)
-                        time.sleep(15)
-                        db.fixtures.update_one({"_id": f["_id"]}, {"$set": {"predictions.footystats_h2h_link": link}})
-                        updated += 1
-                        prev_driver = new_driver
-                        new_driver = None
-                    except Exception as e:
-                        print(f"    [!] FootyStats incognito xetasi: {e}")
-                        _safe_quit_driver(new_driver)
-                        _safe_quit_driver(prev_driver)
-                        prev_driver = None
+                    db.fixtures.update_one({"_id": f["_id"]}, {"$set": {"predictions.footystats_h2h_link": link}})
+                    updated += 1
                     break
 
-        _safe_quit_driver(prev_driver)
-        print(f"  [{league_name}] Updated: {updated}")
+        print(f"  [{league_name}] Updated (link): {updated}")
 
 
 def run_footystats_links_only():

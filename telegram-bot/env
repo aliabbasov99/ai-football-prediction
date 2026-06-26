@@ -1,0 +1,13 @@
+BOT_TOKEN = "8702590227:AAGxTUfCENQ-5U97JtplEHbsG0mAs3dSqQs"
+ADMIN_CHAT_ID =  2094914778          # Sənin Telegram chat id-n
+API_BASE_URL = "http://localhost:7999"
+paymentalert = 8831044220:AAFuQs2O6kYpxw1M3Gc7v3EieMrNSBkJyKE
+BOT_SECRET = qolqol-bot-secret-2024
+
+
+
+PAYMENT_BOT_TOKEN = "8702590227:AAGxTUfCENQ-5U97JtplEHbsG0mAs3dSqQs"   # Ödəniş botu tokeni
+ALERT_BOT_TOKEN   = "8831044220:AAFuQs2O6kYpxw1M3Gc7v3EieMrNSBkJyKE"     # Alert botu tokeni
+
+ADMIN_CHAT_ID = 2094914778    # Sənin chat id-n
+API_BASE_URL  = "http://localhost:7999"
