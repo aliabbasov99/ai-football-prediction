@@ -27,7 +27,7 @@ export function StatsSidebar() {
   return (
     <aside className="card h-fit overflow-hidden lg:sticky lg:top-20">
       <div className="border-b border-line px-3 py-2.5">
-        <p className="text-xs font-semibold uppercase tracking-widerr text-ink-muted">
+        <p className="text-xs font-semibold uppercase tracking-wider text-ink-muted">
           Statistika bölmələri
         </p>
       </div>

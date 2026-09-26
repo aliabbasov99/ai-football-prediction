@@ -377,7 +377,7 @@ export default function AdminPage() {
               <div className="space-y-6">
                 {GROUPS.map((group) => (
                   <div key={group.title}>
-                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-widerr text-ink-faint">
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-ink-faint">
                       {group.title}
                     </p>
                     <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
