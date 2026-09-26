@@ -28,9 +28,7 @@ export function CouponItemRow({
       </div>
 
       <div className="flex shrink-0 items-center gap-1.5">
-        <span className="rounded-md bg-surface-3 px-1.5 py-0.5 text-xs font-semibold text-ink">
-          {item.odds}
-        </span>
+        <span className="pill badge-muted tabular-nums">{item.odds}</span>
         <button
           onClick={() => onRemove(item.key)}
           className="grid h-6 w-6 place-items-center rounded-md text-ink-faint transition-colors hover:bg-danger/15 hover:text-danger"

@@ -104,13 +104,12 @@ export const api = {
 
   me: () => request<{ user: AuthUser }>("/auth/me"),
 
-  users: () => request<{ users: AuthUser[] }>("/auth/users"),
+  /** Backend `users_collection`-u DÜZ massiv kimi qaytarır (zərf yoxdur). */
+  users: () => request<AuthUser[]>("/auth/users"),
 
   /* ── Admin (token tələb edir) ── */
 
   adminStatus: () => request<PipelineState>("/admin/status-live"),
-
-  adminStatusStatic: () => request<PipelineState>("/admin/status"),
 
   adminScrapeStart: (toggles: ScrapeToggles) =>
     request<{ status: string; message?: string }>("/admin/scrape-start", {
@@ -121,7 +120,13 @@ export const api = {
   adminClearDb: () =>
     request<{ status: string; message?: string }>("/admin/clear-db", { method: "POST" }),
 
-  adminLeagues: () => request<{ leagues: LeagueConfig[] }>("/admin/leagues"),
+  /**
+   * DİQQƏT: backend `leagues_config` kolleksiyasını DÜZ massiv kimi qaytarır
+   * (`list(...)` -> JSON array), `{ leagues: [...] }` zərfi YOXDUR.
+   * Əvvəlki tip `{ leagues: LeagueConfig[] }` idi — `res.leagues` hər zaman
+   * `undefined` çıxırdı və admin səhifəsi mövcud liqları HEÇ VAXT göstərmirdi.
+   */
+  adminLeagues: () => request<LeagueConfig[]>("/admin/leagues"),
 
   adminCreateLeague: (data: Partial<LeagueConfig>) =>
     request<{ status: string }>("/admin/leagues", {

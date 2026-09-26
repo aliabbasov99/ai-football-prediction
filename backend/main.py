@@ -451,10 +451,16 @@ async def admin_get_teams(league_id: str = Query(""), admin: dict = Depends(requ
 
     teams = list(data_service.db["teams"].find({"league_id": league_id}))
     if not teams:
-        # Try by leagues_config _id (the admin page sends MongoDB _id as league id)
-        config = data_service.db["leagues_config"].find_one({"_id": ObjectId(league_id)})
-        if config:
-            teams = list(data_service.db["teams"].find({"league_id": league_id}))
+        # Try by leagues_config _id (the admin page sends MongoDB _id as league id).
+        # ObjectId("1") InvalidId atir -> onsuz da 500 atirdi; indi boş listə dönür.
+        try:
+            oid = ObjectId(league_id)
+        except Exception:
+            oid = None
+        if oid is not None:
+            config = data_service.db["leagues_config"].find_one({"_id": oid})
+            if config:
+                teams = list(data_service.db["teams"].find({"league_id": league_id}))
 
     for t in teams:
         t["_id"] = str(t["_id"])

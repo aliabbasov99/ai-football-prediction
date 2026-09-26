@@ -112,8 +112,8 @@ export default function AdminPage() {
     let cancelled = false;
     (async () => {
       try {
-        const res = await api.adminLeagues();
-        if (!cancelled) setLeagueCount(res.leagues.length);
+        const leagues = await api.adminLeagues();
+        if (!cancelled) setLeagueCount(leagues.length);
       } catch {
         if (!cancelled) setLeagueCount(null);
       }
@@ -365,7 +365,7 @@ export default function AdminPage() {
       <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
         <div className="space-y-6">
           <Reveal delay={0.05}>
-            <div className="card p-5">
+            <div className="card p-6">
               <div className="mb-4 flex items-center justify-between gap-3">
                 <h2 className="flex items-center gap-2 text-sm font-semibold text-ink">
                   <CircuitBoard className="h-4 w-4 text-ink-faint" strokeWidth={2.25} />
@@ -374,7 +374,7 @@ export default function AdminPage() {
                 <span className="pill badge-muted">{selectedCount} addım seçilib</span>
               </div>
 
-              <div className="space-y-5">
+              <div className="space-y-6">
                 {GROUPS.map((group) => (
                   <div key={group.title}>
                     <p className="mb-2 text-[10px] font-semibold uppercase tracking-widerr text-ink-faint">
