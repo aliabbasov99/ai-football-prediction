@@ -1,0 +1,32 @@
+{
+  "name": "ai-football-prediction-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "logos:fetch": "python ../backend/venv/Scripts/python.exe scripts/fetch_logos.py",
+    "logos:check": "python ../backend/venv/Scripts/python.exe scripts/verify_logos.py",
+    "logos:sources": "python ../backend/venv/Scripts/python.exe scripts/check_sources.py"
+  },
+  "dependencies": {
+    "html2canvas-oklch": "1.5.0-alpha.0",
+    "lucide-react": "^1.48.0",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "^16.0.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.7.0"
+  }
+}
