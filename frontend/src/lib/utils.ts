@@ -24,18 +24,32 @@ export function initials(name: string): string {
 }
 
 /**
+ * Monogram çipinin rəng palitrası.
+ *
+ * Əvvəl `hsl(hash % 360 ...)` idi — bu bənövşəyi (hue 250-330) və neon
+ * (85% saturasiya) monogramlar yaradırdı, yəni dizayn qaydasını ("yalnız bir
+ * vurğu rəngi, neytral zink, bənövşəyi/neon yox") pozurdu.
+ *
+ * İndi 10 aşağı doyğunluqlu hue-dan seçilir. Palitradan bənövşəyi/indiqo
+ * aralığı (250-330) qəsdən çıxarılıb, hər rəng zink səviyyəsindədir ki
+ * monogram səhifənin qalan hissəsi ilə zəif bağlansın və hətta rang seçməsinə
+ * ehtiyac olmadan komandaları fərqləndirsin.
+ */
+const MONOGRAM_HUES = [0, 18, 34, 45, 95, 140, 165, 185, 205, 225] as const;
+
+/**
  * Komanda adından sabit rəng çıxarır — initials fallback üçün.
- * Eyni ad hər yerdə eyni rəngi alır (hash → hue).
+ * Eyni ad hər yerdə eyni rəngi alır (hash → palitra indeksi).
  */
 export function colorFromString(value: string): { bg: string; fg: string } {
   let hash = 0;
   for (let i = 0; i < value.length; i++) {
     hash = value.charCodeAt(i) + ((hash << 5) - hash);
   }
-  const hue = Math.abs(hash) % 360;
+  const hue = MONOGRAM_HUES[Math.abs(hash) % MONOGRAM_HUES.length];
   return {
-    bg: `hsl(${hue} 55% 32%)`,
-    fg: `hsl(${hue} 85% 82%)`,
+    bg: `hsl(${hue} 16% 21%)`,
+    fg: `hsl(${hue} 30% 88%)`,
   };
 }
 
