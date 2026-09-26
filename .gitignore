@@ -15,6 +15,9 @@ env/
 venv/
 .env
 
+# Loqo yükləyicisinin diski cache-i (nəticələr, loqolar deyil)
+frontend/scripts/.tsdb_cache.json
+
 # Next.js
 .next/
 out/
