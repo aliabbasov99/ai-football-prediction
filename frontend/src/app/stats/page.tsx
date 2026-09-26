@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
 import { Loader2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { StatsSidebar, StatPageHeader } from "./components/StatsSidebar";
@@ -8,6 +9,7 @@ import { StatsTable } from "./components/StatsTable";
 import { PredictionsTable } from "./components/PredictionsTable";
 import { STAT_PAGES } from "./components/constants";
 import { EmptyState } from "@/components/EmptyState";
+import { Reveal, RevealItem, staggerList } from "@/components/motion";
 import { api } from "@/lib/api";
 import type { FootyStatsPage, FootyStatsTable } from "@/types/football";
 
@@ -17,6 +19,7 @@ export default function StatsPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+  const reduce = useReducedMotion();
 
   useEffect(() => {
     let cancelled = false;
@@ -66,18 +69,22 @@ export default function StatsPage() {
   const loadedCount = Object.keys(pages).length;
 
   return (
-    <div className="grid gap-5 lg:grid-cols-[260px_1fr]">
-      <StatsSidebar />
+    <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
+      <Reveal>
+        <StatsSidebar />
+      </Reveal>
 
-      <div className="space-y-4">
-        <StatPageHeader
-          title="Statistika"
-          description="FootyStats-dan toplanan 16 statistika kateqoriyası."
-        />
+      <div className="space-y-6">
+        <Reveal>
+          <StatPageHeader
+            title="Statistika"
+            description="FootyStats-dan toplanan 16 statistika kateqoriyası."
+          />
+        </Reveal>
 
         {loading && (
           <div className="grid place-items-center py-20">
-            <Loader2 className="h-6 w-6 animate-spin text-ink-faint" />
+            <Loader2 className="h-6 w-6 animate-spin text-ink-faint" strokeWidth={2.25} />
           </div>
         )}
 
@@ -90,25 +97,34 @@ export default function StatsPage() {
 
         {!loading && !error && (
           <>
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <FilterBar value={query} onChange={setQuery} />
-              <span className="shrink-0 text-xs text-ink-faint">
-                {loadedCount}/{STAT_PAGES.length} səhifə · {filteredTables.length} cədvəl
-              </span>
-            </div>
+            <Reveal delay={0.05}>
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <FilterBar value={query} onChange={setQuery} />
+                <span className="shrink-0 text-xs text-ink-faint">
+                  {loadedCount}/{STAT_PAGES.length} səhifə · {filteredTables.length} cədvəl
+                </span>
+              </div>
+            </Reveal>
 
             {filteredTables.length === 0 ? (
               <EmptyState title="Cədvəl tapılmadı" description="Axtarışı dəyişdirin." />
             ) : (
-              <div className="space-y-4">
-                {filteredTables.map((table, i) =>
-                  /proqnoz|prediction/i.test(table.title) ? (
-                    <PredictionsTable key={i} table={table} />
-                  ) : (
-                    <StatsTable key={i} table={table} />
-                  ),
-                )}
-              </div>
+              <motion.div
+                variants={reduce ? undefined : staggerList}
+                initial={reduce ? false : "hidden"}
+                animate="show"
+                className="space-y-4"
+              >
+                {filteredTables.map((table, i) => (
+                  <RevealItem key={i}>
+                    {/proqnoz|prediction/i.test(table.title) ? (
+                      <PredictionsTable table={table} />
+                    ) : (
+                      <StatsTable table={table} />
+                    )}
+                  </RevealItem>
+                ))}
+              </motion.div>
             )}
           </>
         )}

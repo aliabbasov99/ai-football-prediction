@@ -28,7 +28,13 @@ pipeline = {
     "step_status": "idle",
     "error": "",
     "report": None,
+    "log": [],
+    "started_at": None,
+    "finished_at": None,
 }
+
+# Pipeline logunda saxlanilacak maksimum satir sayi
+PIPELINE_LOG_LIMIT = 500
 
 fs_stats_pipeline = {
     "is_running": False,
@@ -275,27 +281,57 @@ async def admin_scrape_start(toggles: ScrapeToggles, background_tasks: Backgroun
     pipeline["step_status"] = "running"
     pipeline["error"] = ""
     pipeline["report"] = None
+    pipeline["log"] = []
+    pipeline["started_at"] = datetime.now().isoformat(timespec="seconds")
+    pipeline["finished_at"] = None
+
+    if not selected_steps:
+        pipeline["is_running"] = False
+        pipeline["step_status"] = "error"
+        pipeline["error"] = "Heç bir addım seçilmədi."
+        pipeline["current_step"] = ""
+        pipeline["finished_at"] = datetime.now().isoformat(timespec="seconds")
+        return {"status": "warning", "message": "Heç bir addım seçilmədi."}
+
+    def log_line(text: str):
+        lines = pipeline["log"]
+        lines.append(text)
+        if len(lines) > PIPELINE_LOG_LIMIT:
+            # eskileri at, "x setir gosterildi" repl qoy
+            drop = len(lines) - PIPELINE_LOG_LIMIT
+            del lines[:drop]
+            lines.insert(0, f"... ({drop} əvvəlki sətir gizlədildi)")
 
     def run_pipeline():
         def progress_callback(percent: int, text: str):
             pipeline["progress"] = percent
+            # `current_step` finally blokunda SIFIRLANMIRDIR — yoksa proqnoz
+            # in final "heç bir oyun tapılmadı" mesajı UI-da itib gedirdi.
             pipeline["current_step"] = text
 
         report = None
         try:
-            report = run_god_mode(toggles=toggles_dict, progress_callback=progress_callback)
+            report = run_god_mode(
+                toggles=toggles_dict,
+                progress_callback=progress_callback,
+                log_callback=log_line,
+            )
             pipeline["progress"] = 100
-            pipeline["step_status"] = "completed"
+            if report and report.get("failed_steps"):
+                pipeline["step_status"] = "partial"
+            else:
+                pipeline["step_status"] = "completed"
         except Exception as e:
             pipeline["error"] = str(e)
             pipeline["step_status"] = "error"
+            log_line(f"[X] Pipeline xətasi: {e}")
         finally:
             if report:
                 pipeline["report"] = report
             pipeline["is_running"] = False
-            pipeline["current_step"] = ""
             pipeline["current_step_index"] = 0
             pipeline["total_steps"] = 0
+            pipeline["finished_at"] = datetime.now().isoformat(timespec="seconds")
 
     background_tasks.add_task(run_pipeline)
     return {"status": "success", "message": f"Pipeline started with {len(selected_steps)} steps."}

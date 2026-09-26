@@ -246,15 +246,36 @@ export interface ScrapeToggles {
   sportsgambler_predictions: boolean;
 }
 
+export interface PipelineScraperStats {
+  with_link?: number;
+  with_prediction?: number;
+  /** Bu icradan əlavə olunan məlumat sayı */
+  this_run?: { link?: number; prediction?: number };
+}
+
+export interface PipelineReport {
+  total_fixtures: number;
+  per_scraper: Record<string, PipelineScraperStats>;
+  failed_steps?: string[];
+  notes?: string[];
+  /** Pipeline dayandırıldısa səbəb */
+  aborted?: string;
+}
+
 export interface PipelineState {
   is_running: boolean;
   current_step: string;
   current_step_index: number;
   total_steps: number;
   progress: number;
+  /** "idle" | "running" | "completed" | "partial" | "error" */
   step_status: string;
   error: string;
-  report: Record<string, unknown> | null;
+  report: PipelineReport | null;
+  /** Addım addım stdout — "heç nə olmur" problemini görünür edir */
+  log: string[];
+  started_at: string | null;
+  finished_at: string | null;
 }
 
 export interface FsStatsPipelineState {

@@ -10,7 +10,7 @@ function UpcomingList({ games, title }: { games: UpcomingMatch[]; title: string 
         {games.slice(0, 3).map((g, i) => (
           <li key={i} className="truncate text-[11px] text-ink-muted">
             {g.home} — {g.away}
-            {g.score ? <span className="ml-1 font-bold text-ink">{g.score}</span> : null}
+            {g.score ? <span className="ml-1 font-semibold text-ink">{g.score}</span> : null}
           </li>
         ))}
       </ul>
@@ -31,7 +31,7 @@ export function UpcomingAndTopScorers({ item }: { item: PredictionItem }) {
 
   return (
     <div className="rounded-lg border border-line-soft bg-surface-2 p-2">
-      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wide text-ink-faint">
+      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-ink-faint">
         Əlavə məlumat
       </p>
       <div className="space-y-2">
@@ -50,7 +50,7 @@ export function UpcomingAndTopScorers({ item }: { item: PredictionItem }) {
                 <li key={i} className="flex items-center gap-1.5 text-[11px]">
                   {s.team_logo && <TeamLogo logo={s.team_logo} name={s.team} size={14} alt={s.team ?? ""} />}
                   <span className="min-w-0 flex-1 truncate text-ink-muted">{s.name}</span>
-                  <span className="shrink-0 tabular-nums font-bold text-ink">{s.goals}</span>
+                  <span className="shrink-0 tabular-nums font-semibold text-ink">{s.goals}</span>
                 </li>
               ))}
             </ul>

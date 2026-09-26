@@ -13,6 +13,7 @@
     "logos:sources": "python ../backend/venv/Scripts/python.exe scripts/check_sources.py"
   },
   "dependencies": {
+    "framer-motion": "^13.4.4",
     "html2canvas-oklch": "1.5.0-alpha.0",
     "lucide-react": "^1.48.0",
     "next": "^16.0.0",

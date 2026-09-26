@@ -1,20 +1,30 @@
 "use client";
 
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   AlertTriangle,
+  CircuitBoard,
   Database,
+  Gauge,
+  Layers,
   Loader2,
   LogIn,
-  Play,
-  Shield,
+  Rocket,
+  ShieldCheck,
   Trash2,
+  TriangleAlert,
 } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
-import { PipelineReport, PipelineStatusCard } from "./components/PipelineReport";
+import {
+  PipelineLog,
+  PipelineReport,
+  PipelineStatusCard,
+} from "./components/PipelineReport";
 import { ProgressBar } from "./components/ProgressBar";
 import { Toggle } from "./components/Toggle";
 import { api, ApiError, getToken, setToken } from "@/lib/api";
 import { useAuth } from "@/lib/useAuth";
+import { DUR, EASE_OUT, Reveal } from "@/components/motion";
 import type { PipelineState, ScrapeToggles } from "@/types/football";
 
 const DEFAULT_TOGGLES: ScrapeToggles = {
@@ -64,9 +74,11 @@ export default function AdminPage() {
   const [state, setState] = useState<PipelineState | null>(null);
   const [message, setMessage] = useState<{ kind: "ok" | "err"; text: string } | null>(null);
   const [busy, setBusy] = useState(false);
+  const [leagueCount, setLeagueCount] = useState<number | null>(null);
 
   const { status, isAdmin, nickname: adminName, refresh, logout: logoutAuth } =
     useAuth();
+  const reduce = useReducedMotion();
 
   // status-live SSE deyil, sadə JSON — polling ilə izlənir
   const poll = useCallback(async () => {
@@ -90,6 +102,27 @@ export default function AdminPage() {
     };
   }, [isAdmin, poll]);
 
+  /**
+   * ÖNCƏKİ YOXLAMA — pipeline düyməsinin "heç nə olmur" probleminin əsas səbəbi:
+   * DB-də lig yoxdursa skriptlər heç nə tapa bilmir və pipeline boş report
+   * ilə bitir. İstifadəçi isə "düymə işləmir" deyirdi.
+   */
+  useEffect(() => {
+    if (!isAdmin) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const res = await api.adminLeagues();
+        if (!cancelled) setLeagueCount(res.leagues.length);
+      } catch {
+        if (!cancelled) setLeagueCount(null);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [isAdmin]);
+
   async function login(e: React.FormEvent) {
     e.preventDefault();
     setAuthLoading(true);
@@ -98,7 +131,6 @@ export default function AdminPage() {
       const res = await api.login(nickname, password);
       setToken(res.access_token);
       setPassword("");
-      // Rolu `useAuth` yenidən oxusun
       refresh();
     } catch (e) {
       setAuthError(e instanceof ApiError ? e.message : "Giriş uğursuz oldu");
@@ -114,24 +146,44 @@ export default function AdminPage() {
   }
 
   async function startPipeline() {
+    // Boş DB ilə pipeline işə salınma — səbəbini əvvəlcədən de
+    if (leagueCount === 0) {
+      setMessage({
+        kind: "err",
+        text:
+          "Heç bir lig təyin edilməyib. Pipeline məlumat çəkmək üçün əvvəlcə " +
+          "`/admin/leagues` bölməsindən ən azı bir lig əlavə edin.",
+      });
+      return;
+    }
+
     setBusy(true);
     setMessage(null);
     try {
       const res = await api.adminScrapeStart(toggles);
       setMessage({
         kind: res.status === "warning" ? "err" : "ok",
-        text: res.message ?? (res.status === "warning" ? "Pipeline artıq işləyir" : "Pipeline başladı"),
+        text:
+          res.message ??
+          (res.status === "warning" ? "Pipeline artıq işləyir" : "Pipeline başladı"),
       });
+      // Dərhal bir dəfə çək — düymə "başladı" vəziyyətini dərhal göstərsin
       void poll();
     } catch (e) {
-      setMessage({ kind: "err", text: e instanceof ApiError ? e.message : "Xəta baş verdi" });
+      setMessage({
+        kind: "err",
+        text: e instanceof ApiError ? e.message : "Xəta baş verdi",
+      });
     } finally {
       setBusy(false);
     }
   }
 
   async function clearDb() {
-    if (!confirm("Bütün məlumat bazaları silinsin? Bu əməliyat geri qaytarıla bilməz.")) return;
+    if (
+      !confirm("Bütün məlumat bazaları silinsin? Bu əməliyat geri qaytarıla bilməz.")
+    )
+      return;
     setBusy(true);
     setMessage(null);
     try {
@@ -139,7 +191,10 @@ export default function AdminPage() {
       setMessage({ kind: "ok", text: res.message ?? "Baza təmizləndi" });
       void poll();
     } catch (e) {
-      setMessage({ kind: "err", text: e instanceof ApiError ? e.message : "Xəta baş verdi" });
+      setMessage({
+        kind: "err",
+        text: e instanceof ApiError ? e.message : "Xəta baş verdi",
+      });
     } finally {
       setBusy(false);
     }
@@ -155,7 +210,10 @@ export default function AdminPage() {
           : await api.adminScrapeFootystatsStats();
       setMessage({ kind: "ok", text: res.message ?? "Əmr göndərildi" });
     } catch (e) {
-      setMessage({ kind: "err", text: e instanceof ApiError ? e.message : "Xəta baş verdi" });
+      setMessage({
+        kind: "err",
+        text: e instanceof ApiError ? e.message : "Xəta baş verdi",
+      });
     } finally {
       setBusy(false);
     }
@@ -165,167 +223,261 @@ export default function AdminPage() {
   if (status === "loading") {
     return (
       <div className="grid place-items-center py-20">
-        <Loader2 className="h-6 w-6 animate-spin text-ink-faint" />
+        <Loader2 className="h-6 w-6 animate-spin text-ink-faint" strokeWidth={2.25} />
       </div>
     );
   }
 
   if (!isAdmin) {
     return (
-      <div className="mx-auto max-w-sm">
-        <div className="card p-6">
-          <h1 className="flex items-center gap-2 text-lg font-bold">
-            <Shield className="h-5 w-5 text-brand" /> Admin girişi
-          </h1>
-          <p className="mt-1 text-sm text-ink-muted">
-            Bu səhifə yalnız administrator üçün. Admin hesabı ilə daxil olun.
-          </p>
+      <div className="mx-auto max-w-sm py-10">
+        <Reveal>
+          <div className="card p-6">
+            <h1 className="flex items-center gap-2 text-lg font-semibold">
+              <ShieldCheck className="h-5 w-5 text-brand" strokeWidth={2.25} />
+              Admin girişi
+            </h1>
+            <p className="mt-1.5 text-sm text-ink-muted">
+              Bu səhifə yalnız administrator üçün. Admin hesabı ilə daxil olun.
+            </p>
 
-          <form onSubmit={login} className="mt-5 space-y-3">
-            <input
-              value={nickname}
-              onChange={(e) => setNickname(e.target.value)}
-              placeholder="İstifadəçi adı"
-              autoComplete="username"
-              className="w-full rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm text-ink outline-none focus:border-brand"
-            />
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Şifrə"
-              autoComplete="current-password"
-              className="w-full rounded-lg border border-line bg-surface-2 px-3 py-2 text-sm text-ink outline-none focus:border-brand"
-            />
+            <form onSubmit={login} className="mt-6 space-y-3">
+              <input
+                value={nickname}
+                onChange={(e) => setNickname(e.target.value)}
+                placeholder="İstifadəçi adı"
+                autoComplete="username"
+                className="input"
+              />
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Şifrə"
+                autoComplete="current-password"
+                className="input"
+              />
 
-            {authError && (
-              <p className="flex items-center gap-1.5 text-xs text-danger">
-                <AlertTriangle className="h-3.5 w-3.5" />
-                {authError}
-              </p>
-            )}
+              <AnimatePresence>
+                {authError && (
+                  <motion.p
+                    initial={reduce ? false : { opacity: 0, y: -4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={reduce ? undefined : { opacity: 0 }}
+                    transition={{ duration: DUR.fast, ease: EASE_OUT }}
+                    className="flex items-center gap-1.5 text-xs text-danger"
+                  >
+                    <TriangleAlert className="h-3.5 w-3.5" strokeWidth={2.5} />
+                    {authError}
+                  </motion.p>
+                )}
+              </AnimatePresence>
 
-            <button
-              type="submit"
-              disabled={authLoading}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-50"
-            >
-              {authLoading ? <Loader2 className="h-4 w-4 animate-spin" /> : <LogIn className="h-4 w-4" />}
-              Daxil ol
-            </button>
-          </form>
-        </div>
+              <button
+                type="submit"
+                disabled={authLoading}
+                className="btn btn-primary w-full"
+              >
+                {authLoading ? (
+                  <Loader2 className="h-4 w-4 animate-spin" strokeWidth={2.5} />
+                ) : (
+                  <LogIn className="h-4 w-4" strokeWidth={2.25} />
+                )}
+                Daxil ol
+              </button>
+            </form>
+          </div>
+        </Reveal>
       </div>
     );
   }
 
   /* ── Panel ── */
   const selectedCount = Object.values(toggles).filter(Boolean).length;
+  const noLeagues = leagueCount === 0;
 
   return (
-    <div className="space-y-5">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h1 className="flex items-center gap-2 text-2xl font-bold tracking-tight">
-            <Shield className="h-5 w-5 text-brand" /> Admin paneli
-          </h1>
-          <p className="mt-1 text-sm text-ink-muted">
-            {adminName ?? "admin"} (admin) — scraping pipeline və məlumat idarəetməsi
-          </p>
-        </div>
-        <button
-          onClick={logout}
-          className="rounded-lg border border-line px-3 py-2 text-sm font-medium text-ink-muted hover:bg-surface-2 hover:text-ink"
-        >
-          Çıxış
-        </button>
-      </div>
-
-      {message && (
-        <p
-          className={
-            message.kind === "ok"
-              ? "rounded-lg border border-success/30 bg-success/10 p-3 text-sm text-success"
-              : "rounded-lg border border-danger/30 bg-danger/10 p-3 text-sm text-danger"
-          }
-        >
-          {message.text}
-        </p>
-      )}
-
-      <div className="grid gap-4 lg:grid-cols-[1fr_320px]">
-        <div className="space-y-4">
-          <div className="card p-4">
-            <div className="mb-3 flex items-center justify-between">
-              <h2 className="text-sm font-bold text-ink">Pipeline addımları</h2>
-              <span className="text-xs text-ink-faint">{selectedCount} addım seçilib</span>
-            </div>
-
-            <div className="space-y-4">
-              {GROUPS.map((group) => (
-                <div key={group.title}>
-                  <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wide text-ink-faint">
-                    {group.title}
-                  </p>
-                  <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-                    {group.keys.map((key) => (
-                      <Toggle
-                        key={`${group.title}-${key}`}
-                        label={`${group.title} · ${LABELS[key]}`}
-                        checked={toggles[key]}
-                        disabled={state?.is_running}
-                        onChange={(checked) =>
-                          setToggles((prev) => ({ ...prev, [key]: checked }))
-                        }
-                      />
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-4 flex flex-wrap gap-2 border-t border-line pt-4">
-              <button
-                onClick={startPipeline}
-                disabled={busy || state?.is_running || selectedCount === 0}
-                className="inline-flex items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-50"
-              >
-                {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Play className="h-4 w-4" />}
-                Pipeline-i başlat
-              </button>
-              <button
-                onClick={() => runFootyStats("games")}
-                disabled={busy}
-                className="inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm font-medium text-ink hover:bg-surface-2 disabled:opacity-50"
-              >
-                <Database className="h-4 w-4" /> FootyStats oyunları
-              </button>
-              <button
-                onClick={() => runFootyStats("stats")}
-                disabled={busy}
-                className="inline-flex items-center gap-2 rounded-lg border border-line px-3 py-2 text-sm font-medium text-ink hover:bg-surface-2 disabled:opacity-50"
-              >
-                <Database className="h-4 w-4" /> FootyStats statistika
-              </button>
-              <button
-                onClick={clearDb}
-                disabled={busy}
-                className="inline-flex items-center gap-2 rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-sm font-semibold text-danger transition-colors hover:bg-danger/20 disabled:opacity-50"
-              >
-                <Trash2 className="h-4 w-4" /> Bazanı təmizlə
-              </button>
-            </div>
+    <div className="space-y-6">
+      <Reveal>
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h1 className="flex items-center gap-2 text-2xl font-semibold tracking-tight">
+              <ShieldCheck className="h-5.5 w-5.5 text-brand" strokeWidth={2.25} />
+              Admin paneli
+            </h1>
+            <p className="mt-1 text-sm text-ink-muted">
+              {adminName ?? "admin"} (admin) — scraping pipeline və məlumat idarəetməsi
+            </p>
           </div>
+          <button onClick={logout} className="btn btn-ghost">
+            Çıxış
+          </button>
+        </div>
+      </Reveal>
+
+      <AnimatePresence>
+        {message && (
+          <motion.p
+            key={message.text}
+            initial={reduce ? false : { opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduce ? undefined : { opacity: 0, y: -6 }}
+            transition={{ duration: DUR.base, ease: EASE_OUT }}
+            className={
+              message.kind === "ok"
+                ? "rounded-xl border border-success/30 bg-success/10 p-3 text-sm text-success"
+                : "rounded-xl border border-danger/30 bg-danger/10 p-3 text-sm text-danger"
+            }
+          >
+            {message.text}
+          </motion.p>
+        )}
+      </AnimatePresence>
+
+      {/* ── ÖNCƏKİ XƏBƏRDARLIQ: heç bir lig yoxdur ── */}
+      <AnimatePresence>
+        {noLeagues && (
+          <motion.div
+            initial={reduce ? false : { opacity: 0, y: -6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={reduce ? undefined : { opacity: 0, y: -6 }}
+            transition={{ duration: DUR.base, ease: EASE_OUT }}
+            className="rounded-xl border border-warn/30 bg-warn/10 p-4"
+          >
+            <p className="flex items-center gap-2 text-sm font-medium text-warn">
+              <AlertTriangle className="h-4 w-4" strokeWidth={2.25} />
+              Heç bir lig təyin edilməyib
+            </p>
+            <p className="mt-1.5 text-sm leading-relaxed text-ink-muted">
+              Pipeline yalnız DB-də təyin edilmiş liglər üçün oyun axtarır. Lig
+              yoxdursa bütün skriptlər boş qaytarır və pipeline heç nə toplamadan
+              bitir — bu, əvvəlki versiyalarda &laquo;düymə heç nə etmir&laquo; təsurrücünün
+              səbəbi idi.
+            </p>
+            <a href="/admin/leagues" className="btn btn-ghost mt-3">
+              <Layers className="h-4 w-4" strokeWidth={2.25} />
+              Ligləri idarə et
+            </a>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="grid gap-6 lg:grid-cols-[1fr_340px]">
+        <div className="space-y-6">
+          <Reveal delay={0.05}>
+            <div className="card p-5">
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <h2 className="flex items-center gap-2 text-sm font-semibold text-ink">
+                  <CircuitBoard className="h-4 w-4 text-ink-faint" strokeWidth={2.25} />
+                  Pipeline addımları
+                </h2>
+                <span className="pill badge-muted">{selectedCount} addım seçilib</span>
+              </div>
+
+              <div className="space-y-5">
+                {GROUPS.map((group) => (
+                  <div key={group.title}>
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-widerr text-ink-faint">
+                      {group.title}
+                    </p>
+                    <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                      {group.keys.map((key) => (
+                        <Toggle
+                          key={`${group.title}-${key}`}
+                          label={`${group.title} · ${LABELS[key]}`}
+                          checked={toggles[key]}
+                          disabled={state?.is_running}
+                          onChange={(checked) =>
+                            setToggles((prev) => ({ ...prev, [key]: checked }))
+                          }
+                        />
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2 border-t border-line pt-5">
+                <motion.button
+                  onClick={startPipeline}
+                  disabled={busy || state?.is_running || selectedCount === 0}
+                  whileHover={
+                    reduce || busy || state?.is_running || selectedCount === 0
+                      ? undefined
+                      : { scale: 1.01 }
+                  }
+                  whileTap={
+                    reduce || busy || state?.is_running || selectedCount === 0
+                      ? undefined
+                      : { scale: 0.98 }
+                  }
+                  transition={{ duration: DUR.fast, ease: EASE_OUT }}
+                  className="btn btn-primary"
+                >
+                  {busy ? (
+                    <Loader2 className="h-4 w-4 animate-spin" strokeWidth={2.5} />
+                  ) : (
+                    <Rocket className="h-4 w-4" strokeWidth={2.25} />
+                  )}
+                  Pipeline-i başlat
+                </motion.button>
+                <button
+                  onClick={() => runFootyStats("games")}
+                  disabled={busy}
+                  className="btn btn-ghost"
+                >
+                  <Database className="h-4 w-4" strokeWidth={2.25} />
+                  FootyStats oyunları
+                </button>
+                <button
+                  onClick={() => runFootyStats("stats")}
+                  disabled={busy}
+                  className="btn btn-ghost"
+                >
+                  <Gauge className="h-4 w-4" strokeWidth={2.25} />
+                  FootyStats statistika
+                </button>
+                <button onClick={clearDb} disabled={busy} className="btn btn-danger">
+                  <Trash2 className="h-4 w-4" strokeWidth={2.25} />
+                  Bazanı təmizlə
+                </button>
+              </div>
+
+              {/* Düymənin yanında canlı vəziyyət — əvvəl yalnız yuxarıda idi */}
+              {state?.is_running && (
+                <p className="mt-3 flex items-center gap-2 text-xs text-ink-muted">
+                  <motion.span
+                    animate={reduce ? undefined : { opacity: [1, 0.35, 1] }}
+                    transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+                    className="h-1.5 w-1.5 rounded-full bg-brand"
+                  />
+                  {state.current_step || "Pipeline işləyir…"} —{" "}
+                  {state.progress}%
+                </p>
+              )}
+            </div>
+          </Reveal>
+
+          {/* ── LOG: əvvəl yalnız backend konsolunda idi ── */}
+          <Reveal delay={0.1}>
+            <PipelineLog lines={state?.log ?? []} />
+          </Reveal>
         </div>
 
-        <div className="space-y-4">
-          <PipelineStatusCard state={state} />
+        <div className="space-y-6">
+          <Reveal delay={0.1}>
+            <PipelineStatusCard state={state} />
+          </Reveal>
           {state && (
-            <div className="card p-3.5">
-              <ProgressBar value={state.progress} status={state.step_status} />
-            </div>
+            <Reveal delay={0.15}>
+              <div className="card p-4">
+                <ProgressBar value={state.progress} status={state.step_status} />
+              </div>
+            </Reveal>
           )}
-          <PipelineReport report={state?.report ?? null} />
+          <Reveal delay={0.2}>
+            <PipelineReport report={state?.report ?? null} />
+          </Reveal>
         </div>
       </div>
     </div>

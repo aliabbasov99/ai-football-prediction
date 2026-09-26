@@ -96,7 +96,7 @@ export default function AdminLeaguesPage() {
   return (
     <div className="space-y-5">
       <div>
-        <h1 className="text-2xl font-bold tracking-tight">Liqa və komanda idarəetməsi</h1>
+        <h1 className="text-2xl font-semibold tracking-tight">Liqa və komanda idarəetməsi</h1>
         <p className="mt-1 text-sm text-ink-muted">
           Liqa konfiqurasiyaları, mənbə linkləri, komanda loqoları və alias-lar.
         </p>
@@ -119,7 +119,7 @@ export default function AdminLeaguesPage() {
         <div className="space-y-3">
           <div className="card overflow-hidden">
             <div className="flex items-center justify-between border-b border-line bg-surface-2 px-3 py-2.5">
-              <h2 className="text-sm font-bold text-ink">Liqalar ({leagues.length})</h2>
+              <h2 className="text-sm font-semibold text-ink">Liqalar ({leagues.length})</h2>
               <button
                 onClick={() => {
                   setDraft(BLANK_LEAGUE);
@@ -170,7 +170,7 @@ export default function AdminLeaguesPage() {
         {/* ── Redaktə + komandalar ── */}
         <div className="space-y-4">
           <div className="card p-4">
-            <h2 className="mb-3 text-sm font-bold text-ink">
+            <h2 className="mb-3 text-sm font-semibold text-ink">
               {selectedLeague ? "Liqanı redaktə et" : "Yeni liqa əlavə et"}
             </h2>
 
@@ -230,7 +230,7 @@ export default function AdminLeaguesPage() {
                     await loadLeagues();
                   }, selectedLeague ? "Liqa yeniləndi" : "Liqa əlavə edildi")
                 }
-                className="inline-flex items-center gap-2 rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-50"
+                className="inline-flex items-center gap-2 rounded-lg btn btn-primary transition-opacity hover:opacity-90 disabled:opacity-50"
               >
                 <Save className="h-4 w-4" /> Yadda saxla
               </button>
@@ -274,7 +274,7 @@ export default function AdminLeaguesPage() {
           {selectedLeague && (
             <div className="card overflow-hidden">
               <div className="flex items-center justify-between border-b border-line bg-surface-2 px-3 py-2.5">
-                <h2 className="text-sm font-bold text-ink">Komandalar ({teams.length})</h2>
+                <h2 className="text-sm font-semibold text-ink">Komandalar ({teams.length})</h2>
               </div>
 
               {teams.length === 0 ? (

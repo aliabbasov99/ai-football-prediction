@@ -1,6 +1,14 @@
 "use client";
 
-import { AlertTriangle, Download, Ticket, Trash2, X } from "lucide-react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import {
+  Download,
+  Receipt,
+  Ticket,
+  Trash2,
+  TriangleAlert,
+  X,
+} from "lucide-react";
 import { useRef, useState } from "react";
 import { CouponItemRow } from "@/components/CouponItemRow";
 import {
@@ -9,12 +17,14 @@ import {
   totalOdds,
 } from "@/components/couponUtils";
 import { useCoupon } from "@/context/CouponContext";
-import { cn } from "@/lib/utils";
+import { EXPORT_BG, EXPORT_SCALE } from "@/constants";
+import { DUR, EASE_OUT } from "@/components/motion";
 
 export function CouponPanel() {
   const { items, stake, setStake, isOpen, close, remove, clear } = useCoupon();
   const panelRef = useRef<HTMLDivElement>(null);
   const [exporting, setExporting] = useState(false);
+  const reduce = useReducedMotion();
 
   const conflict = hasConflictingSelections(items);
   const odds = totalOdds(items);
@@ -26,8 +36,8 @@ export function CouponPanel() {
     try {
       const html2canvas = (await import("html2canvas-oklch")).default;
       const canvas = await html2canvas(panelRef.current, {
-        backgroundColor: "#0d1220",
-        scale: 2,
+        backgroundColor: EXPORT_BG,
+        scale: EXPORT_SCALE,
       });
       const link = document.createElement("a");
       link.download = `kupon-${Date.now()}.png`;
@@ -42,46 +52,53 @@ export function CouponPanel() {
 
   return (
     <>
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
-          onClick={close}
-          aria-hidden
-        />
-      )}
-
-      <aside
-        className={cn(
-          "coupon-export fixed right-0 top-0 z-50 flex h-full w-full max-w-sm flex-col border-l border-line bg-surface transition-transform duration-200",
-          isOpen ? "translate-x-0" : "translate-x-full",
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={reduce ? false : { opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={reduce ? undefined : { opacity: 0 }}
+            transition={{ duration: DUR.base, ease: EASE_OUT }}
+            onClick={close}
+            className="fixed inset-0 z-40 bg-black/70 backdrop-blur-sm"
+            aria-hidden
+          />
         )}
+      </AnimatePresence>
+
+      <motion.aside
+        initial={false}
+        animate={{ x: isOpen ? 0 : "100%" }}
+        transition={{ duration: DUR.slow, ease: EASE_OUT }}
+        className="coupon-export fixed right-0 top-0 z-50 flex h-full w-full max-w-sm flex-col border-l border-line bg-base"
         aria-hidden={!isOpen}
       >
-        <div className="flex items-center justify-between border-b border-line px-4 py-3">
-          <h2 className="flex items-center gap-2 font-bold">
-            <Ticket className="h-4 w-4 text-brand" /> Kupon
+        <div className="flex items-center justify-between border-b border-line bg-surface/60 px-4 py-3 backdrop-blur-sm">
+          <h2 className="flex items-center gap-2 text-sm font-semibold">
+            <Ticket className="h-4 w-4 text-brand" strokeWidth={2.25} />
+            Kupon
             {items.length > 0 && (
-              <span className="rounded-full bg-surface-3 px-2 py-0.5 text-xs font-bold text-ink-muted">
-                {items.length}
-              </span>
+              <span className="pill badge-muted">{items.length}</span>
             )}
           </h2>
           <button
             onClick={close}
-            className="grid h-8 w-8 place-items-center rounded-lg text-ink-muted hover:bg-surface-2 hover:text-ink"
+            className="btn btn-ghost !px-2 !py-1.5"
             aria-label="Bağla"
           >
-            <X className="h-5 w-5" />
+            <X className="h-4 w-4" strokeWidth={2.25} />
           </button>
         </div>
 
-        <div ref={panelRef} className="flex min-h-0 flex-1 flex-col">
+        <div ref={panelRef} className="flex min-h-0 flex-1 flex-col bg-surface/50">
           <div className="flex-1 space-y-2 overflow-y-auto p-4">
             {items.length === 0 ? (
-              <div className="grid place-items-center gap-2 py-16 text-center">
-                <Ticket className="h-8 w-8 text-ink-faint" />
-                <p className="text-sm text-ink-muted">Kupon boşdur</p>
-                <p className="max-w-[220px] text-xs text-ink-faint">
+              <div className="grid place-items-center gap-3 py-16 text-center">
+                <span className="grid h-14 w-14 place-items-center rounded-xl border border-line bg-surface-2">
+                  <Ticket className="h-6 w-6 text-ink-faint" strokeWidth={1.75} />
+                </span>
+                <p className="text-sm font-medium text-ink">Kupon boşdur</p>
+                <p className="max-w-[240px] text-xs leading-relaxed text-ink-faint">
                   Proqnozlar səhifəsində əmsal seçdikdə məhsullar burada toplanacaq.
                 </p>
               </div>
@@ -93,16 +110,27 @@ export function CouponPanel() {
           </div>
 
           {items.length > 0 && (
-            <div className="space-y-3 border-t border-line bg-surface-2 p-4">
-              {conflict && (
-                <div className="flex items-start gap-2 rounded-lg border border-warn/30 bg-warn/10 p-2.5 text-xs text-warn">
-                  <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
-                  <span>
-                    Eyni matçda bir-birini əks edən seçimlər var (məs. 1 və 2). Bu kupon
-                    uğurlu ola bilməz.
-                  </span>
-                </div>
-              )}
+            <div className="space-y-4 border-t border-line bg-surface/80 p-4 backdrop-blur-sm">
+              <AnimatePresence>
+                {conflict && (
+                  <motion.p
+                    initial={reduce ? false : { opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={reduce ? undefined : { opacity: 0, height: 0 }}
+                    transition={{ duration: DUR.base, ease: EASE_OUT }}
+                    className="flex items-start gap-2 overflow-hidden rounded-lg border border-warn/30 bg-warn/10 p-2.5 text-xs leading-relaxed text-warn"
+                  >
+                    <TriangleAlert
+                      className="mt-0.5 h-3.5 w-3.5 shrink-0"
+                      strokeWidth={2.25}
+                    />
+                    <span>
+                      Eyni matçda bir-birini əks edən seçimlər var (məs. 1 və 2). Bu kupon
+                      uğurlu ola bilməz.
+                    </span>
+                  </motion.p>
+                )}
+              </AnimatePresence>
 
               <label className="block text-xs font-medium text-ink-muted">
                 Stake (AZN)
@@ -112,18 +140,22 @@ export function CouponPanel() {
                   step={1}
                   value={stake}
                   onChange={(e) => setStake(Math.max(0, Number(e.target.value) || 0))}
-                  className="mt-1.5 w-full rounded-lg border border-line bg-surface px-3 py-2 text-sm font-semibold text-ink outline-none focus:border-brand"
+                  className="input mt-1.5 !font-semibold"
                 />
               </label>
 
-              <div className="space-y-1.5 rounded-lg border border-line bg-surface p-3 text-sm">
+              <div className="card-inset space-y-1.5 p-3 text-sm">
                 <div className="flex justify-between text-ink-muted">
                   <span>Ümumi əmsal</span>
-                  <span className="font-bold text-ink">{odds.toFixed(2)}</span>
+                  <span className="font-semibold tabular-nums text-ink">
+                    {odds.toFixed(2)}
+                  </span>
                 </div>
                 <div className="flex justify-between text-ink-muted">
                   <span>Məqsud</span>
-                  <span className="font-bold text-success">{ret.toFixed(2)} AZN</span>
+                  <span className="font-semibold tabular-nums text-success">
+                    {ret.toFixed(2)} AZN
+                  </span>
                 </div>
               </div>
 
@@ -131,23 +163,25 @@ export function CouponPanel() {
                 <button
                   onClick={exportPng}
                   disabled={exporting}
-                  className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-line bg-surface px-3 py-2 text-sm font-semibold text-ink transition-colors hover:bg-surface-3 disabled:opacity-50"
+                  className="btn btn-ghost flex-1"
                 >
-                  <Download className="h-4 w-4" />
+                  <Download className="h-4 w-4" strokeWidth={2.25} />
                   {exporting ? "İxrac…" : "PNG"}
                 </button>
-                <button
-                  onClick={clear}
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-danger/40 bg-danger/10 px-3 py-2 text-sm font-semibold text-danger transition-colors hover:bg-danger/20"
-                >
-                  <Trash2 className="h-4 w-4" />
+                <button onClick={clear} className="btn btn-danger">
+                  <Trash2 className="h-4 w-4" strokeWidth={2.25} />
                   Təmizlə
                 </button>
               </div>
+
+              <p className="flex items-center justify-center gap-1.5 text-[11px] text-ink-faint">
+                <Receipt className="h-3 w-3" strokeWidth={2.25} />
+                Bu proqnozlar məlumat üçündür, məsləhət deyil
+              </p>
             </div>
           )}
         </div>
-      </aside>
+      </motion.aside>
     </>
   );
 }

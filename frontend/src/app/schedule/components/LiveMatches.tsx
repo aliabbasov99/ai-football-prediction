@@ -36,7 +36,7 @@ export function LiveMatches({ teams }: { teams: TeamXGStats[] }) {
     return (
       <div className="space-y-2">
         {[0, 1].map((i) => (
-          <div key={i} className="h-20 animate-pulse rounded-[14px] bg-surface" />
+          <div key={i} className="h-20 animate-pulse rounded-xl bg-surface" />
         ))}
       </div>
     );
@@ -73,7 +73,7 @@ export function LiveMatches({ teams }: { teams: TeamXGStats[] }) {
               <TeamLogo logo={m.home_logo} name={m.home_team} size={26} alt={m.home_team} />
             </div>
 
-            <span className="rounded-md bg-surface-2 px-2 py-1 text-xs font-bold tabular-nums text-ink">
+            <span className="rounded-md bg-surface-2 px-2 py-1 text-xs font-semibold tabular-nums text-ink">
               {m.score ?? "VS"}
             </span>
 
@@ -89,9 +89,9 @@ export function LiveMatches({ teams }: { teams: TeamXGStats[] }) {
           {m.home_xg > 0 || m.away_xg > 0 ? (
             <div className="mt-2 flex items-center justify-center gap-3 text-[11px] tabular-nums text-ink-faint">
               <span>xG</span>
-              <span className="font-bold text-ink">{m.home_xg.toFixed(2)}</span>
+              <span className="font-semibold text-ink">{m.home_xg.toFixed(2)}</span>
               <span>—</span>
-              <span className="font-bold text-ink">{m.away_xg.toFixed(2)}</span>
+              <span className="font-semibold text-ink">{m.away_xg.toFixed(2)}</span>
             </div>
           ) : null}
 

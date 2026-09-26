@@ -11,7 +11,7 @@ export function GreenScoreBadge({
   return (
     <span
       className={cn(
-        "inline-block rounded-md px-1.5 py-0.5 text-xs font-bold tabular-nums",
+        "inline-block rounded-md px-1.5 py-0.5 text-xs font-semibold tabular-nums",
         isBest ? "bg-success/15 text-success" : "text-ink-muted",
       )}
     >

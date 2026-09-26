@@ -7,7 +7,7 @@ export const MAX_COUPON_ITEMS = 12;
 
 /** PNG ixracının ölçə və keyfiyyəti. */
 export const EXPORT_SCALE = 2;
-export const EXPORT_BG = "#0d1220";
+export const EXPORT_BG = "#18181b";
 
 /** Navbar-da göstərilən əsas səhifələr. */
 export const NAV_LINKS = [

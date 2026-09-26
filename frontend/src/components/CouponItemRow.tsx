@@ -28,7 +28,7 @@ export function CouponItemRow({
       </div>
 
       <div className="flex shrink-0 items-center gap-1.5">
-        <span className="rounded-md bg-surface-3 px-1.5 py-0.5 text-xs font-bold text-ink">
+        <span className="rounded-md bg-surface-3 px-1.5 py-0.5 text-xs font-semibold text-ink">
           {item.odds}
         </span>
         <button

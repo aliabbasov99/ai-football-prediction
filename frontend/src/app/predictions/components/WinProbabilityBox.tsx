@@ -19,7 +19,7 @@ export function WinProbabilityBox({ item }: { item: PredictionItem }) {
 
   return (
     <div className="rounded-lg border border-line-soft bg-surface-2 p-2">
-      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wide text-ink-faint">
+      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-ink-faint">
         Qələbə ehtimalı
       </p>
 
@@ -32,7 +32,7 @@ export function WinProbabilityBox({ item }: { item: PredictionItem }) {
           ].map((cell) => (
             <div key={cell.label} className="rounded-md bg-surface px-1 py-1">
               <p className="text-[10px] text-ink-faint">{cell.label}</p>
-              <p className={`text-xs font-bold tabular-nums ${cell.tone}`}>
+              <p className={`text-xs font-semibold tabular-nums ${cell.tone}`}>
                 {percentValue(cell.value)}
               </p>
             </div>
@@ -54,7 +54,7 @@ export function WinProbabilityBox({ item }: { item: PredictionItem }) {
       {wcProb && (
         <div className="mt-1 flex items-center justify-between text-[10px] text-ink-faint">
           <span>WinComparator</span>
-          <span className="tabular-nums text-violet">{percentValue(wcProb)}</span>
+          <span className="tabular-nums text-ink">{percentValue(wcProb)}</span>
         </div>
       )}
     </div>

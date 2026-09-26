@@ -31,7 +31,7 @@ export function LeagueGroup({
           size={22}
           alt={leagueName}
         />
-        <h2 className="text-sm font-bold uppercase tracking-wide text-ink">{leagueName}</h2>
+        <h2 className="text-sm font-semibold uppercase tracking-wider text-ink">{leagueName}</h2>
         <span className="rounded-full bg-surface-2 px-2 py-0.5 text-xs font-semibold text-ink-muted">
           {items.length}
         </span>

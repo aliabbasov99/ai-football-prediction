@@ -17,7 +17,7 @@ export function FormBadge({ form, className }: { form: string; className?: strin
         return (
           <span
             key={i}
-            className={cn("grid h-5 w-5 place-items-center rounded text-[10px] font-bold", tone)}
+            className={cn("grid h-5 w-5 place-items-center rounded text-[10px] font-semibold", tone)}
           >
             {result}
           </span>

@@ -20,7 +20,7 @@ export function StandingsNeighborTable({
 
   return (
     <div className="rounded-lg border border-line-soft bg-surface-2 p-2">
-      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wide text-ink-faint">
+      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-ink-faint">
         Cədvəl vəziyyəti
       </p>
       <ul className="space-y-1">
@@ -31,7 +31,7 @@ export function StandingsNeighborTable({
             </span>
             <TeamLogo logo={team.team_logo} name={team.team_name} size={16} alt={team.team_name} />
             <span className="min-w-0 flex-1 truncate text-ink">{team.team_name}</span>
-            <span className="shrink-0 tabular-nums font-bold text-ink-muted">{team.points} xal</span>
+            <span className="shrink-0 tabular-nums font-semibold text-ink-muted">{team.points} xal</span>
           </li>
         ))}
       </ul>

@@ -30,7 +30,7 @@ export function TopBottomTeamCard({
       </div>
       <div className="shrink-0 text-right">
         {typeof team.points === "number" && (
-          <p className="text-sm font-bold tabular-nums text-ink">{team.points}</p>
+          <p className="text-sm font-semibold tabular-nums text-ink">{team.points}</p>
         )}
         <p
           className={
@@ -72,7 +72,7 @@ export function TopBottomMatchRow({ match }: { match: TopBottomMatch }) {
           />
         </div>
 
-        <span className="text-xs font-bold text-ink-faint">VS</span>
+        <span className="text-xs font-semibold text-ink-faint">VS</span>
 
         <div className="flex min-w-0 items-center gap-2">
           <TeamLogo

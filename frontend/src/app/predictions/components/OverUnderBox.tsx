@@ -34,7 +34,7 @@ export function OverUnderBox({
 
   return (
     <div className="rounded-lg border border-line-soft bg-surface-2 p-2">
-      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wide text-ink-faint">
+      <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-ink-faint">
         Over / Under 2.5
       </p>
       <div className="flex flex-wrap items-center gap-1.5">

@@ -28,7 +28,7 @@ export function InlineChip({
   const content = (
     <>
       <span className="text-ink-faint">{label}</span>
-      <span className={cn("ml-1 font-bold tabular-nums", tone)}>{value ?? "—"}</span>
+      <span className={cn("ml-1 font-semibold tabular-nums", tone)}>{value ?? "—"}</span>
     </>
   );
 
@@ -51,11 +51,11 @@ export function InlineChip({
       className={cn(
         "inline-flex items-center rounded-md px-1.5 py-0.5 text-[11px] transition-colors",
         selected
-          ? "bg-brand text-white"
+          ? "bg-brand text-base"
           : "bg-surface-2 hover:bg-surface-3 disabled:cursor-not-allowed disabled:opacity-45",
       )}
     >
-      {selected ? <span className="font-bold">{label}</span> : content}
+      {selected ? <span className="font-semibold">{label}</span> : content}
     </button>
   );
 }

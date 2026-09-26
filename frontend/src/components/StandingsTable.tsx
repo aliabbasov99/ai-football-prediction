@@ -12,9 +12,9 @@ export function StandingsTable({ teams }: { teams: TeamXGStats[] }) {
   // Çempion / küçək zonları üçün rəng
   const max = teams.length;
   const zone = (pos: number) => {
-    if (pos <= 4) return "border-l-brand"; // UCL
-    if (pos <= 6) return "border-l-violet"; // Avropa
-    if (pos > max - 3) return "border-l-danger"; // küçək
+    if (pos <= 4) return "border-l-brand"; // UCL — vurğu (zümrüd)
+    if (pos <= 6) return "border-l-warn"; // Avropa — kəhrəba
+    if (pos > max - 3) return "border-l-danger"; // küçək — qırmızı
     return "border-l-transparent";
   };
 
@@ -62,7 +62,7 @@ export function StandingsTable({ teams }: { teams: TeamXGStats[] }) {
                 <td className="px-3 py-2.5 text-center tabular-nums text-ink-muted">
                   {team.goal_difference}
                 </td>
-                <td className="px-3 py-2.5 text-center tabular-nums font-bold text-ink">
+                <td className="px-3 py-2.5 text-center tabular-nums font-semibold text-ink">
                   {team.points}
                 </td>
                 <td className="px-3 py-2.5">

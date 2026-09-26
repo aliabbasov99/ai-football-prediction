@@ -66,7 +66,7 @@ export function MatchRow({ item, activeMarkets, addToCoupon, isSelected }: Match
             <span className="truncate text-sm font-semibold text-ink">{item.home_team}</span>
             <TeamLogo logo={item.home_logo} name={item.home_team} size={26} alt={item.home_team} />
           </div>
-          <span className="text-xs font-bold text-ink-faint">VS</span>
+          <span className="text-xs font-semibold text-ink-faint">VS</span>
           <div className="flex min-w-0 items-center gap-2">
             <TeamLogo logo={item.away_logo} name={item.away_team} size={26} alt={item.away_team} />
             <span className="truncate text-sm font-semibold text-ink">{item.away_team}</span>
@@ -189,7 +189,7 @@ export function MatchRow({ item, activeMarkets, addToCoupon, isSelected }: Match
           {/* Baza açıldıqda heç bir məlumat yoxdursa */}
           {!activeSources.length && (
             <div className="rounded-lg border border-line-soft bg-surface-2 p-2 sm:col-span-2">
-              <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wide text-ink-faint">
+              <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-ink-faint">
                 Mənbə məlumatı
               </p>
               <div className="flex items-center gap-2 text-[11px] text-ink-faint">

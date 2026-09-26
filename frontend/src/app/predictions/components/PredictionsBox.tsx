@@ -49,7 +49,7 @@ export function PredictionsBox({ item }: { item: PredictionItem }) {
 
   return (
     <div className="rounded-lg border border-line-soft bg-surface-2 p-2">
-      <p className="mb-1.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wide text-ink-faint">
+      <p className="mb-1.5 flex items-center gap-1 text-[10px] font-semibold uppercase tracking-wider text-ink-faint">
         <Target className="h-3 w-3" /> Proqnozlar
       </p>
       <ul className="space-y-1">

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion, useReducedMotion } from "framer-motion";
 import { Filter, Loader2, TrendingUp } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { LeagueGroup } from "@/app/predictions/components/LeagueGroup";
@@ -7,6 +8,7 @@ import { groupByLeague, hasMarket } from "@/app/predictions/components/utils";
 import { OddsHeader } from "@/app/predictions/components/OddsHeader";
 import { type MarketKey } from "./components/types";
 import { EmptyState } from "@/components/EmptyState";
+import { Reveal, RevealItem, staggerList } from "@/components/motion";
 import { useCoupon } from "@/context/CouponContext";
 import { api } from "@/lib/api";
 import type { PredictionItem } from "@/types/football";
@@ -20,6 +22,7 @@ export default function PredictionsPage() {
   const [markets, setMarkets] = useState<Set<string>>(new Set(ALL_MARKETS));
   const [leagueFilter, setLeagueFilter] = useState<string>("all");
   const { toggle, has } = useCoupon();
+  const reduce = useReducedMotion();
 
   useEffect(() => {
     api
@@ -65,31 +68,36 @@ export default function PredictionsPage() {
   const totalVisible = Array.from(visible.values()).reduce((a, l) => a + l.length, 0);
 
   return (
-    <div className="space-y-5">
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight">Proqnozlar</h1>
-          <p className="mt-1 text-sm text-ink-muted">
-            Əmsal və proqnozlar 7+ mənbədən toplanır. Əmsala klikləyib kupon əlavə edin.
-          </p>
-        </div>
+    <div className="space-y-6">
+      <Reveal>
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h1 className="flex items-center gap-2 text-2xl font-semibold tracking-tight">
+              <TrendingUp className="h-5.5 w-5.5 text-brand" strokeWidth={2.25} />
+              Proqnozlar
+            </h1>
+            <p className="mt-1 text-sm text-ink-muted">
+              Əmsal və proqnozlar 7+ mənbədən toplanır. Əmsala klikləyib kupon əlavə edin.
+            </p>
+          </div>
 
-        <div className="flex flex-wrap items-center gap-2">
-          <select
-            value={leagueFilter}
-            onChange={(e) => setLeagueFilter(e.target.value)}
-            className="rounded-lg border border-line bg-surface px-3 py-2 text-sm text-ink outline-none focus:border-brand"
-          >
-            <option value="all">Bütün liqalar</option>
-            {leagues.map((l) => (
-              <option key={l} value={l}>
-                {l}
-              </option>
-            ))}
-          </select>
-          <OddsHeader active={markets} onToggle={toggleMarket} />
+          <div className="flex flex-wrap items-center gap-2">
+            <select
+              value={leagueFilter}
+              onChange={(e) => setLeagueFilter(e.target.value)}
+              className="input select w-auto min-w-[180px]"
+            >
+              <option value="all">Bütün liqalar</option>
+              {leagues.map((l) => (
+                <option key={l} value={l}>
+                  {l}
+                </option>
+              ))}
+            </select>
+            <OddsHeader active={markets} onToggle={toggleMarket} />
+          </div>
         </div>
-      </div>
+      </Reveal>
 
       {loading && (
         <div className="grid place-items-center py-20">
@@ -121,18 +129,24 @@ export default function PredictionsPage() {
         />
       )}
 
-      <div className="space-y-6">
+      <motion.div
+        variants={reduce ? undefined : staggerList}
+        initial={reduce ? false : "hidden"}
+        animate="show"
+        className="space-y-6"
+      >
         {Array.from(visible.entries()).map(([league, list]) => (
-          <LeagueGroup
-            key={league}
-            leagueName={league}
-            items={list}
-            activeMarkets={markets}
-            addToCoupon={toggle}
-            isSelected={has}
-          />
+          <RevealItem key={league}>
+            <LeagueGroup
+              leagueName={league}
+              items={list}
+              activeMarkets={markets}
+              addToCoupon={toggle}
+              isSelected={has}
+            />
+          </RevealItem>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

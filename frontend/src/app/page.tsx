@@ -1,11 +1,16 @@
 "use client";
 
-import { Loader2, Search } from "lucide-react";
+import { Loader2, Search, Sigma } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
-import { StatCards, type StatCardItem } from "@/app/components/StatCards";
+import {
+  SeriesLegend,
+  StatCards,
+  type StatCardItem,
+} from "@/app/components/StatCards";
 import { LeagueSelector } from "@/components/LeagueSelector";
 import { TeamXGTable } from "@/components/TeamXGTable";
 import { EmptyState } from "@/components/EmptyState";
+import { Reveal } from "@/components/motion";
 import { api } from "@/lib/api";
 import { useLeagueTeams } from "@/lib/useLeagueTeams";
 import type { League, PredictionItem } from "@/types/football";
@@ -42,7 +47,7 @@ export default function HomePage() {
     return [
       { label: "Aktiv liqa", value: leagues.length, tone: "brand" },
       { label: "Komanda", value: teams.length || "—", tone: "info" },
-      { label: "Proqnozlu matç", value: predictions.length || "—", tone: "violet" },
+      { label: "Proqnozlu matç", value: predictions.length || "—", tone: "warn" },
       {
         label: "Əmsalı olan matç",
         value: withOdds || "—",
@@ -53,16 +58,21 @@ export default function HomePage() {
   }, [leagues.length, teams, predictions]);
 
   return (
-    <div className="space-y-5">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight">xG Analizi</h1>
-          <p className="mt-1 text-sm text-ink-muted">
-            Liqa seçin və komandaların gözlənilən qol statistikasını müqayisə edin.
-          </p>
+    <div className="space-y-6">
+      <Reveal>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h1 className="flex items-center gap-2 text-2xl font-semibold tracking-tight">
+              <Sigma className="h-5.5 w-5.5 text-brand" strokeWidth={2.25} />
+              xG Analizi
+            </h1>
+            <p className="mt-1 text-sm text-ink-muted">
+              Liqa seçin və komandaların gözlənilən qol statistikasını müqayisə edin.
+            </p>
+          </div>
+          <LeagueSelector leagues={leagues} value={selected} onChange={setSelected} />
         </div>
-        <LeagueSelector leagues={leagues} value={selected} onChange={setSelected} />
-      </div>
+      </Reveal>
 
       <StatCards items={cards} />
 
@@ -95,20 +105,15 @@ export default function HomePage() {
 
       {!loadingTeams && teams.length > 0 && (
         <>
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-xs text-ink-faint">
-            <span className="font-semibold text-ink">{league?.name}</span>
-            <span>{teams.length} komanda</span>
-            <span className="flex items-center gap-1.5">
-              <span className="inline-block h-0.5 w-4 bg-brand" /> Son 30 oyun
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="inline-block h-0.5 w-4 bg-violet" /> Liqa
-            </span>
-            <span className="flex items-center gap-1.5">
-              <span className="inline-block h-0.5 w-4 bg-info" /> Kubok
-            </span>
-          </div>
-          <TeamXGTable teams={teams} />
+          <Reveal delay={0.1}>
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs text-ink-faint">
+              <SeriesLegend extra={league?.name} />
+              <span>{teams.length} komanda</span>
+            </div>
+          </Reveal>
+          <Reveal delay={0.15}>
+            <TeamXGTable teams={teams} />
+          </Reveal>
         </>
       )}
 

@@ -16,7 +16,7 @@ export function PredictionsTable({ table }: { table: FootyStatsTable }) {
   return (
     <div className="card overflow-hidden">
       <div className="border-b border-line bg-surface-2 px-3 py-2.5">
-        <h3 className="text-sm font-bold text-ink">{table.title}</h3>
+        <h3 className="text-sm font-semibold text-ink">{table.title}</h3>
       </div>
       <div className="max-h-[520px] overflow-auto">
         <table className="w-full min-w-[760px] text-sm">

@@ -68,7 +68,7 @@ export function TeamXGTable({ teams }: { teams: TeamXGStats[] }) {
                 <td className="px-3 py-2.5 text-right tabular-nums text-ink-muted">{team.won}</td>
                 <td className="px-3 py-2.5 text-right tabular-nums text-ink-muted">{team.drawn}</td>
                 <td className="px-3 py-2.5 text-right tabular-nums text-ink-muted">{team.lost}</td>
-                <td className="px-3 py-2.5 text-right tabular-nums font-bold text-ink">{team.points}</td>
+                <td className="px-3 py-2.5 text-right tabular-nums font-semibold text-ink">{team.points}</td>
                 <td className="px-3 py-2.5">
                   <FormBadge form={team.form} />
                 </td>

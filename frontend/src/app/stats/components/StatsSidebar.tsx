@@ -27,7 +27,7 @@ export function StatsSidebar() {
   return (
     <aside className="card h-fit overflow-hidden lg:sticky lg:top-20">
       <div className="border-b border-line px-3 py-2.5">
-        <p className="text-xs font-bold uppercase tracking-wide text-ink-muted">
+        <p className="text-xs font-semibold uppercase tracking-widerr text-ink-muted">
           Statistika bölmələri
         </p>
       </div>
@@ -72,7 +72,7 @@ export function StatPageHeader({
   return (
     <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
       <div>
-        <h1 className="flex items-center gap-2 text-2xl font-bold tracking-tight">
+        <h1 className="flex items-center gap-2 text-2xl font-semibold tracking-tight">
           <Trophy className="h-5 w-5 text-brand" />
           {title}
         </h1>

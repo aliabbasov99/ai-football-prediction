@@ -19,7 +19,8 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col antialiased">
         <CouponProvider>
           <Navbar />
-          <main className="mx-auto w-full max-w-[1600px] flex-1 px-4 py-6">
+          {/* 8px ritmi: py-6 (24px) + px-4 (16px) mobil, geniş ekranda px-6 */}
+          <main className="mx-auto w-full max-w-[1600px] flex-1 px-4 py-6 md:px-6">
             {children}
           </main>
           <Footer />

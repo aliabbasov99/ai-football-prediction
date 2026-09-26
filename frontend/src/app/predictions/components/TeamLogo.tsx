@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";import { logoCandidates, type LogoKind } from "@/lib/logo";
+import { useState } from "react";
+import { logoCandidates, type LogoKind } from "@/lib/logo";
 import { cn, colorFromString, initials } from "@/lib/utils";
 
 interface TeamLogoProps {
@@ -52,7 +53,7 @@ export function TeamLogo({
         aria-label={label}
         title={label}
         className={cn(
-          "inline-flex shrink-0 items-center justify-center rounded-full font-bold select-none",
+          "inline-flex shrink-0 items-center justify-center rounded-full font-semibold select-none",
           className,
         )}
         style={{
