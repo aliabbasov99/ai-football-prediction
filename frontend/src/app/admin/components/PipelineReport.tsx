@@ -216,7 +216,7 @@ export function PipelineReport({ report }: { report: Report | null }) {
             <AlertCircle className="h-3.5 w-3.5" strokeWidth={2.5} />
             {failed.length} addım uğursuz oldu
           </p>
-          <ul className="mt-1.5 space-y-0.5 pl-5 text-xs text-ink-muted">
+          <ul className="mt-1.5 space-y-0.5 pl-4 text-xs text-ink-muted">
             {failed.map((s) => (
               <li key={s} className="list-disc">
                 {s}

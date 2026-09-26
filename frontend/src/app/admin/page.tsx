@@ -397,7 +397,7 @@ export default function AdminPage() {
                 ))}
               </div>
 
-              <div className="mt-5 flex flex-wrap gap-2 border-t border-line pt-5">
+              <div className="mt-6 flex flex-wrap gap-2 border-t border-line pt-6">
                 <motion.button
                   onClick={startPipeline}
                   disabled={busy || state?.is_running || selectedCount === 0}

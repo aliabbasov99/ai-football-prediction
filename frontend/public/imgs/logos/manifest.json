@@ -1,1737 +1,468 @@
 {
-  "generated_at": "2026-09-26T21:26:55",
-  "duration_sec": 1.6,
+  "generated_at": "2026-09-26T22:30:14",
+  "duration_sec": 21.4,
   "leagues": {},
   "teams": {
-    "Burnley": "Burnley",
-    "Fulham": "Fulham",
-    "Bournemouth": "Bournemouth",
-    "Crystal Palace": "Crystal Palace",
-    "Brighton": "Brighton WFC",
-    "Aston Villa": "Aston Villa",
-    "Brentford": "Brentford",
-    "Arsenal": "Arsenal",
-    "Everton": "Everton",
-    "Chelsea": "Chelsea",
-    "Leeds United": "Leeds United",
-    "Liverpool": "Liverpool",
-    "Man City": "Manchester City",
-    "Newcastle": "Newcastle Jets",
-    "Sunderland": "Sunderland",
-    "Wolves": "Wolves SC",
-    "West Ham": "West Ham Women",
-    "Spurs": "Tottenham Hotspur",
-    "Man Utd": "Manchester United",
-    "Birmingham City": "Birmingham City",
-    "Blackburn Rovers": "Blackburn Rovers",
-    "Charlton Athletic": "Charlton Athletic",
-    "Bristol City": "Bristol City",
-    "Derby County": "Derby County",
-    "Hull City": "Hull City",
-    "Coventry City": "Coventry City",
-    "Ipswich Town": "Ipswich Town",
-    "Leicester City": "Leicester City"
+    "Burnley": null,
+    "Fulham": null,
+    "Bournemouth": null,
+    "Crystal Palace": null,
+    "Brighton": null,
+    "Aston Villa": null,
+    "Brentford": null,
+    "Arsenal": null,
+    "Everton": null,
+    "Chelsea": null,
+    "Leeds United": null,
+    "Liverpool": null,
+    "Man City": null,
+    "Newcastle": null,
+    "Sunderland": null,
+    "Wolves": null,
+    "West Ham": null,
+    "Spurs": null,
+    "Man Utd": null,
+    "Birmingham City": null,
+    "Blackburn Rovers": null,
+    "Charlton Athletic": null,
+    "Bristol City": null,
+    "Derby County": null,
+    "Hull City": null,
+    "Coventry City": null,
+    "Ipswich Town": null,
+    "Leicester City": null,
+    "Portsmouth": null,
+    "Queens Park Rangers": null,
+    "Sheff Utd": null,
+    "Southampton": null,
+    "Stoke City": null,
+    "Swansea City": null,
+    "Sheffield Wednesday": null,
+    "Wigan Athletic": null,
+    "Alavés": null,
+    "Athletic Club": null,
+    "Atletico Madrid": null,
+    "Barcelona": null,
+    "Celta Vigo": null,
+    "Elche": null,
+    "Espanyol": null,
+    "Getafe": null,
+    "Girona": null,
+    "Levante": null,
+    "Mallorca": null,
+    "Osasuna": null,
+    "Rayo Vallecano": null,
+    "Betis": null,
+    "Real Madrid": null,
+    "Real Oviedo": null,
+    "Real Sociedad": null,
+    "Sevilla": null,
+    "Valencia": null,
+    "Villarreal": null,
+    "Augsburg": null,
+    "Middlesbrough": null,
+    "Millwall": null,
+    "Norwich City": null,
+    "Bayer Leverkusen": null,
+    "Bayern Munich": null,
+    "Dortmund": null,
+    "Gladbach": null,
+    "Frankfurt": null,
+    "Freiburg": null,
+    "Heidenheim": null,
+    "Hoffenheim": null,
+    "Holstein Kiel": null,
+    "Köln": null,
+    "Mainz 05": null,
+    "RB Leipzig": null,
+    "St. Pauli": null,
+    "Stuttgart": null,
+    "Union Berlin": null,
+    "Werder Bremen": null,
+    "Wolfsburg": null,
+    "Atalanta": null,
+    "Bologna": null,
+    "Cagliari": null,
+    "Como": null,
+    "Cremonese": null,
+    "Fiorentina": null,
+    "Genoa": null,
+    "Hellas Verona": null,
+    "Inter": null,
+    "Juventus": null,
+    "Lazio": null,
+    "Lecce": null,
+    "Milan": null,
+    "Napoli": null,
+    "Parma": null,
+    "Pisa": null,
+    "Roma": null,
+    "Sassuolo": null,
+    "Torino": null,
+    "Udinese": null,
+    "Angers": null,
+    "Auxerre": null,
+    "Brest": null,
+    "Le Havre": null,
+    "Lens": null,
+    "Lorient": null,
+    "Lyon": null,
+    "Marseille": null,
+    "Metz": null,
+    "Monaco": null,
+    "Nantes": null,
+    "Nice": null,
+    "Paris FC": null,
+    "Rennes": null,
+    "Strasbourg": null,
+    "Toulouse": null,
+    "Ajax": null,
+    "Paris SG": null,
+    "Almere City": null,
+    "AZ Alkmaar": null,
+    "Excelsior": null,
+    "Feyenoord": null,
+    "Fortuna Sittard": null,
+    "Go Ahead Eagles": null,
+    "Groningen": null,
+    "Heerenveen": null,
+    "Heracles Almelo": null,
+    "NAC Breda": null,
+    "NEC Nijmegen": null,
+    "PEC Zwolle": null,
+    "PSV Eindhoven": null,
+    "Sparta Rotterdam": null,
+    "Twente": null,
+    "Utrecht": null,
+    "Willem II": null,
+    "Atlético Mineiro": null,
+    "Bahia": null,
+    "Botafogo": null,
+    "Ceará": null,
+    "Corinthians": null,
+    "Cruzeiro": null,
+    "Flamengo": null,
+    "Fluminense": null,
+    "Fortaleza": null,
+    "Grêmio": null,
+    "Internacional": null,
+    "Juventude": null,
+    "Mirassol": null,
+    "Palmeiras": null,
+    "Red Bull Bragantino": null,
+    "Santos": null,
+    "São Paulo": null,
+    "Sport Recife": null,
+    "Vasco da Gama": null,
+    "Vitória": null,
+    "Arouca": null,
+    "Benfica": null,
+    "Boavista": null,
+    "Braga": null,
+    "Casa Pia": null,
+    "Estoril": null,
+    "Farense": null,
+    "Gil Vicente": null,
+    "Moreirense": null,
+    "Porto": null,
+    "Rio Ave": null,
+    "Santa Clara": null,
+    "Sporting CP": null,
+    "Tondela": null,
+    "AVS": null,
+    "Aldosivi": null,
+    "Argentinos Juniors": null,
+    "Atlético Tucumán": null,
+    "Banfield": null,
+    "Barracas Central": null,
+    "Boca Juniors": null,
+    "Belgrano": null,
+    "Central Córdoba": null,
+    "Defensa y Justicia": null,
+    "Deportivo Riestra": null,
+    "Gimnasia La Plata": null,
+    "Godoy Cruz": null,
+    "Huracán": null,
+    "Independiente": null,
+    "Independiente Rivadavia": null,
+    "Instituto": null,
+    "Lanús": null,
+    "Newell's Old Boys": null,
+    "Platense": null,
+    "Racing Club": null,
+    "River Plate": null,
+    "Rosario Central": null,
+    "San Lorenzo": null,
+    "San Martín de San Juan": null,
+    "Talleres": null,
+    "Tigre": null,
+    "Unión": null,
+    "Vélez Sarsfield": null,
+    "Anderlecht": null,
+    "Antwerp": null,
+    "Beerschot": null,
+    "Cercle Brugge": null,
+    "Charleroi": null,
+    "Club Brugge": null,
+    "Dender": null,
+    "Genk": null,
+    "Gent": null,
+    "Kortrijk": null,
+    "KV Mechelen": null,
+    "OH Leuven": null,
+    "Sint-Truiden": null,
+    "Standard Liège": null,
+    "Union Saint-Gilloise": null,
+    "Westerlo": null,
+    "Adana Demirspor": null,
+    "Alanyaspor": null,
+    "Antalyaspor": null,
+    "Beşiktaş": null,
+    "Çaykur Rizespor": null,
+    "Eyüpspor": null,
+    "Fatih Karagümrük": null,
+    "Fenerbahçe": null,
+    "Fenerbahce": null,
+    "Galatasaray": null,
+    "Gaziantep FK": null,
+    "Göztepe": null,
+    "Kasımpaşa": null,
+    "Kayserispor": null,
+    "Kocaelispor": null,
+    "Samsunspor": null,
+    "Sivasspor": null,
+    "Trabzonspor": null,
+    "Zonguldakspor": null,
+    "Al Ahli": null,
+    "Al Ettifaq": null,
+    "Al Fateh": null,
+    "Al Fayha": null,
+    "Al Hilal": null,
+    "Al Ittihad": null,
+    "Al Kholood": null,
+    "Al Nassr": null,
+    "Al Okhdood": null,
+    "Al Orobah": null,
+    "Al Qadsiah": null,
+    "Al Taawoun": null,
+    "Al Wehda": null,
+    "Al Jeddah": null,
+    "Damac": null,
+    "Neom SC": null,
+    "Atlanta United": null,
+    "Austin FC": null,
+    "Charlotte FC": null,
+    "Chicago Fire": null,
+    "Colorado Rapids": null,
+    "Columbus Crew": null,
+    "FC Cincinnati": null,
+    "D.C. United": null,
+    "FC Dallas": null,
+    "Houston Dynamo": null,
+    "Inter Miami": null,
+    "LA Galaxy": null,
+    "Los Angeles FC": null,
+    "Minnesota United": null,
+    "CF Montréal": null,
+    "Nashville SC": null,
+    "New England Revolution": null,
+    "New York City FC": null,
+    "New York Red Bulls": null,
+    "Philadelphia Union": null,
+    "Portland Timbers": null,
+    "Real Salt Lake": null,
+    "San Jose Earthquakes": null,
+    "Seattle Sounders": null,
+    "Sporting Kansas City": null,
+    "Toronto FC": null,
+    "Vancouver Whitecaps": null,
+    "Baník Ostrava": null,
+    "Bohemians 1905": null,
+    "Dukla Praha": null,
+    "Hradec Králové": null,
+    "Jablonec": null,
+    "Karviná": null,
+    "Mladá Boleslav": null,
+    "Pardubice": null,
+    "Příbram": null,
+    "Sigma Olomouc": null,
+    "Slavia Praha": null,
+    "Slovan Liberec": null,
+    "Sparta Praha": null,
+    "Teplice": null,
+    "Viktoria Plzeň": null,
+    "Zlín": null,
+    "AEK Athens": null,
+    "AEL Larissa": null,
+    "Aris": null,
+    "Asteras Tripolis": null,
+    "Atromitos": null,
+    "Kifisia": null,
+    "Levadiakos": null,
+    "OFI Crete": null,
+    "Olympiacos": null,
+    "Panathinaikos": null,
+    "Panetolikos": null,
+    "Panionios": null,
+    "PAOK": null,
+    "Aucas": null,
+    "Barcelona SC": null,
+    "Delfín": null,
+    "Deportivo Cuenca": null,
+    "El Nacional": null,
+    "Emelec": null,
+    "IDV": null,
+    "Independiente del Valle": null,
+    "LDU Quito": null,
+    "Macará": null,
+    "Guayas": null,
+    "Manta": null,
+    "Mushuc Runa": null,
+    "Orense": null,
+    "Sociedad Deportivo Quito": null,
+    "Técnico Universitario": null,
+    "AaB": null,
+    "AGF": null,
+    "Brøndby": null,
+    "Midtjylland": null,
+    "København": null,
+    "Nordsjælland": null,
+    "OB": null,
+    "Randers": null,
+    "Silkeborg": null,
+    "Sønderjyske": null,
+    "Viborg": null,
+    "Vejle": null,
+    "Arka Gdynia": null,
+    "Cracovia": null,
+    "Górnik Zabrze": null,
+    "Jagiellonia": null,
+    "Korona Kielce": null,
+    "Lech Poznań": null,
+    "Lechia Gdańsk": null,
+    "Legia Warsaw": null,
+    "Motor Lublin": null,
+    "Piast Gliwice": null,
+    "Pogoń Szczecin": null,
+    "Radomiak Radom": null,
+    "Stal Mielec": null,
+    "Raków Częstochowa": null,
+    "Widzew Łódź": null,
+    "Wisła Kraków": null,
+    "Wisła Płock": null,
+    "Warta Poznań": null,
+    "Zagłębie Lubin": null,
+    "Avispa Fukuoka": null,
+    "Cerezo Osaka": null,
+    "Fagiano Okayama": null,
+    "FC Osaka": null,
+    "FC Tokyo": null,
+    "Gamba Osaka": null,
+    "Kashima Antlers": null,
+    "Kashiwa Reysol": null,
+    "Kawasaki Frontale": null,
+    "Kyoto Sanga": null,
+    "Machida Zelvia": null,
+    "Nagoya Grampus": null,
+    "Sanfrecce Hiroshima": null,
+    "Shonan Bellmare": null,
+    "Tokyo Verdy": null,
+    "Urawa Red Diamonds": null,
+    "Vissel Kobe": null,
+    "Yokohama F. Marinos": null,
+    "Yokohama FC": null,
+    "Brann": null,
+    "Fredrikstad": null,
+    "HamKam": null,
+    "Haugesund": null,
+    "KFUM Oslo": null,
+    "Lillestrøm": null,
+    "Molde": null,
+    "Odd": null,
+    "Rosenborg": null,
+    "Sandefjord": null,
+    "Sarpsborg 08": null,
+    "Strømsgodset": null,
+    "Tromsø": null,
+    "Vålerenga": null,
+    "Viking": null,
+    "Beijing Guoan": null,
+    "Changchun Yatai": null,
+    "Chengdu Rongcheng": null,
+    "China Life Hunan": null,
+    "Meizhou Hakka": null,
+    "Henan Songshan Longmen": null,
+    "Qingdao West Coast": null,
+    "Qingdao Hainiu": null,
+    "Shanghai Port": null,
+    "Shanghai Shenhua": null,
+    "Shandong Taishan": null,
+    "Shenzhen Peng City": null,
+    "Suzhou Golden Town": null,
+    "Tianjin Jinmen Tiger": null,
+    "Wuhan Three Towns": null,
+    "Zhejiang FC": null,
+    "Flora": null,
+    "Harju JK": null,
+    "FCI Levadia": null,
+    "JK Tabasalu": null,
+    "Kalju": null,
+    "Kuressaare": null,
+    "Paide Linna JK": null,
+    "Narva Trans": null,
+    "Tartu JK Tammeka": null,
+    "Arsenal Dzerzhinsk": null,
+    "BATE": null,
+    "Dnepr Mogilev": null,
+    "Energetyk-BGU": null,
+    "Gomel": null,
+    "Isloch": null,
+    "Krumkachy": null,
+    "Maxline Vitebsk": null,
+    "Minsk": null,
+    "Molodechno": null,
+    "Naftan Novopolotsk": null,
+    "Slavia Mozyr": null,
+    "Sputnik": null,
+    "Torpedo-BelAZ": null,
+    "Qarabag": null,
+    "Sabah": null,
+    "Turan Tovuz": null,
+    "Gabala": null,
+    "Sumgayit": null,
+    "Ağdam": null,
+    "Kapaz": null,
+    "Nottingham Forest": null,
+    "Lille": null,
+    "Estrelas da Amadora": null,
+    "Nacional": null,
+    "Copenhagen": null,
+    "Shimizu S-Pulse": null,
+    "Kalev": null,
+    "Viimsi Tervise JK": null,
+    "Dinamo Brest": null,
+    "Dinamo Minsk": null,
+    "Lokomotiv Vitebsk": null,
+    "Bodø/Glimt": null,
+    "Volos NFC": null,
+    "Neftçi": null,
+    "Zira": null,
+    "Sabail": null,
+    "Inter Baku": null,
+    "Vitinha Guimaraes": null,
+    "Estudiantes": null,
+    "Al Shabab": null,
+    "Riyadh United": null,
+    "Everest PNG": null
   },
   "unresolved": [
-    {
-      "folder": "England - Premier League",
-      "team": "Nottingham Forest"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Middlesbrough"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Millwall"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Norwich City"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Portsmouth"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Queens Park Rangers"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Southampton"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Sheff Utd"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Stoke City"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Swansea City"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Sheffield Wednesday"
-    },
-    {
-      "folder": "England - Championship",
-      "team": "Wigan Athletic"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Alavés"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Celta Vigo"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Elche"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Barcelona"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Espanyol"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Athletic Club"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Atletico Madrid"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Getafe"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Girona"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Levante"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Osasuna"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Mallorca"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Rayo Vallecano"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Real Madrid"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Real Sociedad"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Real Oviedo"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Betis"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Augsburg"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Sevilla"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Valencia"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Heidenheim"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Dortmund"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Bayer Leverkusen"
-    },
-    {
-      "folder": "Spain - LaLiga",
-      "team": "Villarreal"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Frankfurt"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Bayern Munich"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Hoffenheim"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Freiburg"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Holstein Kiel"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Gladbach"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Köln"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "St. Pauli"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "RB Leipzig"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Wolfsburg"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Bologna"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Cagliari"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Atalanta"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Werder Bremen"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Stuttgart"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Union Berlin"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Como"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Cremonese"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Genoa"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Hellas Verona"
-    },
-    {
-      "folder": "Germany - Bundesliga",
-      "team": "Mainz 05"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Juventus"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Lazio"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Lecce"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Fiorentina"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Pisa"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Parma"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Torino"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Sassuolo"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Udinese"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Napoli"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Auxerre"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Roma"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Angers"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Milan"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Lens"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Le Havre"
-    },
-    {
-      "folder": "Italy - Serie A",
-      "team": "Inter"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Brest"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Lorient"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Nantes"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Lille"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Paris FC"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Metz"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Nice"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Rennes"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Lyon"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Monaco"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Strasbourg"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Almere City"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Marseille"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Toulouse"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Ajax"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Excelsior"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Feyenoord"
-    },
-    {
-      "folder": "France - Ligue 1",
-      "team": "Paris SG"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Fortuna Sittard"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Groningen"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Go Ahead Eagles"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "AZ Alkmaar"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Heerenveen"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "NAC Breda"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Heracles Almelo"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "NEC Nijmegen"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "PEC Zwolle"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Sparta Rotterdam"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Utrecht"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Atlético Mineiro"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Willem II"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Bahia"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Botafogo"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Corinthians"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Cruzeiro"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "Twente"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Flamengo"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Ceará"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Fluminense"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Fortaleza"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Grêmio"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Juventude"
-    },
-    {
-      "folder": "Netherlands - Eredivisie",
-      "team": "PSV Eindhoven"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Mirassol"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Palmeiras"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Red Bull Bragantino"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Internacional"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Santos"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Sport Recife"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Vitória"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "São Paulo"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Arouca"
-    },
-    {
-      "folder": "Brazil - Serie A",
-      "team": "Vasco da Gama"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Boavista"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Casa Pia"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Benfica"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Estoril"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Braga"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Estrelas da Amadora"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Farense"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Moreirense"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Gil Vicente"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Nacional"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Porto"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Rio Ave"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Santa Clara"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Tondela"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "AVS"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Vitinha Guimaraes"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Argentinos Juniors"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Atlético Tucumán"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Banfield"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Aldosivi"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Barracas Central"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Belgrano"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Boca Juniors"
-    },
-    {
-      "folder": "Portugal - Liga Portugal",
-      "team": "Sporting CP"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Defensa y Justicia"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Central Córdoba"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Deportivo Riestra"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Estudiantes"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Huracán"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Gimnasia La Plata"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Independiente"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Godoy Cruz"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Independiente Rivadavia"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Lanús"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Newell's Old Boys"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Instituto"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Platense"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Racing Club"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Rosario Central"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "River Plate"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "San Lorenzo"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "San Martín de San Juan"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Talleres"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Anderlecht"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Vélez Sarsfield"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Tigre"
-    },
-    {
-      "folder": "Argentina - Primera Division",
-      "team": "Unión"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Beerschot"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Antwerp"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Charleroi"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Dender"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Cercle Brugge"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Kortrijk"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Gent"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Genk"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "KV Mechelen"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "OH Leuven"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Club Brugge"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Sint-Truiden"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Standard Liège"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Union Saint-Gilloise"
-    },
-    {
-      "folder": "Belgium - Jupiler Pro League",
-      "team": "Westerlo"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Adana Demirspor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Antalyaspor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Beşiktaş"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Alanyaspor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Çaykur Rizespor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Eyüpspor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Fenerbahce"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Fatih Karagümrük"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Gaziantep FK"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Galatasaray"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Fenerbahçe"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Göztepe"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Kocaelispor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Samsunspor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Kayserispor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Kasımpaşa"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Zonguldakspor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Sivasspor"
-    },
-    {
-      "folder": "Turkey - Super Lig",
-      "team": "Trabzonspor"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Ahli"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Fateh"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Ettifaq"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Fayha"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Ittihad"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Hilal"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Kholood"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Nassr"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Orobah"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Okhdood"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Shabab"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Wehda"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Taawoun"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Qadsiah"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Al Jeddah"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Damac"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Neom SC"
-    },
-    {
-      "folder": "Saudi Arabia - Saudi Pro League",
-      "team": "Riyadh United"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Atlanta United"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Austin FC"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Charlotte FC"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Columbus Crew"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Colorado Rapids"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "D.C. United"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Chicago Fire"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "FC Cincinnati"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Houston Dynamo"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "FC Dallas"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Inter Miami"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "LA Galaxy"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Los Angeles FC"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "CF Montréal"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Nashville SC"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Minnesota United"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "New England Revolution"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "New York Red Bulls"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Philadelphia Union"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "New York City FC"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Portland Timbers"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Real Salt Lake"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "San Jose Earthquakes"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Seattle Sounders"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Toronto FC"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Sporting Kansas City"
-    },
-    {
-      "folder": "USA - MLS",
-      "team": "Vancouver Whitecaps"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Baník Ostrava"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Bohemians 1905"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Hradec Králové"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Jablonec"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Mladá Boleslav"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Dukla Praha"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Příbram"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Slavia Praha"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Sigma Olomouc"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Pardubice"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Viktoria Plzeň"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Slovan Liberec"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Sparta Praha"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Karviná"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Zlín"
-    },
-    {
-      "folder": "Czech Republic - Chance Liga",
-      "team": "Teplice"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "AEK Athens"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "AEL Larissa"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Atromitos"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "OFI Crete"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Panetolikos"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Aris"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Levadiakos"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Panathinaikos"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Kifisia"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Olympiacos"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Panionios"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Asteras Tripolis"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Barcelona SC"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "Volos NFC"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Emelec"
-    },
-    {
-      "folder": "Greece - Super League 1",
-      "team": "PAOK"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Deportivo Cuenca"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "El Nacional"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Everest PNG"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Delfín"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Guayas"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Aucas"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "IDV"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Independiente del Valle"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "LDU Quito"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Macará"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Manta"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Orense"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Mushuc Runa"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Técnico Universitario"
-    },
-    {
-      "folder": "Ecuador - LigaPro",
-      "team": "Sociedad Deportivo Quito"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "AGF"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "AaB"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Brøndby"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Midtjylland"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "OB"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Randers"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Copenhagen"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Silkeborg"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Viborg"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Sønderjyske"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Nordsjælland"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "Vejle"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Cracovia"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Górnik Zabrze"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Arka Gdynia"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Jagiellonia"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Lechia Gdańsk"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Lech Poznań"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Korona Kielce"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Legia Warsaw"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Motor Lublin"
-    },
-    {
-      "folder": "Denmark - Superliga",
-      "team": "København"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Piast Gliwice"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Pogoń Szczecin"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Radomiak Radom"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Stal Mielec"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Raków Częstochowa"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Wisła Kraków"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Wisła Płock"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Widzew Łódź"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Warta Poznań"
-    },
-    {
-      "folder": "Poland - PKO BP Ekstraklasa",
-      "team": "Zagłębie Lubin"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Avispa Fukuoka"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Fagiano Okayama"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Cerezo Osaka"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "FC Osaka"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "FC Tokyo"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Gamba Osaka"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Kashima Antlers"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Kawasaki Frontale"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Kashiwa Reysol"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Kyoto Sanga"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Machida Zelvia"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Nagoya Grampus"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Sanfrecce Hiroshima"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Shonan Bellmare"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Shimizu S-Pulse"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Tokyo Verdy"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Urawa Red Diamonds"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Vissel Kobe"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Brann"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Yokohama F. Marinos"
-    },
-    {
-      "folder": "Japan - J1 League",
-      "team": "Yokohama FC"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Bodø/Glimt"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Haugesund"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "HamKam"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "KFUM Oslo"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Lillestrøm"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Fredrikstad"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Molde"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Odd"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Sarpsborg 08"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Sandefjord"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Strømsgodset"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Rosenborg"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Tromsø"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Vålerenga"
-    },
-    {
-      "folder": "Norway - Eliteserien",
-      "team": "Viking"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Beijing Guoan"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Changchun Yatai"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Chengdu Rongcheng"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Meizhou Hakka"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Qingdao Hainiu"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "China Life Hunan"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Henan Songshan Longmen"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Shanghai Port"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Qingdao West Coast"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Shanghai Shenhua"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Shenzhen Peng City"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Shandong Taishan"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Suzhou Golden Town"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Tianjin Jinmen Tiger"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Zhejiang FC"
-    },
-    {
-      "folder": "China - Chinese Super League",
-      "team": "Wuhan Three Towns"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Harju JK"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "JK Tabasalu"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Flora"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "FCI Levadia"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Kalev"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Narva Trans"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Kuressaare"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Kalju"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Dinamo Brest"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Paide Linna JK"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Tartu JK Tammeka"
-    },
-    {
-      "folder": "Estonia - Meistriliiga",
-      "team": "Viimsi Tervise JK"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Arsenal Dzerzhinsk"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "BATE"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Dinamo Minsk"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Dnepr Mogilev"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Gomel"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Energetyk-BGU"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Isloch"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Lokomotiv Vitebsk"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Minsk"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Maxline Vitebsk"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Krumkachy"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Molodechno"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Naftan Novopolotsk"
-    },
     {
       "folder": "Belarus - Vysshaya Liga",
       "team": "Novaje Pinsk"
     },
     {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Sputnik"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Slavia Mozyr"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Qarabag"
-    },
-    {
-      "folder": "Belarus - Vysshaya Liga",
-      "team": "Torpedo-BelAZ"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Sabah"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Neftçi"
-    },
-    {
       "folder": "Azerbaijan - Premier League",
       "team": "Qayalag Zirə"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Inter Baku"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Zira"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Turan Tovuz"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Sabail"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Gabala"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Sumgayit"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Ağdam"
-    },
-    {
-      "folder": "Azerbaijan - Premier League",
-      "team": "Kapaz"
     }
   ],
   "leagues_unresolved": []

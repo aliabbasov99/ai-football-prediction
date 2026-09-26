@@ -59,6 +59,8 @@ UA = "afp-logo-fetch/1.0 (https://github.com/; contact: local)"
 # ---------------------------------------------------------------- yardımcılar
 
 _SLUG_RE = re.compile(r"[^a-z0-9]+")
+# Yol ayırıcıları + Windows qadağan etdiyi simvollar (<>:"/\|?*)
+_UNSAFE_FN_RE = re.compile(r'[<>:"/\\|?*]+')
 
 
 def slugify(value: str) -> str:
@@ -67,6 +69,41 @@ def slugify(value: str) -> str:
     norm = "".join(c for c in norm if not unicodedata.combining(c))
     norm = norm.lower()
     return _SLUG_RE.sub("-", norm).strip("-")
+
+
+def name_variants(name: str, aliases: list[str]) -> list[str]:
+    """Axtarış üçün ad variantlarını təkrarsız, sırayla qaytarır.
+
+    Bəzi mənbələr adın içindəki "/" işarəsini qəbul etmir:
+      TSDB  searchteams.php?t=Bodø/Glimt  -> []   (boş!)
+      TSDB  searchteams.php?t=Bodø Glimt  -> doğru badge
+    Buna görə slash-ı boşluğa çevirilmiş variant da sınanılır. Tək-tək
+    variant cəhd edəndə 429 sayğacı yavaşlayır, ona görə variant yalnız
+    dəqiq ad uğursuz olanda əlavə olunur.
+    """
+    out: list[str] = []
+    for v in [name, *aliases]:
+        for cand in (v, v.replace("/", " "), v.replace("/", "-")):
+            c = cand.strip()
+            if c and c not in out:
+                out.append(c)
+    return out
+
+
+def safe_filename(value: str) -> str:
+    """Windows/POSIX üçün təhlükəsiz fayl adı.
+
+    Bəzi komanda adlarında yol ayırıcı var (məs. "Bodø/Glimt", "Kauno Zalgiris"
+    yoxdur amma "Bodø/Glimt" real). `nested_dir / f"{name}.png"` yazdıranda bu
+    slash alt qovluq kimi şifrələnir və `mkdir` edilmədiyi üçün
+    `FileNotFoundError` atır — logo itirilir.
+
+    Yalnız yol ayırıcıları və Windows qadağan etdiyi simvolları dəyişdiririk,
+    adın özünü qoruyuruq ki, `map_logos.py` fuzzy match-i işləsin.
+    """
+    out = _UNSAFE_FN_RE.sub("-", (value or "").strip())
+    out = out.strip("-. ")
+    return out or "unknown"
 
 
 def norm_name(value: str) -> str:
@@ -477,8 +514,8 @@ def process_team(fetcher: Fetcher, folder: str, entry, report: dict) -> None:
     data: bytes | None = None
     source = ""
 
-    # 1-ci manbe: TheSportsDB (alias-larla siraya)
-    queries = [name, *aliases]
+    # 1-ci manbe: TheSportsDB (alias + slash/boşluq variantlariyla siraya)
+    queries = name_variants(name, aliases)
     chosen = None
     for q in queries:
         cands = fetcher.tsdb_search(q)
@@ -497,9 +534,12 @@ def process_team(fetcher: Fetcher, folder: str, entry, report: dict) -> None:
     # 2-ci manbe: Wikipedia (TheSportsDB tapa bilməyəndə)
     if not data:
         for lang in ("en", "es", "de", "tr", "it", "pt", "fr", "nl", "ru", "pl", "ar"):
-            data = fetcher.wiki_team_image(name, country, lang)
+            for q in queries:
+                data = fetcher.wiki_team_image(q, country, lang)
+                if data:
+                    source = f"wiki:{lang}"
+                    break
             if data:
-                source = f"wiki:{lang}"
                 break
 
     if not data:
@@ -520,9 +560,12 @@ def process_team(fetcher: Fetcher, folder: str, entry, report: dict) -> None:
                 p.write_bytes(data)
 
     # 3) map_logos.py üçün iç içə qovluq
+    #    Ad təhlükəsizləşdirilir: "Bodø/Glimt" slash içərdiyi üçün
+    #    əvvəl `Norway - Eliteserien\Bodø\Glimt.png` yazmağa çalışıb
+    #    FileNotFoundError atırdı.
     nested_dir = LOGO_ROOT / folder
     nested_dir.mkdir(parents=True, exist_ok=True)
-    (nested_dir / f"{name}.png").write_bytes(data)
+    (nested_dir / f"{safe_filename(name)}.png").write_bytes(data)
 
     report["teams_ok"].append(
         {
@@ -623,7 +666,15 @@ def main() -> int:
                 for entry in LEAGUES[folder]["teams"]:
                     if not args.force:
                         name, _ = expand(entry)
-                        if (FLAT_DIR / f"{slugify(name)}.png").exists():
+                        flat = FLAT_DIR / f"{slugify(name)}.png"
+                        nested = LOGO_ROOT / folder / f"{safe_filename(name)}.png"
+                        # Düz fayl VƏ iç içə fayl ikisi də varsa keç.
+                        # Əvvəl yalnız düz fayla baxılırdı: iç içə yazma
+                        # FileNotFoundError ilə alınsa (məs. "Bodø/Glimt" — ad
+                        # slash saxlayır) düz fayl mövcud olub iç içə fayl
+                        # çatışmadığı üçün sonrakı işlərdə heç vaxt təkrar
+                        # sınanmırdı və logo əbədi itirdi.
+                        if flat.exists() and nested.exists():
                             report["teams_ok"].append(
                                 {"folder": folder, "team": name, "cached": True}
                             )
